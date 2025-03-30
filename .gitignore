@@ -1,0 +1,17 @@
+# Build directory
+build/
+
+# IDE files
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# ESP-IDF specific
+sdkconfig.old
+dependencies.lock
+
+# Log files
+*.log 
