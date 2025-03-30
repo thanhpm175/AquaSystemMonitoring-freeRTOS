@@ -1,0 +1,1 @@
+# SysAquaMonitoring_freeRTOS_ThingsboardPlatformSDK
