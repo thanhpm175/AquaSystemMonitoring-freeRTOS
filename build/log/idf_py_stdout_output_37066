@@ -1,0 +1,335 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15716
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 29 2025 16:37:54[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f4a4h (128164) map[0m
+[0;32mI (134) esp_image: segment 1: paddr=0002f4cc vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (134) esp_image: segment 2: paddr=0002f4f0 vaddr=3ffb0000 size=00b28h (  2856) load[0m
+[0;32mI (139) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=a3160h (668000) map[0m
+[0;32mI (373) esp_image: segment 4: paddr=000d3188 vaddr=3ffb0b28 size=034a8h ( 13480) load[0m
+[0;32mI (378) esp_image: segment 5: paddr=000d6638 vaddr=40080000 size=18080h ( 98432) load[0m
+[0;32mI (428) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (428) boot: Disabling RNG early entropy source...[0m
+[0;32mI (439) cpu_start: Multicore app[0m
+[0;32mI (447) cpu_start: Pro cpu start user code[0m
+[0;32mI (447) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (447) app_init: Application information:[0m
+[0;32mI (447) app_init: Project name:     thingsboard[0m
+[0;32mI (451) app_init: App version:      1[0m
+[0;32mI (455) app_init: Compile time:     Mar 29 2025 16:37:45[0m
+[0;32mI (460) app_init: ELF file SHA256:  67d0b6de9...[0m
+[0;32mI (464) app_init: ESP-IDF:          v5.4[0m
+[0;32mI (468) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (472) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (476) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (480) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (486) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (491) heap_init: At 3FFB8D58 len 000272A8 (156 KiB): DRAM[0m
+[0;32mI (496) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (502) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 40098080 len 00007F80 (31 KiB): IRAM[0m
+[0;32mI (514) spi_flash: detected chip: generic[0m
+[0;32mI (516) spi_flash: flash io: dio[0m
+[0;33mW (519) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (531) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (541) main_task: Started on CPU0[0m
+[0;32mI (551) main_task: Calling app_main()[0m
+[0;32mI (551) MAIN: [APP] Startup..[0m
+[0;32mI (551) MAIN: [APP] Free memory: 273280 bytes[0m
+[0;32mI (551) MAIN: [APP] IDF version: v5.4[0m
+[0;32mI (571) MAIN: Servo initialized[0m
+[0;32mI (571) WIFI: Starting WiFi task[0m
+[0;32mI (571) MAIN: Initializing WiFi...[0m
+[0;32mI (581) TB: Starting ThingsBoard task[0m
+[0;32mI (581) SENSOR: Starting sensor task[0m
+[0;32mI (591) wifi:wifi driver task: 3ffc2534, prio:23, stack:6656, core=0[0m
+[0;32mI (601) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (601) wifi:wifi certification version: v7.0[0m
+[0;32mI (601) wifi:config NVS flash: enabled[0m
+[0;32mI (601) wifi:config nano formatting: disabled[0m
+[0;32mI (601) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (611) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (611) wifi:Init management short buffer num: 32[0m
+[0;32mI (621) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (621) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (631) wifi:Init static rx buffer num: 10[0m
+[0;32mI (631) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (641) wifi_init: rx ba win: 6[0m
+[0;32mI (641) wifi_init: accept mbox: 6[0m
+[0;32mI (641) wifi_init: tcpip mbox: 32[0m
+[0;32mI (641) wifi_init: udp mbox: 6[0m
+[0;32mI (651) wifi_init: tcp mbox: 6[0m
+[0;32mI (651) wifi_init: tcp tx win: 5760[0m
+[0;32mI (651) fi_init: tcp rx win: 5760[0m
+[0;32mI (651) wifi_init: tcp mss: 1440[0m
+[0;32mI (661) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (661) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (671) MAIN: Connecing to WiFi SSID: NHATRO BM T1S[0m
+[0;33mW (671) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (681) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (761) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (771) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (781) SERVO: Starting servo task[0m
+[0;32mI (811) wifi:mode : sta (08:d1:f9:26:7e:34)[0m
+[0;32mI (811) wifi:enable tsf[0m
+[0;32mI (821) MAIN: WiFi initialization completed[0m
+[0;32mI (821) WIFI: Waiting for WiFi connection...[0m
+[0;32mI (1071) wifi:new:<5,0>, old:<1,0>, ap:<255,255>, sta:<5,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1081) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1091) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1101) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1211) wifi:connected with NHATRO BM T1S, aid = 1, channel 5, BW20, bssid = c4:70:ab:86:49:3b[0m
+[0;32mI (1211) wifi:security: WPA2-PSK, phy: bgn, rssi: -57[0m
+[0;32mI (1211) wifi:pm start, type: 1[0m
+
+[0;32mI (1211) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1241) wifi:<ba-add>idx:0 (ifx:0, c4:70:ab:86:49:3b), tid:0, ssn:1, winSize:64[0m
+[0;32mI (1271) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1821) WIFI: Waiting for WiFi connection...[0m
+[0;32mI (2251) esp_netif_handlers: sta ip: 192.168.110.169, mask: 255.255.255.0, gw: 192.168.110.1[0m
+[0;32mI (2581) TB: Connecting to ThingsBoard server: 192.168.110.126 with token: koPUeob0V2iGJO646g2B[0m
+[0;32mI (2581) TB: Connected to ThingsBoard server successfully[0m
+[0;32mI (2581) TB: Registered RPC handler for: setServoState[0m
+[0;32mI (2681) TB: Connecting to ThingsBoard server: 192.168.110.126 with token: koPUeob0V2iGJO646g2B[0m
+[0;32mI (2731) wifi:<ba-add>idx:1 (ifx:0, c4:70:ab:86:49:3b), tid:7, ssn:2, winSize:64[0m
+[0;32mI (2791) mqtt_client: Client force reconnect requested[0m
+[TB] Connecting to server failed
+[1;31mE (2791) TB: Failed to connect to ThingsBoard server[0m
+[0;32mI (7791) TB: Sent servo state: 0[0m
+[0;32mI (10811) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (10821) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (12891) TB: Sent servo state: 0[0m
+[0;32mI (17991) TB: Sent servo state: 0[0m
+[0;32mI (20881) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (20881) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (23091) TB: Sent servo state: 0[0m
+[0;32mI (28191) TB: Sent servo state: 0[0m
+[0;32mI (30941) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.87, TDS: 100.00[0m
+[0;32mI (30941) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.87, TDS: 100.00[0m
+[0;32mI (33291) TB: Sent servo state: 0[0m
+[0;32mI (38391) TB: Sent servo state: 0[0m
+[0;32mI (41001) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (41001) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (43491) TB: Sent servo state: 0[0m
+[0;32mI (48591) TB: Sent servo state: 0[0m
+[0;32mI (51061) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (51061) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (53691) TB: Sent servo state: 0[0m
+[0;32mI (58791) TB: Sent servo state: 0[0m
+[0;32mI (61121) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.70, TDS: 100.00[0m
+[0;32mI (61121) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.70, TDS: 100.00[0m
+[0;32mI (63891) TB: Sent servo state: 0[0m
+[0;32mI (68991) TB: Sent servo state: 0[0m
+[0;32mI (71181) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (71181) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (74091) TB: Sent servo state: 0[0m
+[0;32mI (79191) TB: Sent servo state: 0[0m
+[0;32mI (81241) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (81241) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (84291) TB: Sent servo state: 0[0m
+[0;32mI (89391) TB: Sent servo state: 0[0m
+[0;32mI (91301) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.04, TDS: 100.00[0m
+[0;32mI (91301) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.04, TDS: 100.00[0m
+[0;32mI (94491) TB: Sent servo state: 0[0m
+[0;32mI (99591) TB: Sent servo state: 0[0m
+[0;32mI (101361) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (101361) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (104691) TB: Sent servo state: 0[0m
+[0;32mI (109791) TB: Sent servo state: 0[0m
+[0;32mI (111421) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 11.91, TDS: 100.00[0m
+[0;32mI (111421) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 11.91, TDS: 100.00[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014fd  PS      : 0x00060230  A0      : 0x801617c5  A1      : 0x3ffcf770  
+A2      : 0x00000000  A3      : 0xfffffffc  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x00000000  A9      : 0x3ffcf730  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3ffcf9b4  A13     : 0x00000000  
+A14     : 0x3f403d3a  A15     : 0x3ffcf984  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400014fa:0x3ffcf770 0x401617c2:0x3ffcf780 0x4015c135:0x3ffcfaa0 0x40171b01:0x3ffcfad0 0x4009057d:0x3ffcfb00 0x400dcc27:0x3ffcfb50 0x40168c9d:0x3ffcfc60 0x400dd66e:0x3ffcfc80 0x400dd9a4:0x3ffcfca0 0x400dc8a1:0x3ffcfd10 0x4016932d:0x3ffcfe50 0x400dc376:0x3ffcfe70 0x400dc38e:0x3ffcfe90 0x400ddec1:0x3ffcfec0 0x400ddeda:0x3ffcfef0 0x400ddf7a:0x3ffcff10 0x400ddf96:0x3ffcff60 0x40170271:0x3ffcff90 0x4016fd0f:0x3ffcffc0 0x400de22a:0x3ffd0000 0x400ded7c:0x3ffd0020 0x400deee7:0x3ffd0050 0x400df388:0x3ffd0080 0x4008a305:0x3ffd00b0
+
+
+
+
+ELF file SHA256: 67d0b6de9
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15716
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 29 2025 16:37:54[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f4a4h (128164) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002f4cc vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (134) esp_image: segment 2: paddr=0002f4f0 vaddr=3ffb0000 size=00b28h (  2856) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=a3160h (668000) map[0m
+[0;32mI (373) esp_image: segment 4: paddr=000d3188 vaddr=3ffb0b28 size=034a8h ( 13480) load[0m
+[0;32mI (378) esp_image: segment 5: paddr=000d6638 vaddr=40080000 size=18080h ( 98432) load[0m
+[0;32mI (428) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (428) boot: Disabling RNG early entropy source...[0m
+[0;32mI (439) cpu_start: Multicore app[0m
+[0;32mI (447) cpu_start: Pro cpu start user code[0m
+[0;32mI (447) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (447) app_init: Application information:[0m
+[0;32mI (447) app_init: Project name:     thingsboard[0m
+[0;32mI (451) app_init: App version:      1[0m
+[0;32mI (455) app_init: Compile time:     Mar 29 2025 16:37:45[0m
+[0;32mI (460) app_init: ELF file SHA256:  67d0b6de9...[0m
+[0;32mI (464) app_init: ESP-IDF:          v5.4[0m
+[0;32mI (468) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (472) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (476) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (480) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (486) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (491) heap_init: At 3FFB8D58 len 000272A8 (156 KiB): DRAM[0m
+[0;32mI (496) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (501) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 40098080 len 00007F80 (31 KiB): IRAM[0m
+[0;32mI (514) spi_flash: detected chip: generic[0m
+[0;32mI (516) spi_flash: flash io: dio[0m
+[0;33mW (519) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (531) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (541) main_task: Started on CPU0[0m
+[0;32mI (551) main_task: Calling app_main()[0m
+[0;32mI (551) MAIN: [APP] Startup..[0m
+[0;32mI (551) MAIN: [APP] Free memory: 273280 bytes[0m
+[0;32mI (551) MAIN: [APP] IDF version: v5.4[0m
+[0;32mI (571) MAIN: Servo initialized[0m
+[0;32mI (571) WIFI: Starting WiFi task[0m
+[0;32mI (571) MAIN: Initializing WiFi...[0m
+[0;32mI (581) TB: Starting ThingsBoard task[0m
+[0;32mI (581) SENSOR: Starting sensor task[0m
+[0;32mI (591) wifi:wifi driver task: 3ffc25b8, prio:23, stack:6656, core=0[0m
+[0;32mI (601) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (601) wifi:wifi certification version: v7.0[0m
+[0;32mI (601) wifi:config NVS flash: enabled[0m
+[0;32mI (601) wifi:config nano formatting: disabled[0m
+[0;32mI (601) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (611) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (611) wifi:Init management short buffer num: 32[0m
+[0;32mI (621) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (621) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (631) wifi:Init static rx buffer num: 10[0m
+[0;32mI (631) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (641) wifi_init: rx ba win: 6[0m
+[0;32mI (641) wifi_init: accept mbox: 6[0m
+[0;32mI (641) wifi_init: tcpip mbox: 32[0m
+[0;32mI (641) wifi_init: udp mbox: 6[0m
+[0;32mI (651) wifi_init: tcp mbox: 6[0m
+[0;32mI (651) wifi_init: tcp tx win: 5760[0m
+[0;32mI (651) wifi_init: tcp rx win: 5760[0m
+[0;32mI (651) wifi_init: tcp mss: 1440[0m
+[0;32mI (661) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (661) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (671) MAIN: Connecting to WiFi SSID: NHATRO BM T1S[0m
+[0;33mW (671) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (681) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (771) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (791) wifi:mode : sta (08:d1:f9:26:7e:34)[0m
+[0;32mI (791) wifi:enable tsf[0m
+[0;32mI (791) MAIN: WiFi initialization completed[0m
+[0;32mI (801) WIFI: Waiting for WiFi connection...[0m
+[0;32mI (801) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1051) wifi:new:<5,0>, old:<1,0>, ap:<255,255>, sta:<5,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1061) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1061) SERVO: Starting servo task[0m
+[0;32mI (1071) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1071) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1181) wifi:connected with NHATRO BM T1S, aid = 1, channel 5, BW20, bssid = c4:70:ab:86:49:3b[0m
+[0;32mI (1191) wifi:security: WPA2-PSK, phy: bgn, rssi: -56[0m
+[0;32mI (1191) wifi:pm start, type: 1[0m
+
+[0;32mI (1191) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1211) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1221) wifi:<ba-add>idx:0 (ifx:0, c4:70:ab:86:49:3b), tid:0, ssn:1, winSize:64[0m
+[0;32mI (1421) wifi:<ba-add>idx:1 (ifx:0, c4:70:ab:86:49:3b), tid:7, ssn:2, winSize:64[0m
+[0;32mI (1801) WIFI: Waiting for WiFi connection...[0m
+[0;32mI (2221) esp_netif_handlers: sta ip: 192.168.110.169, mask: 255.255.255.0, gw: 192.168.110.1[0m
+[0;32mI (2581) TB: Connecting to ThingsBoard server: 192.168.110.126 with token: koPUeob0V2iGJO646g2B[0m
+[0;32mI (2581) TB: Connected to ThingsBoard server successfully[0m
+[0;32mI (2581) TB: Registered RPC handler for: setServoState[0m
+[0;32mI (2681) TB: Connecting to ThingsBoard server: 192.168.110.126 with token: koPUeob0V2iGJO646g2B[0m
+[0;32mI (2821) mqtt_client: Client force reconnect requested[0m
+[TB] Connecting to server failed
+[1;31mE (2821) TB: Failed to connect to ThingsBoard server[0m
+[0;32mI (7821) TB: Sent servo state: 0[0m
+[0;32mI (11111) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (11111) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (12921) TB: Sent servo state: 0[0m
+[0;32mI (18021) TB: Sent servo state: 0[0m
+[0;32mI (21171) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (21171) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (23121) TB: Sent servo state: 0[0m
+[0;32mI (28221) TB: Sent servo state: 0[0m
+[0;32mI (31231) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.26, TDS: 100.00[0m
+[0;32mI (31231) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.26, TDS: 100.00[0m
+[0;32mI (33321) TB: Sent servo state: 0[0m
+[0;32mI (38421) TB: Sent servo state: 0[0m
+[0;32mI (41291) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.07, TDS: 100.00[0m
+[0;32mI (41291) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.07, TDS: 100.00[0m
+[0;32mI (43521) TB: Sent servo state: 0[0m
+[0;32mI (48621) TB: Sent servo state: 0[0m
+[0;32mI (51361) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.83, TDS: 100.00[0m
+[0;32mI (51361) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.83, TDS: 100.00[0m
+[0;32mI (53721) TB: Sent servo state: 0[0m
+[0;32mI (58821) TB: Sent servo state: 0[0m
+[0;32mI (61431) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (61431) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (63921) TB: Sent servo state: 0[0m
+[0;32mI (69021) TB: Sent servo state: 0[0m
+[0;32mI (71491) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 6.08, TDS: 100.00[0m
+[0;32mI (71491) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 6.08, TDS: 100.00[0m
+[0;32mI (74121) TB: Sent servo state: 0[0m
+[0;32mI (79221) TB: Sent servo state: 0[0m
+[0;32mI (81561) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 12.46, TDS: 100.00[0m
+[0;32mI (81561) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 12.46, TDS: 100.00[0m
+[0;32mI (84321) TB: Sent servo state: 0[0m
+[0;32mI (89421) TB: Sent servo state: 0[0m
+[0;32mI (91621) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (91621) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m

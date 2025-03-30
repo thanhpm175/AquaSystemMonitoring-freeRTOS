@@ -1,0 +1,1319 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15716
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 29 2025 16:37:54[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f544h (128324) map[0m
+[0;32mI (134) esp_image: segment 1: paddr=0002f56c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (134) esp_image: segment 2: paddr=0002f590 vaddr=3ffb0000 size=00a88h (  2696) load[0m
+[0;32mI (139) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=a3394h (668564) map[0m
+[0;32mI (373) esp_image: segment 4: paddr=000d33bc vaddr=3ffb0a88 size=03548h ( 13640) load[0m
+[0;32mI (379) esp_image: segment 5: paddr=000d690c vaddr=40080000 size=18080h ( 98432) load[0m
+[0;32mI (428) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (429) boot: Disabling RNG early entropy source...[0m
+[0;32mI (439) cpu_start: Multicore app[0m
+[0;32mI (447) cpu_start: Pro cpu start user code[0m
+[0;32mI (447) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (448) app_init: Application information:[0m
+[0;32mI (448) app_init: Project name:     thingsboard[0m
+[0;32mI (452) app_init: App version:      1[0m
+[0;32mI (455) app_init: Compile time:     Mar 29 2025 16:37:45[0m
+[0;32mI (460) app_init: ELF file SHA256:  77dc272bc...[0m
+[0;32mI (465) app_init: ESP-IDF:          v5.4[0m
+[0;32mI (468) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (472) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (476) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (480) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (486) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (491) heap_init: At 3FFB8D58 len 000272A8 (156 KiB): DRAM[0m
+[0;32mI (497) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (502) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 40098080 len 00007F80 (31 KiB): IRAM[0m
+[0;32mI (514) spi_flash: detected chip: generic[0m
+[0;32mI (516) spi_flash: flash io: dio[0m
+[0;33mW (519) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (532) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (541) main_task: Started on CPU0[0m
+[0;32mI (551) main_task: Calling app_main()[0m
+[0;32mI (551) MAIN: [APP] Startup..[0m
+[0;32mI (551) MAIN: [APP] Free memory: 273280 bytes[0m
+[0;32mI (551) MAIN: [APP] IDF version: v5.4[0m
+[0;32mI (571) MAIN: Servo initialized[0m
+[0;32mI (571) WIFI: Starting WiFi task[0m
+[0;32mI (571) MAIN: Initializing WiFi...[0m
+[0;32mI (581) TB: Starting ThingsBoard task[0m
+[0;32mI (581) SENSOR: Starting sensor task[0m
+[0;32mI (591) wifi:wifi driver task: 3ffc25b8, prio:23, stack:6656, core=0[0m
+[0;32mI (601) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (601) wifi:wifi certification version: v7.0[0m
+[0;32mI (601) wifi:config NVS flash: enabled[0m
+[0;32mI (601) wifi:config nano formatting: disabled[0m
+[0;32mI (601) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (611) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (611) wifi:Init management short buffer num: 32[0m
+[0;32mI (621) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (621) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (631) wifi:Init static rx buffer num: 10[0m
+[0;32mI (631) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (641) wifi_init: rx ba win: 6[0m
+[0;32mI (641) wifinit: accept mbox: 6[0m
+[0;32mI (641) wifi_init: tcpip mbox: 32[0m
+[0;32mI (641) wifi_init: udp mbox: 6[0m
+[0;32mI (651) wifi_init: tcp mbox: 6[0m
+[0;32mI (651) wifi_init: tcp tx win: 5760[0m
+[0;32mI (651) wifi_init: tcp rx win: 5760[0m
+[0;32mI (651) wifi_init: tcp mss: 1440[0m
+[0;32mI (661) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (661) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (671) MAIN: Connecting to WiFi SSID: NHATRO BM T1S[0m
+[0;33mW (671) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (681) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (761) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (771) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (771) SERVO: Starting servo task[0m
+[0;32mI (811) wifi:mode : sta (08:d1:f9:26:7e:34)[0m
+[0;32mI (811) wifi:enable tsf[0m
+[0;32mI (821) MAIN: WiFi initialization completed[0m
+[0;32mI (821) WIFI: Waiting for WiFi connection...[0m
+[0;32mI (1071) wifi:new:<5,0>, old:<1,0>, ap:<255,255>, sta:<5,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1081) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1081) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1091) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1201) wifi:connected with NHATRO BM T1S, aid = 1, channel 5, BW20, bssid = c4:70:ab:86:49:3b[0m
+[0;32mI (1201) wifi:security: WPA2-PSK, phy: bgn, rssi: -57[0m
+[0;32mI (1201) wifi:pm start, type: 1[0m
+
+[0;32mI (1201) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1221) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1231) wifi:<ba-add>idx:0 (ifx:0, c4:70:ab:86:49:3b), tid:0, ssn:1, winSize:64[0m
+[0;32mI (1821) WIFI: Waiting for WiFi connection...[0m
+[0;32mI (2241) esp_netif_handlers: sta ip: 192.168.110.169, mask: 255.255.255.0, gw: 192.168.110.1[0m
+[0;32mI (2581) TB: Connecting to ThingsBoard server: 192.168.110.126 with token: koPUeob0V2iGJO646g2B[0m
+[0;32mI (2581) TB: Connected to ThingsBoard server successfully[0m
+[0;32mI (2581) TB: Registered RPC handler for: setServoState[0m
+[0;32mI (2601) wifi:<ba-add>idx:1 (ifx:0, c4:70:ab:86:49:3b), tid:7, ssn:4, winSize:64[0m
+[0;32mI (2681) TB: Connecting to ThingsBoard server: 192.168.110.126 with token: koPUeob0V2iGJO646g2B[0m
+[0;32mI (2771) mqtt_client: Client force reconnect requested[0m
+[TB] Connecting to server failed
+[1;31mE (2771) TB: Failed to connect to ThingsBoard server[0m
+[0;32mI (7771) TB: Sent servo state: 0[0m
+[0;32mI (10811) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (10811) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (12871) TB: Sent servo state: 0[0m
+[0;32mI (17971) TB: Sent servo state: 0[0m
+[0;32mI (20861) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.43, TDS: 100.00[0m
+[0;32mI (20861) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.43, TDS: 100.00[0m
+[0;32mI (23071) TB: Sent servo state: 0[0m
+[0;32mI (28171) TB: Sent servo state: 0[0m
+[0;32mI (30911) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (30911) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (33271) TB: Sent servo state: 0[0m
+[0;32mI (38371) TB: Sent servo state: 0[0m
+[0;32mI (40971) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (40971) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (43471) TB: Sent servo state: 0[0m
+[0;32mI (48571) TB: Sent servo state: 0[0m
+[0;32mI (51021) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (51021) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (53671) TB: Sent servo state: 0[0m
+[0;32mI (58771) TB: Sent servo state: 0[0m
+[0;32mI (61071) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (61071) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (63871) TB: Sent servo state: 0[0m
+[0;32mI (68971) TB: Sent servo state: 0[0m
+[0;32mI (71121) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.02, TDS: 100.00[0m
+[0;32mI (71121) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.02, TDS: 100.00[0m
+[0;32mI (74071) TB: Sent servo state: 0[0m
+[0;32mI (79171) TB: Sent servo state: 0[0m
+[0;32mI (81171) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (81171) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (84271) TB: Sent servo state: 0[0m
+[0;32mI (89371) TB: Sent servo state: 0[0m
+[0;32mI (91221) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (91221) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (94471) TB: Sent servo state: 0[0m
+[0;32mI (99571) TB: Sent servo state: 0[0m
+[0;32mI (101281) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.15, TDS: 100.00[0m
+[0;32mI (101281) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.15, TDS: 100.00[0m
+[0;32mI (104671) TB: Sent servo state: 0[0m
+[0;32mI (109771) TB: Sent servo state: 0[0m
+[0;32mI (111341) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (111341) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (114871) TB: Sent servo state: 0[0m
+[0;32mI (119971) TB: Sent servo state: 0[0m
+[0;32mI (121391) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (121391) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (125071) TB: Sent servo state: 0[0m
+[0;32mI (130171) TB: Sent servo state: 0[0m
+[0;32mI (131441) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (131441) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (135271) TB: Sent servo state: 0[0m
+[0;32mI (140371) TB: Sent servo state: 0[0m
+[0;32mI (141491) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.15, TDS: 100.00[0m
+[0;32mI (141491) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.15, TDS: 100.00[0m
+[0;32mI (145471) TB: Sent servo state: 0[0m
+[0;32mI (150571) TB: Sent servo state: 0[0m
+[0;32mI (151541) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.17, TDS: 100.00[0m
+[0;32mI (151541) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.17, TDS: 100.00[0m
+[0;32mI (155671) TB: Sent servo state: 0[0m
+[0;32mI (160771) TB: Sent servo state: 0[0m
+[0;32mI (161591) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (161591) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (165871) TB: Sent servo state: 0[0m
+[0;32mI (170971) TB: Sent servo state: 0[0m
+[0;32mI (171651) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (171651) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (176071) TB: Sent servo state: 0[0m
+[0;32mI (181171) TB: Sent servo state: 0[0m
+[0;32mI (181711) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 5.22, TDS: 100.00[0m
+[0;32mI (181711) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 5.22, TDS: 100.00[0m
+[0;32mI (186271) TB: Sent servo state: 0[0m
+[0;32mI (191371) TB: Sent servo state: 0[0m
+[0;32mI (191761) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (191761) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (196471) TB: Sent servo state: 0[0m
+[0;32mI (201571) TB: Sent servo state: 0[0m
+[0;32mI (201821) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (201821) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (206671) TB: Sent servo state: 0[0m
+[0;32mI (211771) TB: Sent servo state: 0[0m
+[0;32mI (211881) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (211881) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (216871) TB: Sent servo state: 0[0m
+[0;32mI (221941) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 8.69, TDS: 100.00[0m
+[0;32mI (221941) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 8.69, TDS: 100.00[0m
+[0;32mI (221971) TB: Sent servo state: 0[0m
+[0;32mI (227071) TB: Sent servo state: 0[0m
+[0;32mI (231991) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.72, TDS: 100.00[0m
+[0;32mI (231991) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.72, TDS: 100.00[0m
+[0;32mI (232171) TB: Sent servo state: 0[0m
+[0;32mI (237271) TB: Sent servo state: 0[0m
+[0;32mI (242041) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (242041) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (242371) TB: Sent servo state: 0[0m
+[0;32mI (247471) TB: Sent servo state: 0[0m
+[0;32mI (252091) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.25, TDS: 100.00[0m
+[0;32mI (252091) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.25, TDS: 100.00[0m
+[0;32mI (252571) TB: Sent servo state: 0[0m
+[0;32mI (257671) TB: Sent servo state: 0[0m
+[0;32mI (262141) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 10.75, TDS: 100.00[0m
+[0;32mI (262141) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 10.75, TDS: 100.00[0m
+[0;32mI (262771) TB: Sent servo state: 0[0m
+[0;32mI (267871) TB: Sent servo state: 0[0m
+[0;32mI (272191) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (272191) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (272971) TB: Sent servo state: 0[0m
+[0;32mI (278071) TB: Sent servo state: 0[0m
+[0;32mI (282241) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (282241) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (283171) TB: Sent servo state: 0[0m
+[0;32mI (288271) TB: Sent servo state: 0[0m
+[0;32mI (292291) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (292291) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (293371) TB: Sent servo state: 0[0m
+[0;32mI (298471) TB: Sent servo state: 0[0m
+[0;32mI (302341) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (302341) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (303571) TB: Sent servo state: 0[0m
+[0;32mI (308671) TB: Sent servo state: 0[0m
+[0;32mI (312391) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (312391) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (313771) TB: Sent servo state: 0[0m
+[0;32mI (318871) TB: Sent servo state: 0[0m
+[0;32mI (322441) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (322441) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (323971) TB: Sent servo state: 0[0m
+[0;32mI (329071) TB: Sent servo state: 0[0m
+[0;32mI (332491) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (332491) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (334171) TB: Sent servo state: 0[0m
+[0;32mI (339271) TB: Sent servo state: 0[0m
+[0;32mI (342541) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (342541) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (344371) TB: Sent servo state: 0[0m
+[0;32mI (349471) TB: Sent servo state: 0[0m
+[0;32mI (352601) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (352601) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (354571) TB: Sent servo state: 0[0m
+[0;32mI (359671) TB: Sent servo state: 0[0m
+[0;32mI (362661) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (362661) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (364771) TB: Sent servo state: 0[0m
+[0;32mI (369871) TB: Sent servo state: 0[0m
+[0;32mI (372711) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 19.10, TDS: 100.00[0m
+[0;32mI (372711) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 19.10, TDS: 100.00[0m
+[0;32mI (374971) TB: Sent servo state: 0[0m
+[0;32mI (380071) TB: Sent servo state: 0[0m
+[0;32mI (382761) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 8.01, TDS: 100.00[0m
+[0;32mI (382761) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 8.01, TDS: 100.00[0m
+[0;32mI (385171) TB: Sent servo state: 0[0m
+[0;32mI (390271) TB: Sent servo state: 0[0m
+[0;32mI (392811) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.29, TDS: 100.00[0m
+[0;32mI (392811) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.29, TDS: 100.00[0m
+[0;32mI (395371) TB: Sent servo state: 0[0m
+[0;32mI (400471) TB: Sent servo state: 0[0m
+[0;32mI (402861) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (402861) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (405571) TB: Sent servo state: 0[0m
+[0;32mI (410671) TB: Sent servo state: 0[0m
+[0;32mI (412911) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (412911) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (415771) TB: Sent servo state: 0[0m
+[0;32mI (420871) TB: Sent servo state: 0[0m
+[0;32mI (422961) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (422961) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (425971) TB: Sent servo state: 0[0m
+[0;32mI (431071) TB: Sent servo state: 0[0m
+[0;32mI (433011) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (433011) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (436171) TB: Sent servo state: 0[0m
+[0;32mI (441271) TB: Sent servo state: 0[0m
+[0;32mI (443061) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.87, TDS: 100.00[0m
+[0;32mI (443061) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.87, TDS: 100.00[0m
+[0;32mI (446371) TB: Sent servo state: 0[0m
+[0;32mI (451471) TB: Sent servo state: 0[0m
+[0;32mI (453111) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (453111) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (456571) TB: Sent servo state: 0[0m
+[0;32mI (461671) TB: Sent servo state: 0[0m
+[0;32mI (463171) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (463171) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (466771) TB: Sent servo state: 0[0m
+[0;32mI (471871) TB: Sent servo state: 0[0m
+[0;32mI (473221) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (473221) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (476971) TB: Sent servo state: 0[0m
+[0;32mI (482071) TB: Sent servo state: 0[0m
+[0;32mI (483271) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (483271) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (487171) TB: Sent servo state: 0[0m
+[0;32mI (492271) TB: Sent servo state: 0[0m
+[0;32mI (493321) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (493321) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (497371) TB: Sent servo state: 0[0m
+[0;32mI (502471) TB: Sent servo state: 0[0m
+[0;32mI (503371) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (503371) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (507571) TB: Sent servo state: 0[0m
+[0;32mI (512671) TB: Sent servo state: 0[0m
+[0;32mI (513421) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (513421) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (517771) TB: Sent servo state: 0[0m
+[0;32mI (522871) TB: Sent servo state: 0[0m
+[0;32mI (523471) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (523471) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (527971) TB: Sent servo state: 0[0m
+[0;32mI (533071) TB: Sent servo state: 0[0m
+[0;32mI (533521) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (533521) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (538171) TB: Sent servo state: 0[0m
+[0;32mI (543271) TB: Sent servo state: 0[0m
+[0;32mI (543571) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (543571) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (548371) TB: Sent servo state: 0[0m
+[0;32mI (553471) TB: Sent servo state: 0[0m
+[0;32mI (553621) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (553621) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (558571) TB: Sent servo state: 0[0m
+[0;32mI (563671) TB: Sent servo state: 0[0m
+[0;32mI (563671) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (563671) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (568771) TB: Sent servo state: 0[0m
+[0;32mI (573731) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (573731) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (573871) TB: Sent servo state: 0[0m
+[0;32mI (578971) TB: Sent servo state: 0[0m
+[0;32mI (583781) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 9.74, TDS: 100.00[0m
+[0;32mI (583781) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 9.74, TDS: 100.00[0m
+[0;32mI (584071) TB: Sent servo state: 0[0m
+[0;32mI (589171) TB: Sent servo state: 0[0m
+[0;32mI (593831) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (593831) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (594271) TB: Sent servo state: 0[0m
+[0;32mI (599371) TB: Sent servo state: 0[0m
+[0;32mI (603881) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (603881) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (604471) TB: Sent servo state: 0[0m
+[0;32mI (609571) TB: Sent servo state: 0[0m
+[0;32mI (613931) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (613931) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (614671) TB: Sent servo state: 0[0m
+[0;32mI (619771) TB: Sent servo state: 0[0m
+[0;32mI (623981) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (623981) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (624871) TB: Sent servo state: 0[0m
+[0;32mI (629971) TB: Sent servo state: 0[0m
+[0;32mI (634031) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (634031) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (635071) TB: Sent servo state: 0[0m
+[0;32mI (640171) TB: Sent servo state: 0[0m
+[0;32mI (644091) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (644091) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (645271) TB: Sent servo state: 0[0m
+[0;32mI (650371) TB: Sent servo state: 0[0m
+[0;32mI (654141) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.46, TDS: 100.00[0m
+[0;32mI (654141) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.46, TDS: 100.00[0m
+[0;32mI (655471) TB: Sent servo state: 0[0m
+[0;32mI (660571) TB: Sent servo state: 0[0m
+[0;32mI (664191) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 5.52, TDS: 100.00[0m
+[0;32mI (664191) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 5.52, TDS: 100.00[0m
+[0;32mI (665671) TB: Sent servo state: 0[0m
+[0;32mI (670771) TB: Sent servo state: 0[0m
+[0;32mI (674241) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (674241) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (675871) TB: Sent servo state: 0[0m
+[0;32mI (680971) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (684291) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 11.87, TDS: 100.00[0m
+[0;32mI (684291) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 11.87, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (686071) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (691171) TB: Sent servo state: 0[0m
+[0;32mI (694341) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (694341) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (696271) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (701371) TB: Sent servo state: 0[0m
+[0;32mI (704401) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (704401) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (706471) TB: Sent servo state: 0[0m
+[0;32mI (711571) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (714461) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.78, TDS: 100.00[0m
+[0;32mI (714461) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.78, TDS: 100.00[0m
+[0;32mI (716671) TB: Sent servo state: 0[0m
+[0;32mI (721771) TB: Sent servo state: 0[0m
+[0;32mI (724521) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (724521) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (726871) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (731971) TB: Sent servo state: 0[0m
+[0;32mI (734571) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.85, TDS: 100.00[0m
+[0;32mI (734571) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.85, TDS: 100.00[0m
+[0;32mI (737071) TB: Sent servo state: 0[0m
+[0;32mI (742171) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (744621) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (744621) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (747271) TB: Sent servo state: 0[0m
+[0;32mI (752371) TB: Sent servo state: 0[0m
+[0;32mI (754671) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (754671) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (757471) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (762571) TB: Sent servo state: 0[0m
+[0;32mI (764721) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.07, TDS: 100.00[0m
+[0;32mI (764721) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.07, TDS: 100.00[0m
+[0;32mI (767671) TB: Sent servo state: 0[0m
+[0;32mI (772771) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (774771) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (774771) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (777871) TB: Sent servo state: 0[0m
+[0;32mI (782971) TB: Sent servo state: 0[0m
+[0;32mI (784821) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (784821) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (788071) TB: Sent servo state: 0[0m
+[0;32mI (793171) TB: Sent servo state: 0[0m
+[0;32mI (794871) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 19.34, TDS: 100.00[0m
+[0;32mI (794871) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 19.34, TDS: 100.00[0m
+[0;32mI (798271) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (803371) TB: Sent servo state: 0[0m
+[0;32mI (804931) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (804931) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (808471) TB: Sent servo state: 0[0m
+[0;32mI (813571) TB: Sent servo state: 0[0m
+[0;32mI (814981) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (814981) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (818671) TB: Sent servo state: 0[0m
+[0;32mI (823771) TB: Sent servo state: 0[0m
+[0;32mI (825031) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.49, TDS: 100.00[0m
+[0;32mI (825031) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.49, TDS: 100.00[0m
+[0;32mI (828871) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (833971) TB: Sent servo state: 0[0m
+[0;32mI (835081) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (835081) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (839071) TB: Sent servo state: 0[0m
+[0;32mI (844171) TB: Sent servo state: 0[0m
+[0;32mI (845131) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.45, TDS: 100.00[0m
+[0;32mI (845131) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.45, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (849271) TB: Sent servo state: 0[0m
+[0;32mI (854371) TB: Sent servo state: 0[0m
+[0;32mI (855181) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (855181) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (859471) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (864571) TB: Sent servo state: 0[0m
+[0;32mI (865231) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (865231) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (869671) TB: Sent servo state: 0[0m
+[0;32mI (874771) TB: Sent servo state: 0[0m
+[0;32mI (875291) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (875291) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (879871) TB: Sent servo state: 0[0m
+[0;32mI (884971) TB: Sent servo state: 0[0m
+[0;32mI (885341) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.59, TDS: 100.00[0m
+[0;32mI (885341) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.59, TDS: 100.00[0m
+[0;32mI (890071) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (895171) TB: Sent servo state: 0[0m
+[0;32mI (895401) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 12.95, TDS: 100.00[0m
+[0;32mI (895401) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 12.95, TDS: 100.00[0m
+[0;32mI (900271) TB: Sent servo state: 0[0m
+[0;32mI (905371) TB: Sent servo state: 0[0m
+[0;32mI (905461) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.58, TDS: 100.00[0m
+[0;32mI (905461) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.58, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (910471) TB: Sent servo state: 0[0m
+[0;32mI (915511) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.86, TDS: 100.00[0m
+[0;32mI (915511) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.86, TDS: 100.00[0m
+[0;32mI (915571) TB: Sent servo state: 0[0m
+[0;32mI (920671) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (925561) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (925561) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (925771) TB: Sent servo state: 0[0m
+[0;32mI (930871) TB: Sent servo state: 0[0m
+[0;32mI (935621) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (935621) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (935971) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (941071) TB: Sent servo state: 0[0m
+[0;32mI (945671) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (945671) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (946171) TB: Sent servo state: 0[0m
+[0;32mI (951271) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (955721) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (955721) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (956371) TB: Sent servo state: 0[0m
+[0;32mI (961471) TB: Sent servo state: 0[0m
+[0;32mI (965771) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.47, TDS: 100.00[0m
+[0;32mI (965771) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.47, TDS: 100.00[0m
+[0;32mI (966571) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (971671) TB: Sent servo state: 0[0m
+[0;32mI (975821) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 5.80, TDS: 100.00[0m
+[0;32mI (975821) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 5.80, TDS: 100.00[0m
+[0;32mI (976771) TB: Sent servo state: 0[0m
+[0;32mI (981871) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (985871) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (985871) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (986971) TB: Sent servo state: 0[0m
+[0;32mI (992071) TB: Sent servo state: 0[0m
+[0;32mI (995931) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (995931) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (997171) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1002271) TB: Sent servo state: 0[0m
+[0;32mI (1005991) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.23, TDS: 100.00[0m
+[0;32mI (1005991) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.23, TDS: 100.00[0m
+[0;32mI (1007371) TB: Sent servo state: 0[0m
+[0;32mI (1012471) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1016051) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.57, TDS: 100.00[0m
+[0;32mI (1016051) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.57, TDS: 100.00[0m
+[0;32mI (1017571) TB: Sent servo state: 0[0m
+[0;32mI (1022671) TB: Sent servo state: 0[0m
+[0;32mI (1026101) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.33, TDS: 100.00[0m
+[0;32mI (1026101) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.33, TDS: 100.00[0m
+[0;32mI (1027771) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1032871) TB: Sent servo state: 0[0m
+[0;32mI (1036151) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 6.57, TDS: 100.00[0m
+[0;32mI (1036151) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 6.57, TDS: 100.00[0m
+[0;32mI (1037971) TB: Sent servo state: 0[0m
+[0;32mI (1043071) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1046201) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1046201) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1048171) TB: Sent servo state: 0[0m
+[0;32mI (1053271) TB: Sent servo state: 0[0m
+[0;32mI (1056251) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 4.99, TDS: 100.00[0m
+[0;32mI (1056251) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 4.99, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1058371) TB: Sent servo state: 0[0m
+[0;32mI (1063471) TB: Sent servo state: 0[0m
+[0;32mI (1066311) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.52, TDS: 100.00[0m
+[0;32mI (1066311) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.52, TDS: 100.00[0m
+[0;32mI (1068571) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1073671) TB: Sent servo state: 0[0m
+[0;32mI (1076371) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.55, TDS: 100.00[0m
+[0;32mI (1076371) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.55, TDS: 100.00[0m
+[0;32mI (1078771) TB: Sent servo state: 0[0m
+[0;32mI (1083871) TB: Sent servo state: 0[0m
+[0;32mI (1086421) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1086421) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1088971) TB: Sent servo state: 0[0m
+[0;32mI (1094071) TB: Sent servo state: 0[0m
+[0;32mI (1096471) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1096471) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1099171) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1104271) TB: Sent servo state: 0[0m
+[0;32mI (1106531) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.12, TDS: 100.00[0m
+[0;32mI (1106531) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.12, TDS: 100.00[0m
+[0;32mI (1109371) TB: Sent servo state: 0[0m
+[0;32mI (1114471) TB: Sent servo state: 0[0m
+[0;32mI (1116591) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1116591) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1119571) TB: Sent servo state: 0[0m
+[0;32mI (1124671) TB: Sent servo state: 0[0m
+[0;32mI (1126641) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.86, TDS: 100.00[0m
+[0;32mI (1126641) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.86, TDS: 100.00[0m
+[0;32mI (1129771) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1134871) TB: Sent servo state: 0[0m
+[0;32mI (1136691) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1136691) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1139971) TB: Sent servo state: 0[0m
+[0;32mI (1145071) TB: Sent servo state: 0[0m
+[0;32mI (1146741) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1146741) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1150171) TB: Sent servo state: 0[0m
+[0;32mI (1155271) TB: Sent servo state: 0[0m
+[0;32mI (1156791) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.62, TDS: 100.00[0m
+[0;32mI (1156791) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.62, TDS: 100.00[0m
+[0;32mI (1160371) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1165471) TB: Sent servo state: 0[0m
+[0;32mI (1166851) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1166851) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1170571) TB: Sent servo state: 0[0m
+[0;32mI (1175671) TB: Sent servo state: 0[0m
+[0;32mI (1176901) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1176901) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1180771) TB: Sent servo state: 0[0m
+[0;32mI (1185871) TB: Sent servo state: 0[0m
+[0;32mI (1186951) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1186951) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1190971) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1196071) TB: Sent servo state: 0[0m
+[0;32mI (1197001) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1197001) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1201171) TB: Sent servo state: 0[0m
+[0;32mI (1206271) TB: Sent servo state: 0[0m
+[0;32mI (1207051) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1207051) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1211371) TB: Sent servo state: 0[0m
+[0;32mI (1216471) TB: Sent servo state: 0[0m
+[0;32mI (1217101) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 6.22, TDS: 100.00[0m
+[0;32mI (1217101) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 6.22, TDS: 100.00[0m
+[0;32mI (1221571) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1226671) TB: Sent servo state: 0[0m
+[0;32mI (1227151) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1227151) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1231771) TB: Sent servo state: 0[0m
+[0;32mI (1236871) TB: Sent servo state: 0[0m
+[0;32mI (1237211) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1237211) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1241971) TB: Sent servo state: 0[0m
+[0;32mI (1247071) TB: Sent servo state: 0[0m
+[0;32mI (1247261) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1247261) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1252171) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1257271) TB: Sent servo state: 0[0m
+[0;32mI (1257311) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.82, TDS: 100.00[0m
+[0;32mI (1257311) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.82, TDS: 100.00[0m
+[0;32mI (1262371) TB: Sent servo state: 0[0m
+[0;32mI (1267371) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.85, TDS: 100.00[0m
+[0;32mI (1267371) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.85, TDS: 100.00[0m
+[0;32mI (1267471) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1272571) TB: Sent servo state: 0[0m
+[0;32mI (1277421) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.72, TDS: 100.00[0m
+[0;32mI (1277421) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.72, TDS: 100.00[0m
+[0;32mI (1277671) TB: Sent servo state: 0[0m
+[0;32mI (1282771) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1287471) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1287471) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1287871) TB: Sent servo state: 0[0m
+[0;32mI (1292971) TB: Sent servo state: 0[0m
+[0;32mI (1297531) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1297531) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1298071) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1303171) TB: Sent servo state: 0[0m
+[0;32mI (1307581) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1307581) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1308271) TB: Sent servo state: 0[0m
+[0;32mI (1313371) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1317631) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1317631) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1318471) TB: Sent servo state: 0[0m
+[0;32mI (1323571) TB: Sent servo state: 0[0m
+[0;32mI (1327681) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.69, TDS: 100.00[0m
+[0;32mI (1327681) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.69, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1328671) TB: Sent servo state: 0[0m
+[0;32mI (1333771) TB: Sent servo state: 0[0m
+[0;32mI (1337741) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1337741) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1338871) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1343971) TB: Sent servo state: 0[0m
+[0;32mI (1347791) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1347791) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1349071) TB: Sent servo state: 0[0m
+[0;32mI (1354171) TB: Sent servo state: 0[0m
+[0;32mI (1357851) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1357851) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1359271) TB: Sent servo state: 0[0m
+[0;32mI (1364371) TB: Sent servo state: 0[0m
+[0;32mI (1367901) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1367901) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1369471) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1374571) TB: Sent servo state: 0[0m
+[0;32mI (1377951) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.35, TDS: 100.00[0m
+[0;32mI (1377951) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.35, TDS: 100.00[0m
+[0;32mI (1379671) TB: Sent servo state: 0[0m
+[0;32mI (1384771) TB: Sent servo state: 0[0m
+[0;32mI (1388001) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.13, TDS: 100.00[0m
+[0;32mI (1388001) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.13, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1389871) TB: Sent servo state: 0[0m
+[0;32mI (1394971) TB: Sent servo state: 0[0m
+[0;32mI (1398051) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.89, TDS: 100.00[0m
+[0;32mI (1398051) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.89, TDS: 100.00[0m
+[0;32mI (1400071) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1405171) TB: Sent servo state: 0[0m
+[0;32mI (1408111) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.32, TDS: 100.00[0m
+[0;32mI (1408111) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.32, TDS: 100.00[0m
+[0;32mI (1410271) TB: Sent servo state: 0[0m
+[0;32mI (1415371) TB: Sent servo state: 0[0m
+[0;32mI (1418161) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1418161) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1420471) TB: Sent servo state: 0[0m
+[0;32mI (1425571) TB: Sent servo state: 0[0m
+[0;32mI (1428211) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.78, TDS: 100.00[0m
+[0;32mI (1428211) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.78, TDS: 100.00[0m
+[0;32mI (1430671) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1435771) TB: Sent servo state: 0[0m
+[0;32mI (1438261) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.01, TDS: 100.00[0m
+[0;32mI (1438261) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.01, TDS: 100.00[0m
+[0;32mI (1440871) TB: Sent servo state: 0[0m
+[0;32mI (1445971) TB: Sent servo state: 0[0m
+[0;32mI (1448321) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1448321) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1451071) TB: Sent servo state: 0[0m
+[0;32mI (1456171) TB: Sent servo state: 0[0m
+[0;32mI (1458371) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.40, TDS: 100.00[0m
+[0;32mI (1458371) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.40, TDS: 100.00[0m
+[0;32mI (1461271) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1466371) TB: Sent servo state: 0[0m
+[0;32mI (1468421) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 3.22, TDS: 100.00[0m
+[0;32mI (1468421) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 3.22, TDS: 100.00[0m
+[0;32mI (1471471) TB: Sent servo state: 0[0m
+[0;32mI (1476571) TB: Sent servo state: 0[0m
+[0;32mI (1478471) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1478471) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1481671) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1486771) TB: Sent servo state: 0[0m
+[0;32mI (1488531) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1488531) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1491871) TB: Sent servo state: 0[0m
+[0;32mI (1496971) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1498581) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.64, TDS: 100.00[0m
+[0;32mI (1498581) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.64, TDS: 100.00[0m
+[0;32mI (1502071) TB: Sent servo state: 0[0m
+[0;32mI (1507171) TB: Sent servo state: 0[0m
+[0;32mI (1508641) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 19.43, TDS: 100.00[0m
+[0;32mI (1508641) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 19.43, TDS: 100.00[0m
+[0;32mI (1512271) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1517371) TB: Sent servo state: 0[0m
+[0;32mI (1518701) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.53, TDS: 100.00[0m
+[0;32mI (1518701) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.53, TDS: 100.00[0m
+[0;32mI (1522471) TB: Sent servo state: 0[0m
+[0;32mI (1527571) TB: Sent servo state: 0[0m
+[0;32mI (1528751) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1528751) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1532671) TB: Sent servo state: 0[0m
+[0;32mI (1537771) TB: Sent servo state: 0[0m
+[0;32mI (1538801) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1538801) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1542871) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1547971) TB: Sent servo state: 0[0m
+[0;32mI (1548861) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1548861) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1553071) TB: Sent servo state: 0[0m
+[0;32mI (1558171) TB: Sent servo state: 0[0m
+[0;32mI (1558921) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 6.35, TDS: 100.00[0m
+[0;32mI (1558921) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 6.35, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1563271) TB: Sent servo state: 0[0m
+[0;32mI (1568371) TB: Sent servo state: 0[0m
+[0;32mI (1568971) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.12, TDS: 100.00[0m
+[0;32mI (1568971) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.12, TDS: 100.00[0m
+[0;32mI (1573471) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1578571) TB: Sent servo state: 0[0m
+[0;32mI (1579021) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.81, TDS: 100.00[0m
+[0;32mI (1579021) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.81, TDS: 100.00[0m
+[0;32mI (1583671) TB: Sent servo state: 0[0m
+[0;32mI (1588771) TB: Sent servo state: 0[0m
+[0;32mI (1589071) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.23, TDS: 100.00[0m
+[0;32mI (1589071) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.23, TDS: 100.00[0m
+[0;32mI (1593871) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1598971) TB: Sent servo state: 0[0m
+[0;32mI (1599121) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1599121) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1604071) TB: Sent servo state: 0[0m
+[0;32mI (1609171) TB: Sent servo state: 0[0m
+[0;32mI (1609171) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1609171) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1614271) TB: Sent servo state: 0[0m
+[0;32mI (1619231) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1619231) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1619371) TB: Sent servo state: 0[0m
+[0;32mI (1624471) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1629281) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.88, TDS: 100.00[0m
+[0;32mI (1629281) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.88, TDS: 100.00[0m
+[0;32mI (1629571) TB: Sent servo state: 0[0m
+[0;32mI (1634671) TB: Sent servo state: 0[0m
+[0;32mI (1639331) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1639331) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1639771) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1644871) TB: Sent servo state: 0[0m
+[0;32mI (1649391) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 10.87, TDS: 100.00[0m
+[0;32mI (1649391) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 10.87, TDS: 100.00[0m
+[0;32mI (1649971) TB: Sent servo state: 0[0m
+[0;32mI (1655071) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1659441) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1659441) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1660171) TB: Sent servo state: 0[0m
+[0;32mI (1665271) TB: Sent servo state: 0[0m
+[0;32mI (1669491) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1669491) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1670371) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1675471) TB: Sent servo state: 0[0m
+[0;32mI (1679541) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1679541) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1680571) TB: Sent servo state: 0[0m
+[0;32mI (1685671) TB: Sent servo state: 0[0m
+[0;32mI (1689591) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1689591) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1690771) TB: Sent servo state: 0[0m
+[0;32mI (1695871) TB: Sent servo state: 0[0m
+[0;32mI (1699651) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1699651) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1700971) TB: Sent servo state: 0[0m
+[0;32mI (1706071) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1709701) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1709701) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1711171) TB: Sent servo state: 0[0m
+[0;32mI (1716271) TB: Sent servo state: 0[0m
+[0;32mI (1719751) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 4.62, TDS: 100.00[0m
+[0;32mI (1719751) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 4.62, TDS: 100.00[0m
+[0;32mI (1721371) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1726471) TB: Sent servo state: 0[0m
+[0;32mI (1729801) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.55, TDS: 100.00[0m
+[0;32mI (1729801) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.55, TDS: 100.00[0m
+[0;32mI (1731571) TB: Sent servo state: 0[0m
+[0;32mI (1736671) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1739851) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1739851) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1741771) TB: Sent servo state: 0[0m
+[0;32mI (1746871) TB: Sent servo state: 0[0m
+[0;32mI (1749911) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1749911) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1751971) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1757071) TB: Sent servo state: 0[0m
+[0;32mI (1759971) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.62, TDS: 100.00[0m
+[0;32mI (1759971) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.62, TDS: 100.00[0m
+[0;32mI (1762171) TB: Sent servo state: 0[0m
+[0;32mI (1767271) TB: Sent servo state: 0[0m
+[0;32mI (1770021) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1770021) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1772371) TB: Sent servo state: 0[0m
+[0;32mI (1777471) TB: Sent servo state: 0[0m
+[0;32mI (1780071) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1780071) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1782571) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1787671) TB: Sent servo state: 0[0m
+[0;32mI (1790121) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1790121) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1792771) TB: Sent servo state: 0[0m
+[0;32mI (1797871) TB: Sent servo state: 0[0m
+[0;32mI (1800181) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.18, TDS: 100.00[0m
+[0;32mI (1800181) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.18, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1802971) TB: Sent servo state: 0[0m
+[0;32mI (1808071) TB: Sent servo state: 0[0m
+[0;32mI (1810231) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.33, TDS: 100.00[0m
+[0;32mI (1810231) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.33, TDS: 100.00[0m
+[0;32mI (1813171) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1818271) TB: Sent servo state: 0[0m
+[0;32mI (1820291) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1820291) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1823371) TB: Sent servo state: 0[0m
+[0;32mI (1828471) TB: Sent servo state: 0[0m
+[0;32mI (1830341) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1830341) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1833571) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1838671) TB: Sent servo state: 0[0m
+[0;32mI (1840401) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.43, TDS: 100.00[0m
+[0;32mI (1840401) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.43, TDS: 100.00[0m
+[0;32mI (1843771) TB: Sent servo state: 0[0m
+[0;32mI (1848871) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1850461) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1850461) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1853971) TB: Sent servo state: 0[0m
+[0;32mI (1859071) TB: Sent servo state: 0[0m
+[0;32mI (1860521) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1860521) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1864171) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1869271) TB: Sent servo state: 0[0m
+[0;32mI (1870581) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 19.26, TDS: 100.00[0m
+[0;32mI (1870581) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 19.26, TDS: 100.00[0m
+[0;32mI (1874371) TB: Sent servo state: 0[0m
+[0;32mI (1879471) TB: Sent servo state: 0[0m
+[0;32mI (1880631) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.72, TDS: 100.00[0m
+[0;32mI (1880631) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.72, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1884571) TB: Sent servo state: 0[0m
+[0;32mI (1889671) TB: Sent servo state: 0[0m
+[0;32mI (1890681) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1890681) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1894771) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1899871) TB: Sent servo state: 0[0m
+[0;32mI (1900731) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 5.36, TDS: 100.00[0m
+[0;32mI (1900731) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 5.36, TDS: 100.00[0m
+[0;32mI (1904971) TB: Sent servo state: 0[0m
+[0;32mI (1910071) TB: Sent servo state: 0[0m
+[0;32mI (1910791) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1910791) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1915171) TB: Sent servo state: 0[0m
+[0;32mI (1920271) TB: Sent servo state: 0[0m
+[0;32mI (1920841) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.76, TDS: 100.00[0m
+[0;32mI (1920841) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.76, TDS: 100.00[0m
+[0;32mI (1925371) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1930471) TB: Sent servo state: 0[0m
+[0;32mI (1930891) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1930891) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1935571) TB: Sent servo state: 0[0m
+[0;32mI (1940671) TB: Sent servo state: 0[0m
+[0;32mI (1940941) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 10.24, TDS: 100.00[0m
+[0;32mI (1940941) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 10.24, TDS: 100.00[0m
+[0;32mI (1945771) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1950871) TB: Sent servo state: 0[0m
+[0;32mI (1950991) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1950991) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1955971) TB: Sent servo state: 0[0m
+[0;32mI (1961041) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1961041) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1961071) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1966171) TB: Sent servo state: 0[0m
+[0;32mI (1971091) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1971091) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1971271) TB: Sent servo state: 0[0m
+[0;32mI (1976371) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1981141) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1981141) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1981471) TB: Sent servo state: 0[0m
+[0;32mI (1986571) TB: Sent servo state: 0[0m
+[0;32mI (1991191) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.16, TDS: 100.00[0m
+[0;32mI (1991191) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.16, TDS: 100.00[0m
+[0;32mI (1991671) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (1996771) TB: Sent servo state: 0[0m
+[0;32mI (2001241) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2001241) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2001871) TB: Sent servo state: 0[0m
+[0;32mI (2006971) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2011291) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 7.32, TDS: 100.00[0m
+[0;32mI (2011291) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 7.32, TDS: 100.00[0m
+[0;32mI (2012071) TB: Sent servo state: 0[0m
+[0;32mI (2017171) TB: Sent servo state: 0[0m
+[0;32mI (2021341) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2021341) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2022271) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2027371) TB: Sent servo state: 0[0m
+[0;32mI (2031401) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2031401) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2032471) TB: Sent servo state: 0[0m
+[0;32mI (2037571) TB: Sent servo state: 0[0m
+[0;32mI (2041461) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2041461) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2042671) TB: Sent servo state: 0[0m
+[0;32mI (2047771) TB: Sent servo state: 0[0m
+[0;32mI (2051521) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.51, TDS: 100.00[0m
+[0;32mI (2051521) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.51, TDS: 100.00[0m
+[0;32mI (2052871) TB: Sent servo state: 0[0m
+[0;32mI (2057971) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2061571) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2061571) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2063071) TB: Sent servo state: 0[0m
+[0;32mI (2068171) TB: Sent servo state: 0[0m
+[0;32mI (2071621) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 9.85, TDS: 100.00[0m
+[0;32mI (2071621) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 9.85, TDS: 100.00[0m
+[0;32mI (2073271) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2078371) TB: Sent servo state: 0[0m
+[0;32mI (2081671) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2081671) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2083471) TB: Sent servo state: 0[0m
+[0;32mI (2088571) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2091721) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 10.78, TDS: 100.00[0m
+[0;32mI (2091721) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 10.78, TDS: 100.00[0m
+[0;32mI (2093671) TB: Sent servo state: 0[0m
+[0;32mI (2098771) TB: Sent servo state: 0[0m
+[0;32mI (2101771) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.90, TDS: 100.00[0m
+[0;32mI (2101771) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.90, TDS: 100.00[0m
+[0;32mI (2103871) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2108971) TB: Sent servo state: 0[0m
+[0;32mI (2111831) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2111831) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2114071) TB: Sent servo state: 0[0m
+[0;32mI (2119171) TB: Sent servo state: 0[0m
+[0;32mI (2121881) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.64, TDS: 100.00[0m
+[0;32mI (2121881) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.64, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2124271) TB: Sent servo state: 0[0m
+[0;32mI (2129371) TB: Sent servo state: 0[0m
+[0;32mI (2131931) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 5.46, TDS: 100.00[0m
+[0;32mI (2131931) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 5.46, TDS: 100.00[0m
+[0;32mI (2134471) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2139571) TB: Sent servo state: 0[0m
+[0;32mI (2141981) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.44, TDS: 100.00[0m
+[0;32mI (2141981) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.44, TDS: 100.00[0m
+[0;32mI (2144671) TB: Sent servo state: 0[0m
+[0;32mI (2149771) TB: Sent servo state: 0[0m
+[0;32mI (2152031) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.43, TDS: 100.00[0m
+[0;32mI (2152031) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.43, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2154871) TB: Sent servo state: 0[0m
+[0;32mI (2159971) TB: Sent servo state: 0[0m
+[0;32mI (2162091) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2162091) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2165071) TB: Sent servo state: 0[0m
+[0;32mI (2170171) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2172141) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2172141) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2175271) TB: Sent servo state: 0[0m
+[0;32mI (2180371) TB: Sent servo state: 0[0m
+[0;32mI (2182191) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2182191) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2185471) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2190571) TB: Sent servo state: 0[0m
+[0;32mI (2192241) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2192241) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2195671) TB: Sent servo state: 0[0m
+[0;32mI (2200771) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2202291) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2202291) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2205871) TB: Sent servo state: 0[0m
+[0;32mI (2210971) TB: Sent servo state: 0[0m
+[0;32mI (2212351) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2212351) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2216071) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2221171) TB: Sent servo state: 0[0m
+[0;32mI (2222411) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2222411) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2226271) TB: Sent servo state: 0[0m
+[0;32mI (2231371) TB: Sent servo state: 0[0m
+[0;32mI (2232461) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.52, TDS: 100.00[0m
+[0;32mI (2232461) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.52, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2236471) TB: Sent servo state: 0[0m
+[0;32mI (2241571) TB: Sent servo state: 0[0m
+[0;32mI (2242511) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2242511) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2246671) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2251771) TB: Sent servo state: 0[0m
+[0;32mI (2252571) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.00, TDS: 100.00[0m
+[0;32mI (2252571) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.00, TDS: 100.00[0m
+[0;32mI (2256871) TB: Sent servo state: 0[0m
+[0;32mI (2261971) TB: Sent servo state: 0[0m
+[0;32mI (2262631) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.10, TDS: 100.00[0m
+[0;32mI (2262631) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.10, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2267071) TB: Sent servo state: 0[0m
+[0;32mI (2272171) TB: Sent servo state: 0[0m
+[0;32mI (2272681) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.12, TDS: 100.00[0m
+[0;32mI (2272681) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.12, TDS: 100.00[0m
+[0;32mI (2277271) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2282371) TB: Sent servo state: 0[0m
+[0;32mI (2282731) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2282731) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2287471) TB: Sent servo state: 0[0m
+[0;32mI (2292571) TB: Sent servo state: 0[0m
+[0;32mI (2292781) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2292781) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2297671) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2302771) TB: Sent servo state: 0[0m
+[0;32mI (2302831) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.64, TDS: 100.00[0m
+[0;32mI (2302831) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.64, TDS: 100.00[0m
+[0;32mI (2307871) TB: Sent servo state: 0[0m
+[0;32mI (2312881) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2312881) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2312971) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2318071) TB: Sent servo state: 0[0m
+[0;32mI (2322931) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2322931) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2323171) TB: Sent servo state: 0[0m
+[0;32mI (2328271) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2332981) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.20, TDS: 100.00[0m
+[0;32mI (2332981) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.20, TDS: 100.00[0m
+[0;32mI (2333371) TB: Sent servo state: 0[0m
+[0;32mI (2338471) TB: Sent servo state: 0[0m
+[0;32mI (2343031) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.29, TDS: 100.00[0m
+[0;32mI (2343031) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.29, TDS: 100.00[0m
+[0;32mI (2343571) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2348671) TB: Sent servo state: 0[0m
+[0;32mI (2353081) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2353081) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2353771) TB: Sent servo state: 0[0m
+[0;32mI (2358871) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2363131) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2363131) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2363971) TB: Sent servo state: 0[0m
+[0;32mI (2369071) TB: Sent servo state: 0[0m
+[0;32mI (2373181) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2373181) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2374171) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2379271) TB: Sent servo state: 0[0m
+[0;32mI (2383231) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 6.12, TDS: 100.00[0m
+[0;32mI (2383231) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 6.12, TDS: 100.00[0m
+[0;32mI (2384371) TB: Sent servo state: 0[0m
+[0;32mI (2389471) TB: Sent servo state: 0[0m
+[0;32mI (2393291) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2393291) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2394571) TB: Sent servo state: 0[0m
+[0;32mI (2399671) TB: Sent servo state: 0[0m
+[0;32mI (2403341) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.36, TDS: 100.00[0m
+[0;32mI (2403341) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.36, TDS: 100.00[0m
+[0;32mI (2404771) TB: Sent servo state: 0[0m
+[0;32mI (2409871) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2413391) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2413391) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2414971) TB: Sent servo state: 0[0m
+[0;32mI (2420071) TB: Sent servo state: 0[0m
+[0;32mI (2423441) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2423441) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2425171) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2430271) TB: Sent servo state: 0[0m
+[0;32mI (2433491) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2433491) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2435371) TB: Sent servo state: 0[0m
+[0;32mI (2440471) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2443551) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2443551) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2445571) TB: Sent servo state: 0[0m
+[0;32mI (2450671) TB: Sent servo state: 0[0m
+[0;32mI (2453611) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2453611) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2455771) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2460871) TB: Sent servo state: 0[0m
+[0;32mI (2463661) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2463661) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2465971) TB: Sent servo state: 0[0m
+[0;32mI (2471071) TB: Sent servo state: 0[0m
+[0;32mI (2473711) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.50, TDS: 100.00[0m
+[0;32mI (2473711) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.50, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2476171) TB: Sent servo state: 0[0m
+[0;32mI (2481271) TB: Sent servo state: 0[0m
+[0;32mI (2483761) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.40, TDS: 100.00[0m
+[0;32mI (2483761) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.40, TDS: 100.00[0m
+[0;32mI (2486371) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2491471) TB: Sent servo state: 0[0m
+[0;32mI (2493811) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2493811) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2496571) TB: Sent servo state: 0[0m
+[0;32mI (2501671) TB: Sent servo state: 0[0m
+[0;32mI (2503861) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2503861) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2506771) TB: Sent servo state: 0[0m
+[0;32mI (2511871) TB: Sent servo state: 0[0m
+[0;32mI (2513921) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2513921) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2516971) TB: Sent servo state: 0[0m
+[0;32mI (2522071) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2523971) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 12.51, TDS: 100.00[0m
+[0;32mI (2523971) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 12.51, TDS: 100.00[0m
+[0;32mI (2527171) TB: Sent servo state: 0[0m
+[0;32mI (2532271) TB: Sent servo state: 0[0m
+[0;32mI (2534021) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2534021) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2537371) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2542471) TB: Sent servo state: 0[0m
+[0;32mI (2544071) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2544071) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2547571) TB: Sent servo state: 0[0m
+[0;32mI (2552671) TB: Sent servo state: 0[0m
+[0;32mI (2554131) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 10.74, TDS: 100.00[0m
+[0;32mI (2554131) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 10.74, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2557771) TB: Sent servo state: 0[0m
+[0;32mI (2562871) TB: Sent servo state: 0[0m
+[0;32mI (2564191) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 8.77, TDS: 100.00[0m
+[0;32mI (2564191) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 8.77, TDS: 100.00[0m
+[0;32mI (2567971) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2573071) TB: Sent servo state: 0[0m
+[0;32mI (2574241) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 10.59, TDS: 100.00[0m
+[0;32mI (2574241) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 10.59, TDS: 100.00[0m
+[0;32mI (2578171) TB: Sent servo state: 0[0m
+[0;32mI (2583271) TB: Sent servo state: 0[0m
+[0;32mI (2584291) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2584291) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2588371) TB: Sent servo state: 0[0m
+[0;32mI (2593471) TB: Sent servo state: 0[0m
+[0;32mI (2594341) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2594341) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2598571) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2603671) TB: Sent servo state: 0[0m
+[0;32mI (2604391) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.43, TDS: 100.00[0m
+[0;32mI (2604391) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.43, TDS: 100.00[0m
+[0;32mI (2608771) TB: Sent servo state: 0[0m
+[0;32mI (2613871) TB: Sent servo state: 0[0m
+[0;32mI (2614451) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2614451) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2618971) TB: Sent servo state: 0[0m
+[0;32mI (2624071) TB: Sent servo state: 0[0m
+[0;32mI (2624511) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 10.58, TDS: 100.00[0m
+[0;32mI (2624511) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 10.58, TDS: 100.00[0m
+[0;32mI (2629171) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2634271) TB: Sent servo state: 0[0m
+[0;32mI (2634561) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2634561) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2639371) TB: Sent servo state: 0[0m
+[0;32mI (2644471) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2644611) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.93, TDS: 100.00[0m
+[0;32mI (2644611) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.93, TDS: 100.00[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2649571) TB: Sent servo state: 0[0m
+[0;32mI (2654671) TB: Sent servo state: 0[0m
+[0;32mI (2654671) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2654681) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2659771) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2664731) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2664731) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2664871) TB: Sent servo state: 0[0m
+[0;32mI (2669971) TB: Sent servo state: 0[0m
+[0;32mI (2674791) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2674791) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2675071) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2680171) TB: Sent servo state: 0[0m
+[0;32mI (2684841) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2684841) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2685271) TB: Sent servo state: 0[0m
+[0;32mI (2690371) TB: Sent servo state: 0[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (2694891) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2694891) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2695471) TB: Sent servo state: 0[0m

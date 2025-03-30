@@ -1,0 +1,248 @@
+[1/15] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/ledc_hal_iram.c.obj
+FAILED: esp-idf/hal/CMakeFiles/__idf_hal.dir/ledc_hal_iram.c.obj 
+/home/thanhvo/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.4\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/thanhvo/User_space/thingsboard/build/config -I/home/thanhvo/esp/esp-idf/components/hal/platform_port/include -I/home/thanhvo/esp/esp-idf/components/hal/esp32/include -I/home/thanhvo/esp/esp-idf/components/hal/include -I/home/thanhvo/esp/esp-idf/components/newlib/platform_include -I/home/thanhvo/esp/esp-idf/components/freertos/config/include -I/home/thanhvo/esp/esp-idf/components/freertos/config/include/freertos -I/home/thanhvo/esp/esp-idf/components/freertos/config/xtensa/include -I/home/thanhvo/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/thanhvo/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/thanhvo/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/thanhvo/esp/esp-idf/components/freertos/esp_additions/include -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/include -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/include/soc -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/dma/include -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/port/esp32/include -I/home/thanhvo/esp/esp-idf/components/heap/include -I/home/thanhvo/esp/esp-idf/components/heap/tlsf -I/home/thanhvo/esp/esp-idf/components/log/include -I/home/thanhvo/esp/esp-idf/components/soc/include -I/home/thanhvo/esp/esp-idf/components/soc/esp32 -I/home/thanhvo/esp/esp-idf/components/soc/esp32/include -I/home/thanhvo/esp/esp-idf/components/soc/esp32/register -I/home/thanhvo/esp/esp-idf/components/esp_rom/include -I/home/thanhvo/esp/esp-idf/components/esp_rom/esp32/include -I/home/thanhvo/esp/esp-idf/components/esp_rom/esp32/include/esp32 -I/home/thanhvo/esp/esp-idf/components/esp_rom/esp32 -I/home/thanhvo/esp/esp-idf/components/esp_common/include -I/home/thanhvo/esp/esp-idf/components/esp_system/include -I/home/thanhvo/esp/esp-idf/components/esp_system/port/soc -I/home/thanhvo/esp/esp-idf/components/esp_system/port/include/private -I/home/thanhvo/esp/esp-idf/components/xtensa/esp32/include -I/home/thanhvo/esp/esp-idf/components/xtensa/include -I/home/thanhvo/esp/esp-idf/components/xtensa/deprecated_include -I/home/thanhvo/esp/esp-idf/components/lwip/include -I/home/thanhvo/esp/esp-idf/components/lwip/include/apps -I/home/thanhvo/esp/esp-idf/components/lwip/include/apps/sntp -I/home/thanhvo/esp/esp-idf/components/lwip/lwip/src/include -I/home/thanhvo/esp/esp-idf/components/lwip/port/include -I/home/thanhvo/esp/esp-idf/components/lwip/port/freertos/include -I/home/thanhvo/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/thanhvo/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/thanhvo/esp/esp-idf/components/lwip/port/esp32xx/include/sys -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/thanhvo/User_space/thingsboard=. -fmacro-prefix-map=/home/thanhvo/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/hal/CMakeFiles/__idf_hal.dir/ledc_hal_iram.c.obj -MF esp-idf/hal/CMakeFiles/__idf_hal.dir/ledc_hal_iram.c.obj.d -o esp-idf/hal/CMakeFiles/__idf_hal.dir/ledc_hal_iram.c.obj -c /home/thanhvo/esp/esp-idf/components/hal/ledc_hal_iram.c
+In file included from /home/thanhvo/esp/esp-idf/components/hal/include/hal/ledc_hal.h:19,
+                 from /home/thanhvo/esp/esp-idf/components/hal/ledc_hal_iram.c:10:
+/home/thanhvo/esp/esp-idf/components/hal/include/hal/ledc_types.h:17:10: fatal error: driver/ledc.h: No such file or directory
+   17 | #include "driver/ledc.h"
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+[2/15] Building C object esp-idf/hal/CMakeFiles/__idf_hal.dir/ledc_hal.c.obj
+FAILED: esp-idf/hal/CMakeFiles/__idf_hal.dir/ledc_hal.c.obj 
+/home/thanhvo/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.4\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/thanhvo/User_space/thingsboard/build/config -I/home/thanhvo/esp/esp-idf/components/hal/platform_port/include -I/home/thanhvo/esp/esp-idf/components/hal/esp32/include -I/home/thanhvo/esp/esp-idf/components/hal/include -I/home/thanhvo/esp/esp-idf/components/newlib/platform_include -I/home/thanhvo/esp/esp-idf/components/freertos/config/include -I/home/thanhvo/esp/esp-idf/components/freertos/config/include/freertos -I/home/thanhvo/esp/esp-idf/components/freertos/config/xtensa/include -I/home/thanhvo/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/thanhvo/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/thanhvo/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/thanhvo/esp/esp-idf/components/freertos/esp_additions/include -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/include -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/include/soc -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/dma/include -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/port/esp32/include -I/home/thanhvo/esp/esp-idf/components/heap/include -I/home/thanhvo/esp/esp-idf/components/heap/tlsf -I/home/thanhvo/esp/esp-idf/components/log/include -I/home/thanhvo/esp/esp-idf/components/soc/include -I/home/thanhvo/esp/esp-idf/components/soc/esp32 -I/home/thanhvo/esp/esp-idf/components/soc/esp32/include -I/home/thanhvo/esp/esp-idf/components/soc/esp32/register -I/home/thanhvo/esp/esp-idf/components/esp_rom/include -I/home/thanhvo/esp/esp-idf/components/esp_rom/esp32/include -I/home/thanhvo/esp/esp-idf/components/esp_rom/esp32/include/esp32 -I/home/thanhvo/esp/esp-idf/components/esp_rom/esp32 -I/home/thanhvo/esp/esp-idf/components/esp_common/include -I/home/thanhvo/esp/esp-idf/components/esp_system/include -I/home/thanhvo/esp/esp-idf/components/esp_system/port/soc -I/home/thanhvo/esp/esp-idf/components/esp_system/port/include/private -I/home/thanhvo/esp/esp-idf/components/xtensa/esp32/include -I/home/thanhvo/esp/esp-idf/components/xtensa/include -I/home/thanhvo/esp/esp-idf/components/xtensa/deprecated_include -I/home/thanhvo/esp/esp-idf/components/lwip/include -I/home/thanhvo/esp/esp-idf/components/lwip/include/apps -I/home/thanhvo/esp/esp-idf/components/lwip/include/apps/sntp -I/home/thanhvo/esp/esp-idf/components/lwip/lwip/src/include -I/home/thanhvo/esp/esp-idf/components/lwip/port/include -I/home/thanhvo/esp/esp-idf/components/lwip/port/freertos/include -I/home/thanhvo/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/thanhvo/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/thanhvo/esp/esp-idf/components/lwip/port/esp32xx/include/sys -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/thanhvo/User_space/thingsboard=. -fmacro-prefix-map=/home/thanhvo/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/hal/CMakeFiles/__idf_hal.dir/ledc_hal.c.obj -MF esp-idf/hal/CMakeFiles/__idf_hal.dir/ledc_hal.c.obj.d -o esp-idf/hal/CMakeFiles/__idf_hal.dir/ledc_hal.c.obj -c /home/thanhvo/esp/esp-idf/components/hal/ledc_hal.c
+In file included from /home/thanhvo/esp/esp-idf/components/hal/include/hal/ledc_hal.h:19,
+                 from /home/thanhvo/esp/esp-idf/components/hal/ledc_hal.c:9:
+/home/thanhvo/esp/esp-idf/components/hal/include/hal/ledc_types.h:17:10: fatal error: driver/ledc.h: No such file or directory
+   17 | #include "driver/ledc.h"
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+[3/15] Performing build step for 'bootloader'
+[1/1] cd /home/thanhvo/User_space/thingsboard/build/bootloader/esp-idf/esptool_py && /home/thanhvo/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/thanhvo/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/thanhvo/User_space/thingsboard/build/bootloader/bootloader.bin
+Bootloader binary size 0x6560 bytes. 0xaa0 bytes (9%) free.
+[4/13] Building C object esp-idf/esp_driver_ledc/CMakeFiles/__idf_esp_driver_ledc.dir/src/ledc.c.obj
+FAILED: esp-idf/esp_driver_ledc/CMakeFiles/__idf_esp_driver_ledc.dir/src/ledc.c.obj 
+/home/thanhvo/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.4\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/thanhvo/User_space/thingsboard/build/config -I/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include -I/home/thanhvo/esp/esp-idf/components/newlib/platform_include -I/home/thanhvo/esp/esp-idf/components/freertos/config/include -I/home/thanhvo/esp/esp-idf/components/freertos/config/include/freertos -I/home/thanhvo/esp/esp-idf/components/freertos/config/xtensa/include -I/home/thanhvo/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/thanhvo/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/thanhvo/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/thanhvo/esp/esp-idf/components/freertos/esp_additions/include -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/include -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/include/soc -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/dma/include -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/ldo/include -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/debug_probe/include -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/port/esp32/. -I/home/thanhvo/esp/esp-idf/components/esp_hw_support/port/esp32/include -I/home/thanhvo/esp/esp-idf/components/heap/include -I/home/thanhvo/esp/esp-idf/components/heap/tlsf -I/home/thanhvo/esp/esp-idf/components/log/include -I/home/thanhvo/esp/esp-idf/components/soc/include -I/home/thanhvo/esp/esp-idf/components/soc/esp32 -I/home/thanhvo/esp/esp-idf/components/soc/esp32/include -I/home/thanhvo/esp/esp-idf/components/soc/esp32/register -I/home/thanhvo/esp/esp-idf/components/hal/platform_port/include -I/home/thanhvo/esp/esp-idf/components/hal/esp32/include -I/home/thanhvo/esp/esp-idf/components/hal/include -I/home/thanhvo/esp/esp-idf/components/esp_rom/include -I/home/thanhvo/esp/esp-idf/components/esp_rom/esp32/include -I/home/thanhvo/esp/esp-idf/components/esp_rom/esp32/include/esp32 -I/home/thanhvo/esp/esp-idf/components/esp_rom/esp32 -I/home/thanhvo/esp/esp-idf/components/esp_common/include -I/home/thanhvo/esp/esp-idf/components/esp_system/include -I/home/thanhvo/esp/esp-idf/components/esp_system/port/soc -I/home/thanhvo/esp/esp-idf/components/esp_system/port/include/private -I/home/thanhvo/esp/esp-idf/components/xtensa/esp32/include -I/home/thanhvo/esp/esp-idf/components/xtensa/include -I/home/thanhvo/esp/esp-idf/components/xtensa/deprecated_include -I/home/thanhvo/esp/esp-idf/components/lwip/include -I/home/thanhvo/esp/esp-idf/components/lwip/include/apps -I/home/thanhvo/esp/esp-idf/components/lwip/include/apps/sntp -I/home/thanhvo/esp/esp-idf/components/lwip/lwip/src/include -I/home/thanhvo/esp/esp-idf/components/lwip/port/include -I/home/thanhvo/esp/esp-idf/components/lwip/port/freertos/include -I/home/thanhvo/esp/esp-idf/components/lwip/port/esp32xx/include -I/home/thanhvo/esp/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/thanhvo/esp/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/thanhvo/esp/esp-idf/components/esp_pm/include -I/home/thanhvo/esp/esp-idf/components/esp_driver_gpio/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/thanhvo/User_space/thingsboard=. -fmacro-prefix-map=/home/thanhvo/esp/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/esp_driver_ledc/CMakeFiles/__idf_esp_driver_ledc.dir/src/ledc.c.obj -MF esp-idf/esp_driver_ledc/CMakeFiles/__idf_esp_driver_ledc.dir/src/ledc.c.obj.d -o esp-idf/esp_driver_ledc/CMakeFiles/__idf_esp_driver_ledc.dir/src/ledc.c.obj -c /home/thanhvo/esp/esp-idf/components/esp_driver_ledc/src/ledc.c
+In file included from /home/thanhvo/esp/esp-idf/components/hal/include/hal/ledc_types.h:17,
+                 from /home/thanhvo/esp/esp-idf/components/hal/include/hal/ledc_hal.h:19,
+                 from /home/thanhvo/esp/esp-idf/components/esp_driver_ledc/src/ledc.c:17:
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:53:5: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+   53 |     ledc_mode_t speed_mode;         /*!< LEDC speed speed_mode, high-speed mode (only exists on esp32) or low-speed mode */
+      |     ^~~~~~~~~~~
+      |     ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:54:5: error: unknown type name 'ledc_channel_t'
+   54 |     ledc_channel_t channel;         /*!< LEDC channel (0 - LEDC_CHANNEL_MAX-1) */
+      |     ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:55:5: error: unknown type name 'ledc_intr_type_t'; did you mean 'gpio_int_type_t'?
+   55 |     ledc_intr_type_t intr_type;     /*!< configure interrupt, Fade interrupt enable  or Fade interrupt disable */
+      |     ^~~~~~~~~~~~~~~~
+      |     gpio_int_type_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:56:5: error: unknown type name 'ledc_timer_t'; did you mean 'ledc_dev_t'?
+   56 |     ledc_timer_t timer_sel;         /*!< Select the timer source of channel (0 - LEDC_TIMER_MAX-1) */
+      |     ^~~~~~~~~~~~
+      |     ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:70:5: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+   70 |     ledc_mode_t speed_mode;                /*!< LEDC speed speed_mode, high-speed mode (only exists on esp32) or low-speed mode */
+      |     ^~~~~~~~~~~
+      |     ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:71:5: error: unknown type name 'ledc_timer_bit_t'
+   71 |     ledc_timer_bit_t duty_resolution;      /*!< LEDC channel duty resolution */
+      |     ^~~~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:72:5: error: unknown type name 'ledc_timer_t'; did you mean 'ledc_dev_t'?
+   72 |     ledc_timer_t  timer_num;               /*!< The timer source of channel (0 - LEDC_TIMER_MAX-1) */
+      |     ^~~~~~~~~~~~
+      |     ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:74:5: error: unknown type name 'ledc_clk_cfg_t'
+   74 |     ledc_clk_cfg_t clk_cfg;                /*!< Configure LEDC source clock from ledc_clk_cfg_t.
+      |     ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:181:28: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  181 | esp_err_t ledc_update_duty(ledc_mode_t speed_mode, ledc_channel_t channel);
+      |                            ^~~~~~~~~~~
+      |                            ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:181:52: error: unknown type name 'ledc_channel_t'
+  181 | esp_err_t ledc_update_duty(ledc_mode_t speed_mode, ledc_channel_t channel);
+      |                                                    ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:197:38: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  197 | esp_err_t ledc_set_pin(int gpio_num, ledc_mode_t speed_mode, ledc_channel_t channel);
+      |                                      ^~~~~~~~~~~
+      |                                      ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:197:62: error: unknown type name 'ledc_channel_t'
+  197 | esp_err_t ledc_set_pin(int gpio_num, ledc_mode_t speed_mode, ledc_channel_t channel);
+      |                                                              ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:215:21: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  215 | esp_err_t ledc_stop(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t idle_level);
+      |                     ^~~~~~~~~~~
+      |                     ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:215:45: error: unknown type name 'ledc_channel_t'
+  215 | esp_err_t ledc_stop(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t idle_level);
+      |                                             ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:229:25: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  229 | esp_err_t ledc_set_freq(ledc_mode_t speed_mode, ledc_timer_t timer_num, uint32_t freq_hz);
+      |                         ^~~~~~~~~~~
+      |                         ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:229:49: error: unknown type name 'ledc_timer_t'; did you mean 'ledc_dev_t'?
+  229 | esp_err_t ledc_set_freq(ledc_mode_t speed_mode, ledc_timer_t timer_num, uint32_t freq_hz);
+      |                                                 ^~~~~~~~~~~~
+      |                                                 ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:241:24: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  241 | uint32_t ledc_get_freq(ledc_mode_t speed_mode, ledc_timer_t timer_num);
+      |                        ^~~~~~~~~~~
+      |                        ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:241:48: error: unknown type name 'ledc_timer_t'; did you mean 'ledc_dev_t'?
+  241 | uint32_t ledc_get_freq(ledc_mode_t speed_mode, ledc_timer_t timer_num);
+      |                                                ^~~~~~~~~~~~
+      |                                                ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:262:37: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  262 | esp_err_t ledc_set_duty_with_hpoint(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t duty, uint32_t hpoint);
+      |                                     ^~~~~~~~~~~
+      |                                     ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:262:61: error: unknown type name 'ledc_channel_t'
+  262 | esp_err_t ledc_set_duty_with_hpoint(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t duty, uint32_t hpoint);
+      |                                                             ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:274:21: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  274 | int ledc_get_hpoint(ledc_mode_t speed_mode, ledc_channel_t channel);
+      |                     ^~~~~~~~~~~
+      |                     ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:274:45: error: unknown type name 'ledc_channel_t'
+  274 | int ledc_get_hpoint(ledc_mode_t speed_mode, ledc_channel_t channel);
+      |                                             ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:295:25: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  295 | esp_err_t ledc_set_duty(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t duty);
+      |                         ^~~~~~~~~~~
+      |                         ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:295:49: error: unknown type name 'ledc_channel_t'
+  295 | esp_err_t ledc_set_duty(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t duty);
+      |                                                 ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:310:24: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  310 | uint32_t ledc_get_duty(ledc_mode_t speed_mode, ledc_channel_t channel);
+      |                        ^~~~~~~~~~~
+      |                        ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:310:48: error: unknown type name 'ledc_channel_t'
+  310 | uint32_t ledc_get_duty(ledc_mode_t speed_mode, ledc_channel_t channel);
+      |                                                ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:331:25: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  331 | esp_err_t ledc_set_fade(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t duty, ledc_duty_direction_t fade_direction,
+      |                         ^~~~~~~~~~~
+      |                         ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:331:49: error: unknown type name 'ledc_channel_t'
+  331 | esp_err_t ledc_set_fade(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t duty, ledc_duty_direction_t fade_direction,
+      |                                                 ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:331:88: error: unknown type name 'ledc_duty_direction_t'
+  331 | esp_err_t ledc_set_fade(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t duty, ledc_duty_direction_t fade_direction,
+      |                                                                                        ^~~~~~~~~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:365:26: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  365 | esp_err_t ledc_timer_set(ledc_mode_t speed_mode, ledc_timer_t timer_sel, uint32_t clock_divider, uint32_t duty_resolution, ledc_clk_src_t clk_src);
+      |                          ^~~~~~~~~~~
+      |                          ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:365:50: error: unknown type name 'ledc_timer_t'; did you mean 'ledc_dev_t'?
+  365 | esp_err_t ledc_timer_set(ledc_mode_t speed_mode, ledc_timer_t timer_sel, uint32_t clock_divider, uint32_t duty_resolution, ledc_clk_src_t clk_src);
+      |                                                  ^~~~~~~~~~~~
+      |                                                  ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:365:124: error: unknown type name 'ledc_clk_src_t'; did you mean 'ledc_cbs_t'?
+  365 | esp_err_t ledc_timer_set(ledc_mode_t speed_mode, ledc_timer_t timer_sel, uint32_t clock_divider, uint32_t duty_resolution, ledc_clk_src_t clk_src);
+      |                                                                                                                            ^~~~~~~~~~~~~~
+      |                                                                                                                            ledc_cbs_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:377:26: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  377 | esp_err_t ledc_timer_rst(ledc_mode_t speed_mode, ledc_timer_t timer_sel);
+      |                          ^~~~~~~~~~~
+      |                          ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:377:50: error: unknown type name 'ledc_timer_t'; did you mean 'ledc_dev_t'?
+  377 | esp_err_t ledc_timer_rst(ledc_mode_t speed_mode, ledc_timer_t timer_sel);
+      |                                                  ^~~~~~~~~~~~
+      |                                                  ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:389:28: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  389 | esp_err_t ledc_timer_pause(ledc_mode_t speed_mode, ledc_timer_t timer_sel);
+      |                            ^~~~~~~~~~~
+      |                            ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:389:52: error: unknown type name 'ledc_timer_t'; did you mean 'ledc_dev_t'?
+  389 | esp_err_t ledc_timer_pause(ledc_mode_t speed_mode, ledc_timer_t timer_sel);
+      |                                                    ^~~~~~~~~~~~
+      |                                                    ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:401:29: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  401 | esp_err_t ledc_timer_resume(ledc_mode_t speed_mode, ledc_timer_t timer_sel);
+      |                             ^~~~~~~~~~~
+      |                             ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:401:53: error: unknown type name 'ledc_timer_t'; did you mean 'ledc_dev_t'?
+  401 | esp_err_t ledc_timer_resume(ledc_mode_t speed_mode, ledc_timer_t timer_sel);
+      |                                                     ^~~~~~~~~~~~
+      |                                                     ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:414:35: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  414 | esp_err_t ledc_bind_channel_timer(ledc_mode_t speed_mode, ledc_channel_t channel, ledc_timer_t timer_sel);
+      |                                   ^~~~~~~~~~~
+      |                                   ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:414:59: error: unknown type name 'ledc_channel_t'
+  414 | esp_err_t ledc_bind_channel_timer(ledc_mode_t speed_mode, ledc_channel_t channel, ledc_timer_t timer_sel);
+      |                                                           ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:414:83: error: unknown type name 'ledc_timer_t'; did you mean 'ledc_dev_t'?
+  414 | esp_err_t ledc_bind_channel_timer(ledc_mode_t speed_mode, ledc_channel_t channel, ledc_timer_t timer_sel);
+      |                                                                                   ^~~~~~~~~~~~
+      |                                                                                   ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:439:35: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  439 | esp_err_t ledc_set_fade_with_step(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t target_duty, uint32_t scale, uint32_t cycle_num);
+      |                                   ^~~~~~~~~~~
+      |                                   ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:439:59: error: unknown type name 'ledc_channel_t'
+  439 | esp_err_t ledc_set_fade_with_step(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t target_duty, uint32_t scale, uint32_t cycle_num);
+      |                                                           ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:463:35: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  463 | esp_err_t ledc_set_fade_with_time(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t target_duty, int max_fade_time_ms);
+      |                                   ^~~~~~~~~~~
+      |                                   ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:463:59: error: unknown type name 'ledc_channel_t'
+  463 | esp_err_t ledc_set_fade_with_time(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t target_duty, int max_fade_time_ms);
+      |                                                           ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:503:27: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  503 | esp_err_t ledc_fade_start(ledc_mode_t speed_mode, ledc_channel_t channel, ledc_fade_mode_t fade_mode);
+      |                           ^~~~~~~~~~~
+      |                           ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:503:51: error: unknown type name 'ledc_channel_t'
+  503 | esp_err_t ledc_fade_start(ledc_mode_t speed_mode, ledc_channel_t channel, ledc_fade_mode_t fade_mode);
+      |                                                   ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:503:75: error: unknown type name 'ledc_fade_mode_t'; did you mean 'ledc_sleep_mode_t'?
+  503 | esp_err_t ledc_fade_start(ledc_mode_t speed_mode, ledc_channel_t channel, ledc_fade_mode_t fade_mode);
+      |                                                                           ^~~~~~~~~~~~~~~~
+      |                                                                           ledc_sleep_mode_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:542:36: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  542 | esp_err_t ledc_set_duty_and_update(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t duty, uint32_t hpoint);
+      |                                    ^~~~~~~~~~~
+      |                                    ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:542:60: error: unknown type name 'ledc_channel_t'
+  542 | esp_err_t ledc_set_duty_and_update(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t duty, uint32_t hpoint);
+      |                                                            ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:563:40: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  563 | esp_err_t ledc_set_fade_time_and_start(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t target_duty, uint32_t max_fade_time_ms, ledc_fade_mode_t fade_mode);
+      |                                        ^~~~~~~~~~~
+      |                                        ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:563:64: error: unknown type name 'ledc_channel_t'
+  563 | esp_err_t ledc_set_fade_time_and_start(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t target_duty, uint32_t max_fade_time_ms, ledc_fade_mode_t fade_mode);
+      |                                                                ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:563:137: error: unknown type name 'ledc_fade_mode_t'; did you mean 'ledc_sleep_mode_t'?
+  563 | esp_err_t ledc_set_fade_time_and_start(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t target_duty, uint32_t max_fade_time_ms, ledc_fade_mode_t fade_mode);
+      |                                                                                                                                         ^~~~~~~~~~~~~~~~
+      |                                                                                                                                         ledc_sleep_mode_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:585:40: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  585 | esp_err_t ledc_set_fade_step_and_start(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t target_duty, uint32_t scale, uint32_t cycle_num, ledc_fade_mode_t fade_mode);
+      |                                        ^~~~~~~~~~~
+      |                                        ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:585:64: error: unknown type name 'ledc_channel_t'
+  585 | esp_err_t ledc_set_fade_step_and_start(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t target_duty, uint32_t scale, uint32_t cycle_num, ledc_fade_mode_t fade_mode);
+      |                                                                ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:585:146: error: unknown type name 'ledc_fade_mode_t'; did you mean 'ledc_sleep_mode_t'?
+  585 | esp_err_t ledc_set_fade_step_and_start(ledc_mode_t speed_mode, ledc_channel_t channel, uint32_t target_duty, uint32_t scale, uint32_t cycle_num, ledc_fade_mode_t fade_mode);
+      |                                                                                                                                                  ^~~~~~~~~~~~~~~~
+      |                                                                                                                                                  ledc_sleep_mode_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:603:28: error: unknown type name 'ledc_mode_t'; did you mean 'ledc_dev_t'?
+  603 | esp_err_t ledc_cb_register(ledc_mode_t speed_mode, ledc_channel_t channel, ledc_cbs_t *cbs, void *user_arg);
+      |                            ^~~~~~~~~~~
+      |                            ledc_dev_t
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/include/driver/ledc.h:603:52: error: unknown type name 'ledc_channel_t'
+  603 | esp_err_t ledc_cb_register(ledc_mode_t speed_mode, ledc_channel_t channel, ledc_cbs_t *cbs, void *user_arg);
+      |                                                    ^~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/src/ledc.c: In function 'ledc_channel_config':
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/src/ledc.c:875:5: error: implicit declaration of function 'ledc_set_duty_with_hpoint' [-Wimplicit-function-declaration]
+  875 |     ledc_set_duty_with_hpoint(speed_mode, ledc_channel, duty, hpoint);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/thanhvo/esp/esp-idf/components/esp_driver_ledc/src/ledc.c:877:5: error: implicit declaration of function 'ledc_update_duty'; did you mean 'ledc_ll_get_duty'? [-Wimplicit-function-declaration]
+  877 |     ledc_update_duty(speed_mode, ledc_channel);
+      |     ^~~~~~~~~~~~~~~~
+      |     ledc_ll_get_duty
+ninja: build stopped: subcommand failed.

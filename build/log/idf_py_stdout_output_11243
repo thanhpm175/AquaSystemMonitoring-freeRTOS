@@ -1,0 +1,1886 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15716
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 29 2025 16:37:54[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f30ch (127756) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002f334 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (134) esp_image: segment 2: paddr=0002f358 vaddr=3ffb0000 size=00cc0h (  3264) load[0m
+[0;32mI (139) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=a2dc4h (667076) map[0m
+[0;32mI (373) esp_image: segment 4: paddr=000d2dec vaddr=3ffb0cc0 size=03310h ( 13072) load[0m
+[0;32mI (378) esp_image: segment 5: paddr=000d6104 vaddr=40080000 size=17a98h ( 96920) load[0m
+[0;32mI (427) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (427) boot: Disabling RNG early entropy source...[0m
+[0;32mI (437) cpu_start: Multicore app[0m
+[0;32mI (446) cpu_start: Pro cpu start user code[0m
+[0;32mI (446) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (446) app_init: Application information:[0m
+[0;32mI (446) app_init: Project name:     thingsboard[0m
+[0;32mI (450) app_init: App version:      1[0m
+[0;32mI (454) app_init: Compile time:     Mar 29 2025 16:37:45[0m
+[0;32mI (459) app_init: ELF file SHA256:  b41b866f2...[0m
+[0;32mI (463) app_init: ESP-IDF:          v5.4[0m
+[0;32mI (467) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (470) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (474) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (478) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (485) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (490) heap_init: At 3FFB8C18 len 000273E8 (156 KiB): DRAM[0m
+[0;32mI (495) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (500) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (506) heap_init: At 40097A98 len 00008568 (33 KiB): IRAM[0m
+[0;32mI (512) spi_flash: detected chip: generic[0m
+[0;32mI (515) spi_flash: flash io: dio[0m
+[0;33mW (518) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (530) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (539) main_task: Started on CPU0[0m
+[0;32mI (549) main_task: Calling app_main()[0m
+[0;32mI (549) MAIN: [APP] Startup..[0m
+[0;32mI (549) MAIN: [APP] Free memory: 276008 bytes[0m
+[0;32mI (549) MAIN: [APP] IDF version: v5.4[0m
+[0;32mI (569) MAIN: Servo initialized[0m
+[0;32mI (569) WIFI: Starting WiFi task[0m
+[0;32mI (569) MAIN: Initializing WiFi...[0m
+[0;32mI (579) TB: Starting ThingsBoard task[0m
+[0;32mI (579) SENSOR: Starting sensor task[0m
+[0;32mI (589) wifi:wifi driver task: 3ffc1ae4, prio:23, stack:6656, core=0[0m
+[0;32mI (599) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (599) wifi:wifi certification version: v7.0[0m
+[0;32mI (599) wifi:config NVS flash: enabled[0m
+[0;32mI (599) wifi:config nano formatting: disabled[0m
+[0;32mI (599) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (609) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (609) wifi:Init management short buffer num: 32[0m
+[0;32mI (619) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (619) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (629) wifi:Init static rx buffer num: 10[0m
+[0;32mI (629) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (629) wifi_init: rx ba win: 6[0m
+[0;32mI (639) wifi_init: accept mbox: 6[0m
+[0;32mI (639) wifi_init: tcpip mbox: 32[0m
+[0;32mI (639) wifi_init: udp mbox: 6[0m
+[0;32mI (649) wifi_init: tcpmbox: 6[0m
+[0;32mI (649) wifi_init: tcp tx win: 5760[0m
+[0;32mI (649) wifi_init: tcp rx win: 5760[0m
+[0;32mI (649) wifi_init: tcp mss: 1440[0m
+[0;32mI (659) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (659) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (669) MAIN: Connecting to WiFi SSID: NHATRO BM T1S[0m
+[0;33mW (669) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (679) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (769) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (769) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 7.20, TDS: 100.00[0m
+[0;32mI (769) SERVO: Starting servo task[0m
+[0;32mI (789) wifi:mode : sta (08:d1:f9:26:7e:34)[0m
+[0;32mI (789) wifi:enable tsf[0m
+[0;32mI (799) MAIN: WiFi initialization completed[0m
+[0;32mI (799) WIFI: Waiting for WiFi connection...[0m
+[0;32mI (1059) wifi:new:<5,0>, old:<1,0>, ap:<255,255>, sta:<5,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1059) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1059) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1069) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1179) wifi:connected with NHATRO BM T1S, aid = 1, channel 5, BW20, bssid = c4:70:ab:86:49:3b[0m
+[0;32mI (1179) wifi:security: WPA2-PSK, phy: bgn, rssi: -50[0m
+[0;32mI (1179) wifi:pm start, type: 1[0m
+
+[0;32mI (1189) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1209) wifi:<ba-add>idx:0 (ifx:0, c4:70:ab:86:49:3b), tid:0, ssn:1, winSize:64[0m
+[0;32mI (1219) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1799) WIFI: Waiting for WiFi connection...[0m
+[0;32mI (2219) esp_netif_handlers: sta ip: 192.168.110.169, mask: 255.255.255.0, gw: 192.168.110.1[0m
+[0;32mI (2579) TB: Connecting to ThingsBoard server: 192.168.110.126 with token: koPUeob0V2iGJO646g2B[0m
+[0;32mI (2579) TB: Connected to ThingsBoard server successfully[0m
+[0;32mI (2579) TB: Registered RPC handler for: setServoState[0m
+[0;32mI (2639) wifi:<ba-add>idx:1 (ifx:0, c4:70:ab:86:49:3b), tid:7, ssn:4, winSize:64[0m
+[0;32mI (2679) TB: Connecting to ThingsBoard server: 192.168.110.126 with token: koPUeob0V2iGJO646g2B[0m
+[0;32mI (2689) mqtt_client: Client force reconnect requested[0m
+[TB] Connecting to server failed
+[1;31mE (2689) TB: Failed to connect to ThingsBoard server[0m
+[0;32mI (7689) TB: Sent servo state: 0[0m
+[0;32mI (10809) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (10809) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (12789) TB: Sent servo state: 0[0m
+[0;32mI (17889) TB: Sent servo state: 0[0m
+[0;32mI (20869) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (20869) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (22989) TB: Sent servo state: 0[0m
+[0;32mI (28089) TB: Sent servo state: 0[0m
+[0;32mI (30919) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.30, TDS: 100.00[0m
+[0;32mI (30919) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.30, TDS: 100.00[0m
+[0;32mI (33189) TB: Sent servo state: 0[0m
+[0;32mI (38289) TB: Sent servo state: 0[0m
+[0;32mI (40979) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (40979) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (43389) TB: Sent servo state: 0[0m
+[0;32mI (48489) TB: Sent servo state: 0[0m
+[0;32mI (51039) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (51039) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (53589) TB: Sent servo state: 0[0m
+[0;32mI (58689) TB: Sent servo state: 0[0m
+[0;32mI (61089) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.87, TDS: 100.00[0m
+[0;32mI (61089) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.87, TDS: 100.00[0m
+[0;32mI (63789) TB: Sent servo state: 0[0m
+[0;32mI (68889) TB: Sent servo state: 0[0m
+[0;32mI (71149) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (71149) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (73989) TB: Sent servo state: 0[0m
+[0;32mI (79089) TB: Sent servo state: 0[0m
+[0;32mI (81209) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 12.71, TDS: 100.00[0m
+[0;32mI (81209) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 12.71, TDS: 100.00[0m
+[0;32mI (84189) TB: Sent servo state: 0[0m
+[0;32mI (89289) TB: Sent servo state: 0[0m
+[0;32mI (91259) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (91259) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (94389) TB: Sent servo state: 0[0m
+[0;32mI (99489) TB: Sent servo state: 0[0m
+[0;32mI (101309) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (101309) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (104589) TB: Sent servo state: 0[0m
+[0;32mI (109689) TB: Sent servo state: 0[0m
+[0;32mI (111359) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 9.58, TDS: 100.00[0m
+[0;32mI (111359) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 9.58, TDS: 100.00[0m
+[0;32mI (114789) TB: Sent servo state: 0[0m
+[0;32mI (119889) TB: Sent servo state: 0[0m
+[0;32mI (121419) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (121419) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (124989) TB: Sent servo state: 0[0m
+[0;32mI (130089) TB: Sent servo state: 0[0m
+[0;32mI (131479) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (131479) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (135189) TB: Sent servo state: 0[0m
+[0;32mI (140289) TB: Sent servo state: 0[0m
+[0;32mI (141539) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (141539) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (145389) TB: Sent servo state: 0[0m
+[0;32mI (150489) TB: Sent servo state: 0[0m
+[0;32mI (151599) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 4.17, TDS: 100.00[0m
+[0;32mI (151599) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 4.17, TDS: 100.00[0m
+[0;32mI (155589) TB: Sent servo state: 0[0m
+[0;32mI (160689) TB: Sent servo state: 0[0m
+[0;32mI (161649) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.89, TDS: 100.00[0m
+[0;32mI (161649) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.89, TDS: 100.00[0m
+[0;32mI (165789) TB: Sent servo state: 0[0m
+[0;32mI (170889) TB: Sent servo state: 0[0m
+[0;32mI (171699) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (171699) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (175989) TB: Sent servo state: 0[0m
+[0;32mI (181089) TB: Sent servo state: 0[0m
+[0;32mI (181759) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.06, TDS: 100.00[0m
+[0;32mI (181759) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.06, TDS: 100.00[0m
+[0;32mI (186189) TB: Sent servo state: 0[0m
+[0;32mI (191289) TB: Sent servo state: 0[0m
+[0;32mI (191809) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.46, TDS: 100.00[0m
+[0;32mI (191809) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.46, TDS: 100.00[0m
+[0;32mI (196389) TB: Sent servo state: 0[0m
+[0;32mI (201489) TB: Sent servo state: 0[0m
+[0;32mI (201859) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.20, TDS: 100.00[0m
+[0;32mI (201859) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.20, TDS: 100.00[0m
+[0;32mI (206589) TB: Sent servo state: 0[0m
+[0;32mI (211689) TB: Sent servo state: 0[0m
+[0;32mI (211909) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (211909) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (216789) TB: Sent servo state: 0[0m
+[0;32mI (221889) TB: Sent servo state: 0[0m
+[0;32mI (221959) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (221959) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (226989) TB: Sent servo state: 0[0m
+[0;32mI (232009) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (232009) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (232089) TB: Sent servo state: 0[0m
+[0;32mI (237189) TB: Sent servo state: 0[0m
+[0;32mI (242069) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (242069) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (242289) TB: Sent servo state: 0[0m
+[0;32mI (247389) TB: Sent servo state: 0[0m
+[0;32mI (252119) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (252119) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (252489) TB: Sent servo state: 0[0m
+[0;32mI (257589) TB: Sent servo state: 0[0m
+[0;32mI (262179) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.68, TDS: 100.00[0m
+[0;32mI (262179) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.68, TDS: 100.00[0m
+[0;32mI (262689) TB: Sent servo state: 0[0m
+[0;32mI (267789) TB: Sent servo state: 0[0m
+[0;32mI (272229) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (272229) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (272889) TB: Sent servo state: 0[0m
+[0;32mI (277989) TB: Sent servo state: 0[0m
+[0;32mI (282289) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.82, TDS: 100.00[0m
+[0;32mI (282289) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.82, TDS: 100.00[0m
+[0;32mI (283089) TB: Sent servo state: 0[0m
+[0;32mI (288189) TB: Sent servo state: 0[0m
+[0;32mI (292349) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.93, TDS: 100.00[0m
+[0;32mI (292349) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.93, TDS: 100.00[0m
+[0;32mI (293289) TB: Sent servo state: 0[0m
+[0;32mI (298389) TB: Sent servo state: 0[0m
+[0;32mI (302409) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (302409) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (303489) TB: Sent servo state: 0[0m
+[0;32mI (308589) TB: Sent servo state: 0[0m
+[0;32mI (312459) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (312459) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (313689) TB: Sent servo state: 0[0m
+[0;32mI (318789) TB: Sent servo state: 0[0m
+[0;32mI (322509) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (322509) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (323889) TB: Sent servo state: 0[0m
+[0;32mI (328989) TB: Sent servo state: 0[0m
+[0;32mI (332559) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.94, TDS: 100.00[0m
+[0;32mI (332559) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.94, TDS: 100.00[0m
+[0;32mI (334089) TB: Sent servo state: 0[0m
+[0;32mI (339189) TB: Sent servo state: 0[0m
+[0;32mI (342619) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (342619) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (344289) TB: Sent servo state: 0[0m
+[0;32mI (349389) TB: Sent servo state: 0[0m
+[0;32mI (352669) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.70, TDS: 100.00[0m
+[0;32mI (352669) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.70, TDS: 100.00[0m
+[0;32mI (354489) TB: Sent servo state: 0[0m
+[0;32mI (359589) TB: Sent servo state: 0[0m
+[0;32mI (362729) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (362729) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (364689) TB: Sent servo state: 0[0m
+[0;32mI (369789) TB: Sent servo state: 0[0m
+[0;32mI (372789) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (372789) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (374889) TB: Sent servo state: 0[0m
+[0;32mI (379989) TB: Sent servo state: 0[0m
+[0;32mI (382839) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.85, TDS: 100.00[0m
+[0;32mI (382839) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.85, TDS: 100.00[0m
+[0;32mI (385089) TB: Sent servo state: 0[0m
+[0;32mI (390189) TB: Sent servo state: 0[0m
+[0;32mI (392899) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.62, TDS: 100.00[0m
+[0;32mI (392899) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.62, TDS: 100.00[0m
+[0;32mI (395289) TB: Sent servo state: 0[0m
+[0;32mI (400389) TB: Sent servo state: 0[0m
+[0;32mI (402959) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (402959) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (405489) TB: Sent servo state: 0[0m
+[0;32mI (410589) TB: Sent servo state: 0[0m
+[0;32mI (413009) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (413009) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (415689) TB: Sent servo state: 0[0m
+[0;32mI (420789) TB: Sent servo state: 0[0m
+[0;32mI (423059) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (423059) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (425889) TB: Sent servo state: 0[0m
+[0;32mI (430989) TB: Sent servo state: 0[0m
+[0;32mI (433109) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (433109) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (436089) TB: Sent servo state: 0[0m
+[0;32mI (441189) TB: Sent servo state: 0[0m
+[0;32mI (443169) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (443169) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (446289) TB: Sent servo state: 0[0m
+[0;32mI (451389) TB: Sent servo state: 0[0m
+[0;32mI (453229) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 7.00, TDS: 100.00[0m
+[0;32mI (453229) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 7.00, TDS: 100.00[0m
+[0;32mI (456489) TB: Sent servo state: 0[0m
+[0;32mI (461589) TB: Sent servo state: 0[0m
+[0;32mI (463289) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (463289) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (466689) TB: Sent servo state: 0[0m
+[0;32mI (471789) TB: Sent servo state: 0[0m
+[0;32mI (473349) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 9.46, TDS: 100.00[0m
+[0;32mI (473349) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 9.46, TDS: 100.00[0m
+[0;32mI (476889) TB: Sent servo state: 0[0m
+[0;32mI (481989) TB: Sent servo state: 0[0m
+[0;32mI (483409) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (483409) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (487089) TB: Sent servo state: 0[0m
+[0;32mI (492189) TB: Sent servo state: 0[0m
+[0;32mI (493469) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (493469) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (497289) TB: Sent servo state: 0[0m
+[0;32mI (502389) TB: Sent servo state: 0[0m
+[0;32mI (503529) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (503529) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (507489) TB: Sent servo state: 0[0m
+[0;32mI (512589) TB: Sent servo state: 0[0m
+[0;32mI (513579) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (513579) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (517689) TB: Sent servo state: 0[0m
+[0;32mI (522789) TB: Sent servo state: 0[0m
+[0;32mI (523629) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.76, TDS: 100.00[0m
+[0;32mI (523629) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.76, TDS: 100.00[0m
+[0;32mI (527889) TB: Sent servo state: 0[0m
+[0;32mI (532989) TB: Sent servo state: 0[0m
+[0;32mI (533679) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (533679) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (538089) TB: Sent servo state: 0[0m
+[0;32mI (543189) TB: Sent servo state: 0[0m
+[0;32mI (543739) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (543739) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (548289) TB: Sent servo state: 0[0m
+[0;32mI (553389) TB: Sent servo state: 0[0m
+[0;32mI (553789) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (553789) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (558489) TB: Sent servo state: 0[0m
+[0;32mI (563589) TB: Sent servo state: 0[0m
+[0;32mI (563839) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (563839) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (568689) TB: Sent servo state: 0[0m
+[0;32mI (573789) TB: Sent servo state: 0[0m
+[0;32mI (573889) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (573889) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (578889) TB: Sent servo state: 0[0m
+[0;32mI (583939) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (583939) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (583989) TB: Sent servo state: 0[0m
+[0;32mI (589089) TB: Sent servo state: 0[0m
+[0;32mI (593999) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (593999) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (594189) TB: Sent servo state: 0[0m
+[0;32mI (599289) TB: Sent servo state: 0[0m
+[0;32mI (604059) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (604059) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (604389) TB: Sent servo state: 0[0m
+[0;32mI (609489) TB: Sent servo state: 0[0m
+[0;32mI (614119) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (614119) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (614589) TB: Sent servo state: 0[0m
+[0;32mI (619689) TB: Sent servo state: 0[0m
+[0;32mI (624169) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.91, TDS: 100.00[0m
+[0;32mI (624169) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.91, TDS: 100.00[0m
+[0;32mI (624789) TB: Sent servo state: 0[0m
+[0;32mI (629889) TB: Sent servo state: 0[0m
+[0;32mI (634219) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (634219) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (634989) TB: Sent servo state: 0[0m
+[0;32mI (640089) TB: Sent servo state: 0[0m
+[0;32mI (644269) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (644269) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (645189) TB: Sent servo state: 0[0m
+[0;32mI (650289) TB: Sent servo state: 0[0m
+[0;32mI (654319) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (654319) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (655389) TB: Sent servo state: 0[0m
+[0;32mI (660489) TB: Sent servo state: 0[0m
+[0;32mI (664379) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 12.22, TDS: 100.00[0m
+[0;32mI (664379) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 12.22, TDS: 100.00[0m
+[0;32mI (665589) TB: Sent servo state: 0[0m
+[0;32mI (670689) TB: Sent servo state: 0[0m
+[0;32mI (674439) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (674439) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (675789) TB: Sent servo state: 0[0m
+[0;32mI (680889) TB: Sent servo state: 0[0m
+[0;32mI (684489) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 4.59, TDS: 100.00[0m
+[0;32mI (684489) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 4.59, TDS: 100.00[0m
+[0;32mI (685989) TB: Sent servo state: 0[0m
+[0;32mI (691089) TB: Sent servo state: 0[0m
+[0;32mI (694539) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (694539) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (696189) TB: Sent servo state: 0[0m
+[0;32mI (701289) TB: Sent servo state: 0[0m
+[0;32mI (704589) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (704589) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (706389) TB: Sent servo state: 0[0m
+[0;32mI (711489) TB: Sent servo state: 0[0m
+[0;32mI (714649) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.72, TDS: 100.00[0m
+[0;32mI (714649) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.72, TDS: 100.00[0m
+[0;32mI (716589) TB: Sent servo state: 0[0m
+[0;32mI (721689) TB: Sent servo state: 0[0m
+[0;32mI (724709) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (724709) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (726789) TB: Sent servo state: 0[0m
+[0;32mI (731889) TB: Sent servo state: 0[0m
+[0;32mI (734759) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (734759) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (736989) TB: Sent servo state: 0[0m
+[0;32mI (742089) TB: Sent servo state: 0[0m
+[0;32mI (744809) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.96, TDS: 100.00[0m
+[0;32mI (744809) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.96, TDS: 100.00[0m
+[0;32mI (747189) TB: Sent servo state: 0[0m
+[0;32mI (752289) TB: Sent servo state: 0[0m
+[0;32mI (754859) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (754859) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (757389) TB: Sent servo state: 0[0m
+[0;32mI (762489) TB: Sent servo state: 0[0m
+[0;32mI (764919) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (764919) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (767589) TB: Sent servo state: 0[0m
+[0;32mI (772689) TB: Sent servo state: 0[0m
+[0;32mI (774969) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 8.83, TDS: 100.00[0m
+[0;32mI (774969) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 8.83, TDS: 100.00[0m
+[0;32mI (777789) TB: Sent servo state: 0[0m
+[0;32mI (782889) TB: Sent servo state: 0[0m
+[0;32mI (785029) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (785029) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (787989) TB: Sent servo state: 0[0m
+[0;32mI (793089) TB: Sent servo state: 0[0m
+[0;32mI (795079) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (795079) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (798189) TB: Sent servo state: 0[0m
+[0;32mI (803289) TB: Sent servo state: 0[0m
+[0;32mI (805139) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.19, TDS: 100.00[0m
+[0;32mI (805139) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.19, TDS: 100.00[0m
+[0;32mI (808389) TB: Sent servo state: 0[0m
+[0;32mI (813489) TB: Sent servo state: 0[0m
+[0;32mI (815199) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (815199) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (818589) TB: Sent servo state: 0[0m
+[0;32mI (823689) TB: Sent servo state: 0[0m
+[0;32mI (825249) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.21, TDS: 100.00[0m
+[0;32mI (825249) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.21, TDS: 100.00[0m
+[0;32mI (828789) TB: Sent servo state: 0[0m
+[0;32mI (833889) TB: Sent servo state: 0[0m
+[0;32mI (835309) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 4.59, TDS: 100.00[0m
+[0;32mI (835309) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 4.59, TDS: 100.00[0m
+[0;32mI (838989) TB: Sent servo state: 0[0m
+[0;32mI (844089) TB: Sent servo state: 0[0m
+[0;32mI (845359) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (845359) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (849189) TB: Sent servo state: 0[0m
+[0;32mI (854289) TB: Sent servo state: 0[0m
+[0;32mI (855419) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 8.69, TDS: 100.00[0m
+[0;32mI (855419) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 8.69, TDS: 100.00[0m
+[0;32mI (859389) TB: Sent servo state: 0[0m
+[0;32mI (864489) TB: Sent servo state: 0[0m
+[0;32mI (865469) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.64, TDS: 100.00[0m
+[0;32mI (865469) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.64, TDS: 100.00[0m
+[0;32mI (869589) TB: Sent servo state: 0[0m
+[0;32mI (874689) TB: Sent servo state: 0[0m
+[0;32mI (875519) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (875519) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (879789) TB: Sent servo state: 0[0m
+[0;32mI (884889) TB: Sent servo state: 0[0m
+[0;32mI (885579) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.08, TDS: 100.00[0m
+[0;32mI (885579) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.08, TDS: 100.00[0m
+[0;32mI (889989) TB: Sent servo state: 0[0m
+[0;32mI (895089) TB: Sent servo state: 0[0m
+[0;32mI (895629) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 12.31, TDS: 100.00[0m
+[0;32mI (895629) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 12.31, TDS: 100.00[0m
+[0;32mI (900189) TB: Sent servo state: 0[0m
+[0;32mI (905289) TB: Sent servo state: 0[0m
+[0;32mI (905679) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.05, TDS: 100.00[0m
+[0;32mI (905679) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.05, TDS: 100.00[0m
+[0;32mI (910389) TB: Sent servo state: 0[0m
+[0;32mI (915489) TB: Sent servo state: 0[0m
+[0;32mI (915739) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (915739) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (920589) TB: Sent servo state: 0[0m
+[0;32mI (925689) TB: Sent servo state: 0[0m
+[0;32mI (925789) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (925789) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (930789) TB: Sent servo state: 0[0m
+[0;32mI (935839) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (935839) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (935889) TB: Sent servo state: 0[0m
+[0;32mI (940989) TB: Sent servo state: 0[0m
+[0;32mI (945899) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 6.26, TDS: 100.00[0m
+[0;32mI (945899) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 6.26, TDS: 100.00[0m
+[0;32mI (946089) TB: Sent servo state: 0[0m
+[0;32mI (951189) TB: Sent servo state: 0[0m
+[0;32mI (955949) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (955949) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (956289) TB: Sent servo state: 0[0m
+[0;32mI (961389) TB: Sent servo state: 0[0m
+[0;32mI (965999) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 5.94, TDS: 100.00[0m
+[0;32mI (965999) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 5.94, TDS: 100.00[0m
+[0;32mI (966489) TB: Sent servo state: 0[0m
+[0;32mI (971589) TB: Sent servo state: 0[0m
+[0;32mI (976049) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 11.09, TDS: 100.00[0m
+[0;32mI (976049) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 11.09, TDS: 100.00[0m
+[0;32mI (976689) TB: Sent servo state: 0[0m
+[0;32mI (981789) TB: Sent servo state: 0[0m
+[0;32mI (986099) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.41, TDS: 100.00[0m
+[0;32mI (986099) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.41, TDS: 100.00[0m
+[0;32mI (986889) TB: Sent servo state: 0[0m
+[0;32mI (991989) TB: Sent servo state: 0[0m
+[0;32mI (996149) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (996149) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (997089) TB: Sent servo state: 0[0m
+[0;32mI (1002189) TB: Sent servo state: 0[0m
+[0;32mI (1006199) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1006199) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1007289) TB: Sent servo state: 0[0m
+[0;32mI (1012389) TB: Sent servo state: 0[0m
+[0;32mI (1016259) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1016259) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1017489) TB: Sent servo state: 0[0m
+[0;32mI (1022589) TB: Sent servo state: 0[0m
+[0;32mI (1026309) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 7.64, TDS: 100.00[0m
+[0;32mI (1026309) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 7.64, TDS: 100.00[0m
+[0;32mI (1027689) TB: Sent servo state: 0[0m
+[0;32mI (1032789) TB: Sent servo state: 0[0m
+[0;32mI (1036359) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1036359) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1037889) TB: Sent servo state: 0[0m
+[0;32mI (1042989) TB: Sent servo state: 0[0m
+[0;32mI (1046419) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1046419) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1048089) TB: Sent servo state: 0[0m
+[0;32mI (1053189) TB: Sent servo state: 0[0m
+[0;32mI (1056479) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1056479) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1058289) TB: Sent servo state: 0[0m
+[0;32mI (1063389) TB: Sent servo state: 0[0m
+[0;32mI (1066529) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.53, TDS: 100.00[0m
+[0;32mI (1066529) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.53, TDS: 100.00[0m
+[0;32mI (1068489) TB: Sent servo state: 0[0m
+[0;32mI (1073589) TB: Sent servo state: 0[0m
+[0;32mI (1076579) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 10.56, TDS: 100.00[0m
+[0;32mI (1076579) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 10.56, TDS: 100.00[0m
+[0;32mI (1078689) TB: Sent servo state: 0[0m
+[0;32mI (1083789) TB: Sent servo state: 0[0m
+[0;32mI (1086639) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1086639) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1088889) TB: Sent servo state: 0[0m
+[0;32mI (1093989) TB: Sent servo state: 0[0m
+[0;32mI (1096699) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.80, TDS: 100.00[0m
+[0;32mI (1096699) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.80, TDS: 100.00[0m
+[0;32mI (1099089) TB: Sent servo state: 0[0m
+[0;32mI (1104189) TB: Sent servo state: 0[0m
+[0;32mI (1106759) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1106759) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1109289) TB: Sent servo state: 0[0m
+[0;32mI (1114389) TB: Sent servo state: 0[0m
+[0;32mI (1116809) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 4.35, TDS: 100.00[0m
+[0;32mI (1116809) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 4.35, TDS: 100.00[0m
+[0;32mI (1119489) TB: Sent servo state: 0[0m
+[0;32mI (1124589) TB: Sent servo state: 0[0m
+[0;32mI (1126859) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 7.84, TDS: 100.00[0m
+[0;32mI (1126859) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 7.84, TDS: 100.00[0m
+[0;32mI (1129689) TB: Sent servo state: 0[0m
+[0;32mI (1134789) TB: Sent servo state: 0[0m
+[0;32mI (1136909) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1136909) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1139889) TB: Sent servo state: 0[0m
+[0;32mI (1144989) TB: Sent servo state: 0[0m
+[0;32mI (1146969) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 11.77, TDS: 100.00[0m
+[0;32mI (1146969) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 11.77, TDS: 100.00[0m
+[0;32mI (1150089) TB: Sent servo state: 0[0m
+[0;32mI (1155189) TB: Sent servo state: 0[0m
+[0;32mI (1157029) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1157029) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1160289) TB: Sent servo state: 0[0m
+[0;32mI (1165389) TB: Sent servo state: 0[0m
+[0;32mI (1167089) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1167089) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1170489) TB: Sent servo state: 0[0m
+[0;32mI (1175589) TB: Sent servo state: 0[0m
+[0;32mI (1177139) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1177139) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1180689) TB: Sent servo state: 0[0m
+[0;32mI (1185789) TB: Sent servo state: 0[0m
+[0;32mI (1187189) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.64, TDS: 100.00[0m
+[0;32mI (1187189) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.64, TDS: 100.00[0m
+[0;32mI (1190889) TB: Sent servo state: 0[0m
+[0;32mI (1195989) TB: Sent servo state: 0[0m
+[0;32mI (1197249) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.32, TDS: 100.00[0m
+[0;32mI (1197249) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.32, TDS: 100.00[0m
+[0;32mI (1201089) TB: Sent servo state: 0[0m
+[0;32mI (1206189) TB: Sent servo state: 0[0m
+[0;32mI (1207309) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.66, TDS: 100.00[0m
+[0;32mI (1207309) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.66, TDS: 100.00[0m
+[0;32mI (1211289) TB: Sent servo state: 0[0m
+[0;32mI (1216389) TB: Sent servo state: 0[0m
+[0;32mI (1217359) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.78, TDS: 100.00[0m
+[0;32mI (1217359) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.78, TDS: 100.00[0m
+[0;32mI (1221489) TB: Sent servo state: 0[0m
+[0;32mI (1226589) TB: Sent servo state: 0[0m
+[0;32mI (1227409) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 7.54, TDS: 100.00[0m
+[0;32mI (1227409) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 7.54, TDS: 100.00[0m
+[0;32mI (1231689) TB: Sent servo state: 0[0m
+[0;32mI (1236789) TB: Sent servo state: 0[0m
+[0;32mI (1237459) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 6.17, TDS: 100.00[0m
+[0;32mI (1237459) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 6.17, TDS: 100.00[0m
+[0;32mI (1241889) TB: Sent servo state: 0[0m
+[0;32mI (1246989) TB: Sent servo state: 0[0m
+[0;32mI (1247519) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1247519) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1252089) TB: Sent servo state: 0[0m
+[0;32mI (1257189) TB: Sent servo state: 0[0m
+[0;32mI (1257579) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1257579) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1262289) TB: Sent servo state: 0[0m
+[0;32mI (1267389) TB: Sent servo state: 0[0m
+[0;32mI (1267639) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1267639) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1272489) TB: Sent servo state: 0[0m
+[0;32mI (1277589) TB: Sent servo state: 0[0m
+[0;32mI (1277689) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 10.05, TDS: 100.00[0m
+[0;32mI (1277689) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 10.05, TDS: 100.00[0m
+[0;32mI (1282689) TB: Sent servo state: 0[0m
+[0;32mI (1287739) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 9.58, TDS: 100.00[0m
+[0;32mI (1287739) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 9.58, TDS: 100.00[0m
+[0;32mI (1287789) TB: Sent servo state: 0[0m
+[0;32mI (1292889) TB: Sent servo state: 0[0m
+[0;32mI (1297789) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.00, TDS: 100.00[0m
+[0;32mI (1297789) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.00, TDS: 100.00[0m
+[0;32mI (1297989) TB: Sent servo state: 0[0m
+[0;32mI (1303089) TB: Sent servo state: 0[0m
+[0;32mI (1307839) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1307839) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1308189) TB: Sent servo state: 0[0m
+[0;32mI (1313289) TB: Sent servo state: 0[0m
+[0;32mI (1317899) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.49, TDS: 100.00[0m
+[0;32mI (1317899) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.49, TDS: 100.00[0m
+[0;32mI (1318389) TB: Sent servo state: 0[0m
+[0;32mI (1323489) TB: Sent servo state: 0[0m
+[0;32mI (1327949) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1327949) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1328589) TB: Sent servo state: 0[0m
+[0;32mI (1333689) TB: Sent servo state: 0[0m
+[0;32mI (1337999) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.15, TDS: 100.00[0m
+[0;32mI (1337999) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.15, TDS: 100.00[0m
+[0;32mI (1338789) TB: Sent servo state: 0[0m
+[0;32mI (1343889) TB: Sent servo state: 0[0m
+[0;32mI (1348049) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1348049) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1348989) TB: Sent servo state: 0[0m
+[0;32mI (1354089) TB: Sent servo state: 0[0m
+[0;32mI (1358099) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1358099) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1359189) TB: Sent servo state: 0[0m
+[0;32mI (1364289) TB: Sent servo state: 0[0m
+[0;32mI (1368159) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1368159) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1369389) TB: Sent servo state: 0[0m
+[0;32mI (1374489) TB: Sent servo state: 0[0m
+[0;32mI (1378219) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1378219) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1379589) TB: Sent servo state: 0[0m
+[0;32mI (1384689) TB: Sent servo state: 0[0m
+[0;32mI (1388269) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.00, TDS: 100.00[0m
+[0;32mI (1388269) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.00, TDS: 100.00[0m
+[0;32mI (1389789) TB: Sent servo state: 0[0m
+[0;32mI (1394889) TB: Sent servo state: 0[0m
+[0;32mI (1398319) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1398319) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1399989) TB: Sent servo state: 0[0m
+[0;32mI (1405089) TB: Sent servo state: 0[0m
+[0;32mI (1408369) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1408369) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1410189) TB: Sent servo state: 0[0m
+[0;32mI (1415289) TB: Sent servo state: 0[0m
+[0;32mI (1418419) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.94, TDS: 100.00[0m
+[0;32mI (1418419) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.94, TDS: 100.00[0m
+[0;32mI (1420389) TB: Sent servo state: 0[0m
+[0;32mI (1425489) TB: Sent servo state: 0[0m
+[0;32mI (1428479) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.64, TDS: 100.00[0m
+[0;32mI (1428479) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.64, TDS: 100.00[0m
+[0;32mI (1430589) TB: Sent servo state: 0[0m
+[0;32mI (1435689) TB: Sent servo state: 0[0m
+[0;32mI (1438529) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1438529) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1440789) TB: Sent servo state: 0[0m
+[0;32mI (1445889) TB: Sent servo state: 0[0m
+[0;32mI (1448579) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 3.68, TDS: 100.00[0m
+[0;32mI (1448579) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 3.68, TDS: 100.00[0m
+[0;32mI (1450989) TB: Sent servo state: 0[0m
+[0;32mI (1456089) TB: Sent servo state: 0[0m
+[0;32mI (1458639) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.57, TDS: 100.00[0m
+[0;32mI (1458639) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.57, TDS: 100.00[0m
+[0;32mI (1461189) TB: Sent servo state: 0[0m
+[0;32mI (1466289) TB: Sent servo state: 0[0m
+[0;32mI (1468689) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.75, TDS: 100.00[0m
+[0;32mI (1468689) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.75, TDS: 100.00[0m
+[0;32mI (1471389) TB: Sent servo state: 0[0m
+[0;32mI (1476489) TB: Sent servo state: 0[0m
+[0;32mI (1478749) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1478749) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1481589) TB: Sent servo state: 0[0m
+[0;32mI (1486689) TB: Sent servo state: 0[0m
+[0;32mI (1488799) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1488799) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1491789) TB: Sent servo state: 0[0m
+[0;32mI (1496889) TB: Sent servo state: 0[0m
+[0;32mI (1498859) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1498859) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1501989) TB: Sent servo state: 0[0m
+[0;32mI (1507089) TB: Sent servo state: 0[0m
+[0;32mI (1508919) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1508919) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1512189) TB: Sent servo state: 0[0m
+[0;32mI (1517289) TB: Sent servo state: 0[0m
+[0;32mI (1518969) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1518969) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1522389) TB: Sent servo state: 0[0m
+[0;32mI (1527489) TB: Sent servo state: 0[0m
+[0;32mI (1529019) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1529019) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1532589) TB: Sent servo state: 0[0m
+[0;32mI (1537689) TB: Sent servo state: 0[0m
+[0;32mI (1539079) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.51, TDS: 100.00[0m
+[0;32mI (1539079) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.51, TDS: 100.00[0m
+[0;32mI (1542789) TB: Sent servo state: 0[0m
+[0;32mI (1547889) TB: Sent servo state: 0[0m
+[0;32mI (1549139) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 19.26, TDS: 100.00[0m
+[0;32mI (1549139) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 19.26, TDS: 100.00[0m
+[0;32mI (1552989) TB: Sent servo state: 0[0m
+[0;32mI (1558089) TB: Sent servo state: 0[0m
+[0;32mI (1559199) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1559199) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1563189) TB: Sent servo state: 0[0m
+[0;32mI (1568289) TB: Sent servo state: 0[0m
+[0;32mI (1569249) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.89, TDS: 100.00[0m
+[0;32mI (1569249) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.89, TDS: 100.00[0m
+[0;32mI (1573389) TB: Sent servo state: 0[0m
+[0;32mI (1578489) TB: Sent servo state: 0[0m
+[0;32mI (1579309) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.17, TDS: 100.00[0m
+[0;32mI (1579309) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.17, TDS: 100.00[0m
+[0;32mI (1583589) TB: Sent servo state: 0[0m
+[0;32mI (1588689) TB: Sent servo state: 0[0m
+[0;32mI (1589369) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.35, TDS: 100.00[0m
+[0;32mI (1589369) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.35, TDS: 100.00[0m
+[0;32mI (1593789) TB: Sent servo state: 0[0m
+[0;32mI (1598889) TB: Sent servo state: 0[0m
+[0;32mI (1599419) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.54, TDS: 100.00[0m
+[0;32mI (1599419) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.54, TDS: 100.00[0m
+[0;32mI (1603989) TB: Sent servo state: 0[0m
+[0;32mI (1609089) TB: Sent servo state: 0[0m
+[0;32mI (1609479) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 3.86, TDS: 100.00[0m
+[0;32mI (1609479) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 3.86, TDS: 100.00[0m
+[0;32mI (1614189) TB: Sent servo state: 0[0m
+[0;32mI (1619289) TB: Sent servo state: 0[0m
+[0;32mI (1619539) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1619539) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1624389) TB: Sent servo state: 0[0m
+[0;32mI (1629489) TB: Sent servo state: 0[0m
+[0;32mI (1629589) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 19.39, TDS: 100.00[0m
+[0;32mI (1629589) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 19.39, TDS: 100.00[0m
+[0;32mI (1634589) TB: Sent servo state: 0[0m
+[0;32mI (1639649) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1639649) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1639689) TB: Sent servo state: 0[0m
+[0;32mI (1644789) TB: Sent servo state: 0[0m
+[0;32mI (1649699) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1649699) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1649889) TB: Sent servo state: 0[0m
+[0;32mI (1654989) TB: Sent servo state: 0[0m
+[0;32mI (1659749) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.15, TDS: 100.00[0m
+[0;32mI (1659749) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.15, TDS: 100.00[0m
+[0;32mI (1660089) TB: Sent servo state: 0[0m
+[0;32mI (1665189) TB: Sent servo state: 0[0m
+[0;32mI (1669809) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1669809) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1670289) TB: Sent servo state: 0[0m
+[0;32mI (1675389) TB: Sent servo state: 0[0m
+[0;32mI (1679869) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.63, TDS: 100.00[0m
+[0;32mI (1679869) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.63, TDS: 100.00[0m
+[0;32mI (1680489) TB: Sent servo state: 0[0m
+[0;32mI (1685589) TB: Sent servo state: 0[0m
+[0;32mI (1689929) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.27, TDS: 100.00[0m
+[0;32mI (1689929) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.27, TDS: 100.00[0m
+[0;32mI (1690689) TB: Sent servo state: 0[0m
+[0;32mI (1695789) TB: Sent servo state: 0[0m
+[0;32mI (1699979) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1699979) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1700889) TB: Sent servo state: 0[0m
+[0;32mI (1705989) TB: Sent servo state: 0[0m
+[0;32mI (1710029) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1710029) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1711089) TB: Sent servo state: 0[0m
+[0;32mI (1716189) TB: Sent servo state: 0[0m
+[0;32mI (1720089) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1720089) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1721289) TB: Sent servo state: 0[0m
+[0;32mI (1726389) TB: Sent servo state: 0[0m
+[0;32mI (1730149) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.70, TDS: 100.00[0m
+[0;32mI (1730149) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.70, TDS: 100.00[0m
+[0;32mI (1731489) TB: Sent servo state: 0[0m
+[0;32mI (1736589) TB: Sent servo state: 0[0m
+[0;32mI (1740209) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 11.30, TDS: 100.00[0m
+[0;32mI (1740209) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 11.30, TDS: 100.00[0m
+[0;32mI (1741689) TB: Sent servo state: 0[0m
+[0;32mI (1746789) TB: Sent servo state: 0[0m
+[0;32mI (1750259) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1750259) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1751889) TB: Sent servo state: 0[0m
+[0;32mI (1756989) TB: Sent servo state: 0[0m
+[0;32mI (1760309) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1760309) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1762089) TB: Sent servo state: 0[0m
+[0;32mI (1767189) TB: Sent servo state: 0[0m
+[0;32mI (1770369) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1770369) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1772289) TB: Sent servo state: 0[0m
+[0;32mI (1777389) TB: Sent servo state: 0[0m
+[0;32mI (1780419) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1780419) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1782489) TB: Sent servo state: 0[0m
+[0;32mI (1787589) TB: Sent servo state: 0[0m
+[0;32mI (1790469) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 7.03, TDS: 100.00[0m
+[0;32mI (1790469) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 7.03, TDS: 100.00[0m
+[0;32mI (1792689) TB: Sent servo state: 0[0m
+[0;32mI (1797789) TB: Sent servo state: 0[0m
+[0;32mI (1800519) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1800519) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1802889) TB: Sent servo state: 0[0m
+[0;32mI (1807989) TB: Sent servo state: 0[0m
+[0;32mI (1810569) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1810569) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1813089) TB: Sent servo state: 0[0m
+[0;32mI (1818189) TB: Sent servo state: 0[0m
+[0;32mI (1820619) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1820619) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1823289) TB: Sent servo state: 0[0m
+[0;32mI (1828389) TB: Sent servo state: 0[0m
+[0;32mI (1830679) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1830679) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1833489) TB: Sent servo state: 0[0m
+[0;32mI (1838589) TB: Sent servo state: 0[0m
+[0;32mI (1840739) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.35, TDS: 100.00[0m
+[0;32mI (1840739) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.35, TDS: 100.00[0m
+[0;32mI (1843689) TB: Sent servo state: 0[0m
+[0;32mI (1848789) TB: Sent servo state: 0[0m
+[0;32mI (1850799) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.91, TDS: 100.00[0m
+[0;32mI (1850799) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.91, TDS: 100.00[0m
+[0;32mI (1853889) TB: Sent servo state: 0[0m
+[0;32mI (1858989) TB: Sent servo state: 0[0m
+[0;32mI (1860849) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.86, TDS: 100.00[0m
+[0;32mI (1860849) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.86, TDS: 100.00[0m
+[0;32mI (1864089) TB: Sent servo state: 0[0m
+[0;32mI (1869189) TB: Sent servo state: 0[0m
+[0;32mI (1870899) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1870899) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1874289) TB: Sent servo state: 0[0m
+[0;32mI (1879389) TB: Sent servo state: 0[0m
+[0;32mI (1880959) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.29, TDS: 100.00[0m
+[0;32mI (1880959) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.29, TDS: 100.00[0m
+[0;32mI (1884489) TB: Sent servo state: 0[0m
+[0;32mI (1889589) TB: Sent servo state: 0[0m
+[0;32mI (1891019) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 8.13, TDS: 100.00[0m
+[0;32mI (1891019) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 8.13, TDS: 100.00[0m
+[0;32mI (1894689) TB: Sent servo state: 0[0m
+[0;32mI (1899789) TB: Sent servo state: 0[0m
+[0;32mI (1901079) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.42, TDS: 100.00[0m
+[0;32mI (1901079) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.42, TDS: 100.00[0m
+[0;32mI (1904889) TB: Sent servo state: 0[0m
+[0;32mI (1909989) TB: Sent servo state: 0[0m
+[0;32mI (1911139) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1911139) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1915089) TB: Sent servo state: 0[0m
+[0;32mI (1920189) TB: Sent servo state: 0[0m
+[0;32mI (1921199) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1921199) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1925289) TB: Sent servo state: 0[0m
+[0;32mI (1930389) TB: Sent servo state: 0[0m
+[0;32mI (1931259) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.00, TDS: 100.00[0m
+[0;32mI (1931259) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.00, TDS: 100.00[0m
+[0;32mI (1935489) TB: Sent servo state: 0[0m
+[0;32mI (1940589) TB: Sent servo state: 0[0m
+[0;32mI (1941319) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 19.21, TDS: 100.00[0m
+[0;32mI (1941319) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 19.21, TDS: 100.00[0m
+[0;32mI (1945689) TB: Sent servo state: 0[0m
+[0;32mI (1950789) TB: Sent servo state: 0[0m
+[0;32mI (1951369) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1951369) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1955889) TB: Sent servo state: 0[0m
+[0;32mI (1960989) TB: Sent servo state: 0[0m
+[0;32mI (1961429) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1961429) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1966089) TB: Sent servo state: 0[0m
+[0;32mI (1971189) TB: Sent servo state: 0[0m
+[0;32mI (1971479) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1971479) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1976289) TB: Sent servo state: 0[0m
+[0;32mI (1981389) TB: Sent servo state: 0[0m
+[0;32mI (1981539) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.06, TDS: 100.00[0m
+[0;32mI (1981539) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.06, TDS: 100.00[0m
+[0;32mI (1986489) TB: Sent servo state: 0[0m
+[0;32mI (1991589) TB: Sent servo state: 0[0m
+[0;32mI (1991599) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1991599) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (1996689) TB: Sent servo state: 0[0m
+[0;32mI (2001649) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.87, TDS: 100.00[0m
+[0;32mI (2001649) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.87, TDS: 100.00[0m
+[0;32mI (2001789) TB: Sent servo state: 0[0m
+[0;32mI (2006889) TB: Sent servo state: 0[0m
+[0;32mI (2011699) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2011699) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2011989) TB: Sent servo state: 0[0m
+[0;32mI (2017089) TB: Sent servo state: 0[0m
+[0;32mI (2021759) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2021759) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2022189) TB: Sent servo state: 0[0m
+[0;32mI (2027289) TB: Sent servo state: 0[0m
+[0;32mI (2031809) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.07, TDS: 100.00[0m
+[0;32mI (2031809) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.07, TDS: 100.00[0m
+[0;32mI (2032389) TB: Sent servo state: 0[0m
+[0;32mI (2037489) TB: Sent servo state: 0[0m
+[0;32mI (2041869) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2041869) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2042589) TB: Sent servo state: 0[0m
+[0;32mI (2047689) TB: Sent servo state: 0[0m
+[0;32mI (2051919) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2051919) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2052789) TB: Sent servo state: 0[0m
+[0;32mI (2057889) TB: Sent servo state: 0[0m
+[0;32mI (2061969) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2061969) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2062989) TB: Sent servo state: 0[0m
+[0;32mI (2068089) TB: Sent servo state: 0[0m
+[0;32mI (2072019) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.45, TDS: 100.00[0m
+[0;32mI (2072019) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.45, TDS: 100.00[0m
+[0;32mI (2073189) TB: Sent servo state: 0[0m
+[0;32mI (2078289) TB: Sent servo state: 0[0m
+[0;32mI (2082079) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2082079) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2083389) TB: Sent servo state: 0[0m
+[0;32mI (2088489) TB: Sent servo state: 0[0m
+[0;32mI (2092139) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 6.11, TDS: 100.00[0m
+[0;32mI (2092139) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 6.11, TDS: 100.00[0m
+[0;32mI (2093589) TB: Sent servo state: 0[0m
+[0;32mI (2098689) TB: Sent servo state: 0[0m
+[0;32mI (2102189) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2102189) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2103789) TB: Sent servo state: 0[0m
+[0;32mI (2108889) TB: Sent servo state: 0[0m
+[0;32mI (2112249) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2112249) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2113989) TB: Sent servo state: 0[0m
+[0;32mI (2119089) TB: Sent servo state: 0[0m
+[0;32mI (2122299) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2122299) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2124189) TB: Sent servo state: 0[0m
+[0;32mI (2129289) TB: Sent servo state: 0[0m
+[0;32mI (2132359) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2132359) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2134389) TB: Sent servo state: 0[0m
+[0;32mI (2139489) TB: Sent servo state: 0[0m
+[0;32mI (2142419) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2142419) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2144589) TB: Sent servo state: 0[0m
+[0;32mI (2149689) TB: Sent servo state: 0[0m
+[0;32mI (2152469) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 10.93, TDS: 100.00[0m
+[0;32mI (2152469) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 10.93, TDS: 100.00[0m
+[0;32mI (2154789) TB: Sent servo state: 0[0m
+[0;32mI (2159889) TB: Sent servo state: 0[0m
+[0;32mI (2162529) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.75, TDS: 100.00[0m
+[0;32mI (2162529) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.75, TDS: 100.00[0m
+[0;32mI (2164989) TB: Sent servo state: 0[0m
+[0;32mI (2170089) TB: Sent servo state: 0[0m
+[0;32mI (2172579) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 3.89, TDS: 100.00[0m
+[0;32mI (2172579) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 3.89, TDS: 100.00[0m
+[0;32mI (2175189) TB: Sent servo state: 0[0m
+[0;32mI (2180289) TB: Sent servo state: 0[0m
+[0;32mI (2182629) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2182629) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2185389) TB: Sent servo state: 0[0m
+[0;32mI (2190489) TB: Sent servo state: 0[0m
+[0;32mI (2192689) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2192689) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2195589) TB: Sent servo state: 0[0m
+[0;32mI (2200689) TB: Sent servo state: 0[0m
+[0;32mI (2202749) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.69, TDS: 100.00[0m
+[0;32mI (2202749) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.69, TDS: 100.00[0m
+[0;32mI (2205789) TB: Sent servo state: 0[0m
+[0;32mI (2210889) TB: Sent servo state: 0[0m
+[0;32mI (2212809) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 5.13, TDS: 100.00[0m
+[0;32mI (2212809) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 5.13, TDS: 100.00[0m
+[0;32mI (2215989) TB: Sent servo state: 0[0m
+[0;32mI (2221089) TB: Sent servo state: 0[0m
+[0;32mI (2222869) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.95, TDS: 100.00[0m
+[0;32mI (2222869) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.95, TDS: 100.00[0m
+[0;32mI (2226189) TB: Sent servo state: 0[0m
+[0;32mI (2231289) TB: Sent servo state: 0[0m
+[0;32mI (2232929) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.84, TDS: 100.00[0m
+[0;32mI (2232929) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.84, TDS: 100.00[0m
+[0;32mI (2236389) TB: Sent servo state: 0[0m
+[0;32mI (2241489) TB: Sent servo state: 0[0m
+[0;32mI (2242989) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2242989) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2246589) TB: Sent servo state: 0[0m
+[0;32mI (2251689) TB: Sent servo state: 0[0m
+[0;32mI (2253039) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.04, TDS: 100.00[0m
+[0;32mI (2253039) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.04, TDS: 100.00[0m
+[0;32mI (2256789) TB: Sent servo state: 0[0m
+[0;32mI (2261889) TB: Sent servo state: 0[0m
+[0;32mI (2263089) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2263089) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2266989) TB: Sent servo state: 0[0m
+[0;32mI (2272089) TB: Sent servo state: 0[0m
+[0;32mI (2273139) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2273139) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2277189) TB: Sent servo state: 0[0m
+[0;32mI (2282289) TB: Sent servo state: 0[0m
+[0;32mI (2283189) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2283189) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2287389) TB: Sent servo state: 0[0m
+[0;32mI (2292489) TB: Sent servo state: 0[0m
+[0;32mI (2293249) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 9.03, TDS: 100.00[0m
+[0;32mI (2293249) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 9.03, TDS: 100.00[0m
+[0;32mI (2297589) TB: Sent servo state: 0[0m
+[0;32mI (2302689) TB: Sent servo state: 0[0m
+[0;32mI (2303309) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 8.11, TDS: 100.00[0m
+[0;32mI (2303309) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 8.11, TDS: 100.00[0m
+[0;32mI (2307789) TB: Sent servo state: 0[0m
+[0;32mI (2312889) TB: Sent servo state: 0[0m
+[0;32mI (2313359) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.96, TDS: 100.00[0m
+[0;32mI (2313359) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.96, TDS: 100.00[0m
+[0;32mI (2317989) TB: Sent servo state: 0[0m
+[0;32mI (2323089) TB: Sent servo state: 0[0m
+[0;32mI (2323409) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2323409) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2328189) TB: Sent servo state: 0[0m
+[0;32mI (2333289) TB: Sent servo state: 0[0m
+[0;32mI (2333459) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2333459) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2338389) TB: Sent servo state: 0[0m
+[0;32mI (2343489) TB: Sent servo state: 0[0m
+[0;32mI (2343519) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.21, TDS: 100.00[0m
+[0;32mI (2343529) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.21, TDS: 100.00[0m
+[0;32mI (2348589) TB: Sent servo state: 0[0m
+[0;32mI (2353579) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2353579) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2353689) TB: Sent servo state: 0[0m
+[0;32mI (2358789) TB: Sent servo state: 0[0m
+[0;32mI (2363629) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2363629) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2363889) TB: Sent servo state: 0[0m
+[0;32mI (2368989) TB: Sent servo state: 0[0m
+[0;32mI (2373679) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2373679) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2374089) TB: Sent servo state: 0[0m
+[0;32mI (2379189) TB: Sent servo state: 0[0m
+[0;32mI (2383729) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2383729) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2384289) TB: Sent servo state: 0[0m
+[0;32mI (2389389) TB: Sent servo state: 0[0m
+[0;32mI (2393779) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2393779) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2394489) TB: Sent servo state: 0[0m
+[0;32mI (2399589) TB: Sent servo state: 0[0m
+[0;32mI (2403839) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.10, TDS: 100.00[0m
+[0;32mI (2403839) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.10, TDS: 100.00[0m
+[0;32mI (2404689) TB: Sent servo state: 0[0m
+[0;32mI (2409789) TB: Sent servo state: 0[0m
+[0;32mI (2413899) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2413899) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2414889) TB: Sent servo state: 0[0m
+[0;32mI (2419989) TB: Sent servo state: 0[0m
+[0;32mI (2423949) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 11.74, TDS: 100.00[0m
+[0;32mI (2423949) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 11.74, TDS: 100.00[0m
+[0;32mI (2425089) TB: Sent servo state: 0[0m
+[0;32mI (2430189) TB: Sent servo state: 0[0m
+[0;32mI (2433999) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 4.95, TDS: 100.00[0m
+[0;32mI (2433999) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 4.95, TDS: 100.00[0m
+[0;32mI (2435289) TB: Sent servo state: 0[0m
+[0;32mI (2440389) TB: Sent servo state: 0[0m
+[0;32mI (2444049) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2444049) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2445489) TB: Sent servo state: 0[0m
+[0;32mI (2450589) TB: Sent servo state: 0[0m
+[0;32mI (2454099) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.73, TDS: 100.00[0m
+[0;32mI (2454099) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.73, TDS: 100.00[0m
+[0;32mI (2455689) TB: Sent servo state: 0[0m
+[0;32mI (2460789) TB: Sent servo state: 0[0m
+[0;32mI (2464159) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.33, TDS: 100.00[0m
+[0;32mI (2464159) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.33, TDS: 100.00[0m
+[0;32mI (2465889) TB: Sent servo state: 0[0m
+[0;32mI (2470989) TB: Sent servo state: 0[0m
+[0;32mI (2474209) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2474209) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2476089) TB: Sent servo state: 0[0m
+[0;32mI (2481189) TB: Sent servo state: 0[0m
+[0;32mI (2484259) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2484259) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2486289) TB: Sent servo state: 0[0m
+[0;32mI (2491389) TB: Sent servo state: 0[0m
+[0;32mI (2494309) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.59, TDS: 100.00[0m
+[0;32mI (2494309) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.59, TDS: 100.00[0m
+[0;32mI (2496489) TB: Sent servo state: 0[0m
+[0;32mI (2501589) TB: Sent servo state: 0[0m
+[0;32mI (2504369) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 11.89, TDS: 100.00[0m
+[0;32mI (2504369) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 11.89, TDS: 100.00[0m
+[0;32mI (2506689) TB: Sent servo state: 0[0m
+[0;32mI (2511789) TB: Sent servo state: 0[0m
+[0;32mI (2514429) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2514429) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2516889) TB: Sent servo state: 0[0m
+[0;32mI (2521989) TB: Sent servo state: 0[0m
+[0;32mI (2524489) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 9.56, TDS: 100.00[0m
+[0;32mI (2524489) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 9.56, TDS: 100.00[0m
+[0;32mI (2527089) TB: Sent servo state: 0[0m
+[0;32mI (2532189) TB: Sent servo state: 0[0m
+[0;32mI (2534549) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 5.37, TDS: 100.00[0m
+[0;32mI (2534549) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 5.37, TDS: 100.00[0m
+[0;32mI (2537289) TB: Sent servo state: 0[0m
+[0;32mI (2542389) TB: Sent servo state: 0[0m
+[0;32mI (2544599) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.96, TDS: 100.00[0m
+[0;32mI (2544599) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.96, TDS: 100.00[0m
+[0;32mI (2547489) TB: Sent servo state: 0[0m
+[0;32mI (2552589) TB: Sent servo state: 0[0m
+[0;32mI (2554659) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.63, TDS: 100.00[0m
+[0;32mI (2554659) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.63, TDS: 100.00[0m
+[0;32mI (2557689) TB: Sent servo state: 0[0m
+[0;32mI (2562789) TB: Sent servo state: 0[0m
+[0;32mI (2564719) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 3.57, TDS: 100.00[0m
+[0;32mI (2564719) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 3.57, TDS: 100.00[0m
+[0;32mI (2567889) TB: Sent servo state: 0[0m
+[0;32mI (2572989) TB: Sent servo state: 0[0m
+[0;32mI (2574769) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.20, TDS: 100.00[0m
+[0;32mI (2574769) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.20, TDS: 100.00[0m
+[0;32mI (2578089) TB: Sent servo state: 0[0m
+[0;32mI (2583189) TB: Sent servo state: 0[0m
+[0;32mI (2584819) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2584819) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2588289) TB: Sent servo state: 0[0m
+[0;32mI (2593389) TB: Sent servo state: 0[0m
+[0;32mI (2594869) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2594869) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2598489) TB: Sent servo state: 0[0m
+[0;32mI (2603589) TB: Sent servo state: 0[0m
+[0;32mI (2604929) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2604929) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2608689) TB: Sent servo state: 0[0m
+[0;32mI (2613789) TB: Sent servo state: 0[0m
+[0;32mI (2614989) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2614989) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2618889) TB: Sent servo state: 0[0m
+[0;32mI (2623989) TB: Sent servo state: 0[0m
+[0;32mI (2625049) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2625049) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2629089) TB: Sent servo state: 0[0m
+[0;32mI (2634189) TB: Sent servo state: 0[0m
+[0;32mI (2635109) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.60, TDS: 100.00[0m
+[0;32mI (2635109) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.60, TDS: 100.00[0m
+[0;32mI (2639289) TB: Sent servo state: 0[0m
+[0;32mI (2644389) TB: Sent servo state: 0[0m
+[0;32mI (2645169) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.28, TDS: 100.00[0m
+[0;32mI (2645169) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.28, TDS: 100.00[0m
+[0;32mI (2649489) TB: Sent servo state: 0[0m
+[0;32mI (2654589) TB: Sent servo state: 0[0m
+[0;32mI (2655229) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2655229) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2659689) TB: Sent servo state: 0[0m
+[0;32mI (2664789) TB: Sent servo state: 0[0m
+[0;32mI (2665289) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2665289) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2669889) TB: Sent servo state: 0[0m
+[0;32mI (2674989) TB: Sent servo state: 0[0m
+[0;32mI (2675339) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2675339) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2680089) TB: Sent servo state: 0[0m
+[0;32mI (2685189) TB: Sent servo state: 0[0m
+[0;32mI (2685389) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2685389) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2690289) TB: Sent servo state: 0[0m
+[0;32mI (2695389) TB: Sent servo state: 0[0m
+[0;32mI (2695439) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2695439) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2700489) TB: Sent servo state: 0[0m
+[0;32mI (2705489) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2705489) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2705589) TB: Sent servo state: 0[0m
+[0;32mI (2710689) TB: Sent servo state: 0[0m
+[0;32mI (2715549) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 10.60, TDS: 100.00[0m
+[0;32mI (2715549) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 10.60, TDS: 100.00[0m
+[0;32mI (2715789) TB: Sent servo state: 0[0m
+[0;32mI (2720889) TB: Sent servo state: 0[0m
+[0;32mI (2725599) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2725599) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2725989) TB: Sent servo state: 0[0m
+[0;32mI (2731089) TB: Sent servo state: 0[0m
+[0;32mI (2735649) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2735649) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2736189) TB: Sent servo state: 0[0m
+[0;32mI (2741289) TB: Sent servo state: 0[0m
+[0;32mI (2745699) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.92, TDS: 100.00[0m
+[0;32mI (2745699) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.92, TDS: 100.00[0m
+[0;32mI (2746389) TB: Sent servo state: 0[0m
+[0;32mI (2751489) TB: Sent servo state: 0[0m
+[0;32mI (2755759) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.80, TDS: 100.00[0m
+[0;32mI (2755759) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.80, TDS: 100.00[0m
+[0;32mI (2756589) TB: Sent servo state: 0[0m
+[0;32mI (2761689) TB: Sent servo state: 0[0m
+[0;32mI (2765819) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2765819) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2766789) TB: Sent servo state: 0[0m
+[0;32mI (2771889) TB: Sent servo state: 0[0m
+[0;32mI (2775869) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2775869) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2776989) TB: Sent servo state: 0[0m
+[0;32mI (2782089) TB: Sent servo state: 0[0m
+[0;32mI (2785919) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.09, TDS: 100.00[0m
+[0;32mI (2785919) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.09, TDS: 100.00[0m
+[0;32mI (2787189) TB: Sent servo state: 0[0m
+[0;32mI (2792289) TB: Sent servo state: 0[0m
+[0;32mI (2795979) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2795979) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2797389) TB: Sent servo state: 0[0m
+[0;32mI (2802489) TB: Sent servo state: 0[0m
+[0;32mI (2806039) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2806039) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2807589) TB: Sent servo state: 0[0m
+[0;32mI (2812689) TB: Sent servo state: 0[0m
+[0;32mI (2816099) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2816099) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2817789) TB: Sent servo state: 0[0m
+[0;32mI (2822889) TB: Sent servo state: 0[0m
+[0;32mI (2826159) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2826159) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2827989) TB: Sent servo state: 0[0m
+[0;32mI (2833089) TB: Sent servo state: 0[0m
+[0;32mI (2836219) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.66, TDS: 100.00[0m
+[0;32mI (2836219) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.66, TDS: 100.00[0m
+[0;32mI (2838189) TB: Sent servo state: 0[0m
+[0;32mI (2843289) TB: Sent servo state: 0[0m
+[0;32mI (2846279) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2846279) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2848389) TB: Sent servo state: 0[0m
+[0;32mI (2853489) TB: Sent servo state: 0[0m
+[0;32mI (2856329) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.91, TDS: 100.00[0m
+[0;32mI (2856329) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.91, TDS: 100.00[0m
+[0;32mI (2858589) TB: Sent servo state: 0[0m
+[0;32mI (2863689) TB: Sent servo state: 0[0m
+[0;32mI (2866389) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2866389) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2868789) TB: Sent servo state: 0[0m
+[0;32mI (2873889) TB: Sent servo state: 0[0m
+[0;32mI (2876439) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2876439) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2878989) TB: Sent servo state: 0[0m
+[0;32mI (2884089) TB: Sent servo state: 0[0m
+[0;32mI (2886489) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.65, TDS: 100.00[0m
+[0;32mI (2886489) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.65, TDS: 100.00[0m
+[0;32mI (2889189) TB: Sent servo state: 0[0m
+[0;32mI (2894289) TB: Sent servo state: 0[0m
+[0;32mI (2896549) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 6.60, TDS: 100.00[0m
+[0;32mI (2896549) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 6.60, TDS: 100.00[0m
+[0;32mI (2899389) TB: Sent servo state: 0[0m
+[0;32mI (2904489) TB: Sent servo state: 0[0m
+[0;32mI (2906609) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2906609) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2909589) TB: Sent servo state: 0[0m
+[0;32mI (2914689) TB: Sent servo state: 0[0m
+[0;32mI (2916669) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2916669) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2919789) TB: Sent servo state: 0[0m
+[0;32mI (2924889) TB: Sent servo state: 0[0m
+[0;32mI (2926719) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2926719) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2929989) TB: Sent servo state: 0[0m
+[0;32mI (2935089) TB: Sent servo state: 0[0m
+[0;32mI (2936769) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2936769) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2940189) TB: Sent servo state: 0[0m
+[0;32mI (2945289) TB: Sent servo state: 0[0m
+[0;32mI (2946819) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2946819) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2950389) TB: Sent servo state: 0[0m
+[0;32mI (2955489) TB: Sent servo state: 0[0m
+[0;32mI (2956869) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.16, TDS: 100.00[0m
+[0;32mI (2956869) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.16, TDS: 100.00[0m
+[0;32mI (2960589) TB: Sent servo state: 0[0m
+[0;32mI (2965689) TB: Sent servo state: 0[0m
+[0;32mI (2966929) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.39, TDS: 100.00[0m
+[0;32mI (2966929) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.39, TDS: 100.00[0m
+[0;32mI (2970789) TB: Sent servo state: 0[0m
+[0;32mI (2975889) TB: Sent servo state: 0[0m
+[0;32mI (2976989) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2976989) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2980989) TB: Sent servo state: 0[0m
+[0;32mI (2986089) TB: Sent servo state: 0[0m
+[0;32mI (2987049) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2987049) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2991189) TB: Sent servo state: 0[0m
+[0;32mI (2996289) TB: Sent servo state: 0[0m
+[0;32mI (2997109) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (2997109) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3001389) TB: Sent servo state: 0[0m
+[0;32mI (3006489) TB: Sent servo state: 0[0m
+[0;32mI (3007169) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3007169) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3011589) TB: Sent servo state: 0[0m
+[0;32mI (3016689) TB: Sent servo state: 0[0m
+[0;32mI (3017219) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3017219) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3021789) TB: Sent servo state: 0[0m
+[0;32mI (3026889) TB: Sent servo state: 0[0m
+[0;32mI (3027269) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.33, TDS: 100.00[0m
+[0;32mI (3027269) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.33, TDS: 100.00[0m
+[0;32mI (3031989) TB: Sent servo state: 0[0m
+[0;32mI (3037089) TB: Sent servo state: 0[0m
+[0;32mI (3037319) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3037319) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3042189) TB: Sent servo state: 0[0m
+[0;32mI (3047289) TB: Sent servo state: 0[0m
+[0;32mI (3047369) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3047369) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3052389) TB: Sent servo state: 0[0m
+[0;32mI (3057419) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 3.13, TDS: 100.00[0m
+[0;32mI (3057419) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 3.13, TDS: 100.00[0m
+[0;32mI (3057489) TB: Sent servo state: 0[0m
+[0;32mI (3062589) TB: Sent servo state: 0[0m
+[0;32mI (3067479) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.76, TDS: 100.00[0m
+[0;32mI (3067479) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.76, TDS: 100.00[0m
+[0;32mI (3067689) TB: Sent servo state: 0[0m
+[0;32mI (3072789) TB: Sent servo state: 0[0m
+[0;32mI (3077539) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.36, TDS: 100.00[0m
+[0;32mI (3077539) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.36, TDS: 100.00[0m
+[0;32mI (3077889) TB: Sent servo state: 0[0m
+[0;32mI (3082989) TB: Sent servo state: 0[0m
+[0;32mI (3087589) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3087589) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3088089) TB: Sent servo state: 0[0m
+[0;32mI (3093189) TB: Sent servo state: 0[0m
+[0;32mI (3097639) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3097639) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3098289) TB: Sent servo state: 0[0m
+[0;32mI (3103389) TB: Sent servo state: 0[0m
+[0;32mI (3107689) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.25, TDS: 100.00[0m
+[0;32mI (3107689) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.25, TDS: 100.00[0m
+[0;32mI (3108489) TB: Sent servo state: 0[0m
+[0;32mI (3113589) TB: Sent servo state: 0[0m
+[0;32mI (3117749) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3117749) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3118689) TB: Sent servo state: 0[0m
+[0;32mI (3123789) TB: Sent servo state: 0[0m
+[0;32mI (3127809) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.91, TDS: 100.00[0m
+[0;32mI (3127809) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.91, TDS: 100.00[0m
+[0;32mI (3128889) TB: Sent servo state: 0[0m
+[0;32mI (3133989) TB: Sent servo state: 0[0m
+[0;32mI (3137869) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.64, TDS: 100.00[0m
+[0;32mI (3137869) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.64, TDS: 100.00[0m
+[0;32mI (3139089) TB: Sent servo state: 0[0m
+[0;32mI (3144189) TB: Sent servo state: 0[0m
+[0;32mI (3147919) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3147919) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3149289) TB: Sent servo state: 0[0m
+[0;32mI (3154389) TB: Sent servo state: 0[0m
+[0;32mI (3157969) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 8.52, TDS: 100.00[0m
+[0;32mI (3157969) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 8.52, TDS: 100.00[0m
+[0;32mI (3159489) TB: Sent servo state: 0[0m
+[0;32mI (3164589) TB: Sent servo state: 0[0m
+[0;32mI (3168029) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.52, TDS: 100.00[0m
+[0;32mI (3168029) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.52, TDS: 100.00[0m
+[0;32mI (3169689) TB: Sent servo state: 0[0m
+[0;32mI (3174789) TB: Sent servo state: 0[0m
+[0;32mI (3178089) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.15, TDS: 100.00[0m
+[0;32mI (3178089) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.15, TDS: 100.00[0m
+[0;32mI (3179889) TB: Sent servo state: 0[0m
+[0;32mI (3184989) TB: Sent servo state: 0[0m
+[0;32mI (3188149) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.45, TDS: 100.00[0m
+[0;32mI (3188149) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.45, TDS: 100.00[0m
+[0;32mI (3190089) TB: Sent servo state: 0[0m
+[0;32mI (3195189) TB: Sent servo state: 0[0m
+[0;32mI (3198209) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3198209) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3200289) TB: Sent servo state: 0[0m
+[0;32mI (3205389) TB: Sent servo state: 0[0m
+[0;32mI (3208259) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3208259) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3210489) TB: Sent servo state: 0[0m
+[0;32mI (3215589) TB: Sent servo state: 0[0m
+[0;32mI (3218319) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.87, TDS: 100.00[0m
+[0;32mI (3218319) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.87, TDS: 100.00[0m
+[0;32mI (3220689) TB: Sent servo state: 0[0m
+[0;32mI (3225789) TB: Sent servo state: 0[0m
+[0;32mI (3228379) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 8.47, TDS: 100.00[0m
+[0;32mI (3228379) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 8.47, TDS: 100.00[0m
+[0;32mI (3230889) TB: Sent servo state: 0[0m
+[0;32mI (3235989) TB: Sent servo state: 0[0m
+[0;32mI (3238429) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3238429) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3241089) TB: Sent servo state: 0[0m
+[0;32mI (3246189) TB: Sent servo state: 0[0m
+[0;32mI (3248479) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3248479) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3251289) TB: Sent servo state: 0[0m
+[0;32mI (3256389) TB: Sent servo state: 0[0m
+[0;32mI (3258539) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 11.39, TDS: 100.00[0m
+[0;32mI (3258539) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 11.39, TDS: 100.00[0m
+[0;32mI (3261489) TB: Sent servo state: 0[0m
+[0;32mI (3266589) TB: Sent servo state: 0[0m
+[0;32mI (3268599) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 3.10, TDS: 100.00[0m
+[0;32mI (3268599) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 3.10, TDS: 100.00[0m
+[0;32mI (3271689) TB: Sent servo state: 0[0m
+[0;32mI (3276789) TB: Sent servo state: 0[0m
+[0;32mI (3278659) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3278659) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3281889) TB: Sent servo state: 0[0m
+[0;32mI (3286989) TB: Sent servo state: 0[0m
+[0;32mI (3288719) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.33, TDS: 100.00[0m
+[0;32mI (3288719) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.33, TDS: 100.00[0m
+[0;32mI (3292089) TB: Sent servo state: 0[0m
+[0;32mI (3297189) TB: Sent servo state: 0[0m
+[0;32mI (3298779) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3298779) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3302289) TB: Sent servo state: 0[0m
+[0;32mI (3307389) TB: Sent servo state: 0[0m
+[0;32mI (3308829) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.33, TDS: 100.00[0m
+[0;32mI (3308829) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.33, TDS: 100.00[0m
+[0;32mI (3312489) TB: Sent servo state: 0[0m
+[0;32mI (3317589) TB: Sent servo state: 0[0m
+[0;32mI (3318889) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3318889) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3322689) TB: Sent servo state: 0[0m
+[0;32mI (3327789) TB: Sent servo state: 0[0m
+[0;32mI (3328939) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3328939) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3332889) TB: Sent servo state: 0[0m
+[0;32mI (3337989) TB: Sent servo state: 0[0m
+[0;32mI (3338989) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3338989) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3343089) TB: Sent servo state: 0[0m
+[0;32mI (3348189) TB: Sent servo state: 0[0m
+[0;32mI (3349039) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3349039) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3353289) TB: Sent servo state: 0[0m
+[0;32mI (3358389) TB: Sent servo state: 0[0m
+[0;32mI (3359089) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3359089) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3363489) TB: Sent servo state: 0[0m
+[0;32mI (3368589) TB: Sent servo state: 0[0m
+[0;32mI (3369149) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3369149) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3373689) TB: Sent servo state: 0[0m
+[0;32mI (3378789) TB: Sent servo state: 0[0m
+[0;32mI (3379209) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.75, TDS: 100.00[0m
+[0;32mI (3379209) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.75, TDS: 100.00[0m
+[0;32mI (3383889) TB: Sent servo state: 0[0m
+[0;32mI (3388989) TB: Sent servo state: 0[0m
+[0;32mI (3389259) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3389259) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3394089) TB: Sent servo state: 0[0m
+[0;32mI (3399189) TB: Sent servo state: 0[0m
+[0;32mI (3399319) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3399319) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3404289) TB: Sent servo state: 0[0m
+[0;32mI (3409379) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3409379) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3409389) TB: Sent servo state: 0[0m
+[0;32mI (3414489) TB: Sent servo state: 0[0m
+[0;32mI (3419439) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3419439) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3419589) TB: Sent servo state: 0[0m
+[0;32mI (3424689) TB: Sent servo state: 0[0m
+[0;32mI (3429489) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.46, TDS: 100.00[0m
+[0;32mI (3429489) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.46, TDS: 100.00[0m
+[0;32mI (3429789) TB: Sent servo state: 0[0m
+[0;32mI (3434889) TB: Sent servo state: 0[0m
+[0;32mI (3439539) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3439539) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3439989) TB: Sent servo state: 0[0m
+[0;32mI (3445089) TB: Sent servo state: 0[0m
+[0;32mI (3449589) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 8.42, TDS: 100.00[0m
+[0;32mI (3449589) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 8.42, TDS: 100.00[0m
+[0;32mI (3450189) TB: Sent servo state: 0[0m
+[0;32mI (3455289) TB: Sent servo state: 0[0m
+[0;32mI (3459649) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.99, TDS: 100.00[0m
+[0;32mI (3459649) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.99, TDS: 100.00[0m
+[0;32mI (3460389) TB: Sent servo state: 0[0m
+[0;32mI (3465489) TB: Sent servo state: 0[0m
+[0;32mI (3469709) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.30, TDS: 100.00[0m
+[0;32mI (3469709) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.30, TDS: 100.00[0m
+[0;32mI (3470589) TB: Sent servo state: 0[0m
+[0;32mI (3475689) TB: Sent servo state: 0[0m
+[0;32mI (3479769) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.21, TDS: 100.00[0m
+[0;32mI (3479769) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.21, TDS: 100.00[0m
+[0;32mI (3480789) TB: Sent servo state: 0[0m
+[0;32mI (3485889) TB: Sent servo state: 0[0m
+[0;32mI (3489819) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3489819) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3490989) TB: Sent servo state: 0[0m
+[0;32mI (3496089) TB: Sent servo state: 0[0m
+[0;32mI (3499869) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3499869) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3501189) TB: Sent servo state: 0[0m
+[0;32mI (3506289) TB: Sent servo state: 0[0m
+[0;32mI (3509929) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3509929) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3511389) TB: Sent servo state: 0[0m
+[0;32mI (3516489) TB: Sent servo state: 0[0m
+[0;32mI (3519979) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.89, TDS: 100.00[0m
+[0;32mI (3519979) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.89, TDS: 100.00[0m
+[0;32mI (3521589) TB: Sent servo state: 0[0m
+[0;32mI (3526689) TB: Sent servo state: 0[0m
+[0;32mI (3530039) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3530039) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3531789) TB: Sent servo state: 0[0m
+[0;32mI (3536889) TB: Sent servo state: 0[0m
+[0;32mI (3540089) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 9.72, TDS: 100.00[0m
+[0;32mI (3540089) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 9.72, TDS: 100.00[0m
+[0;32mI (3541989) TB: Sent servo state: 0[0m
+[0;32mI (3547089) TB: Sent servo state: 0[0m
+[0;32mI (3550139) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3550139) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3552189) TB: Sent servo state: 0[0m
+[0;32mI (3557289) TB: Sent servo state: 0[0m
+[0;32mI (3560189) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3560189) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3562389) TB: Sent servo state: 0[0m
+[0;32mI (3567489) TB: Sent servo state: 0[0m
+[0;32mI (3570249) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.29, TDS: 100.00[0m
+[0;32mI (3570249) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.29, TDS: 100.00[0m
+[0;32mI (3572589) TB: Sent servo state: 0[0m
+[0;32mI (3577689) TB: Sent servo state: 0[0m
+[0;32mI (3580309) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 12.55, TDS: 100.00[0m
+[0;32mI (3580309) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 12.55, TDS: 100.00[0m
+[0;32mI (3582789) TB: Sent servo state: 0[0m
+[0;32mI (3587889) TB: Sent servo state: 0[0m
+[0;32mI (3590359) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3590359) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3592989) TB: Sent servo state: 0[0m
+[0;32mI (3598089) TB: Sent servo state: 0[0m
+[0;32mI (3600419) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3600419) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3603189) TB: Sent servo state: 0[0m
+[0;32mI (3608289) TB: Sent servo state: 0[0m
+[0;32mI (3610469) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3610469) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3613389) TB: Sent servo state: 0[0m
+[0;32mI (3618489) TB: Sent servo state: 0[0m
+[0;32mI (3620519) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.67, TDS: 100.00[0m
+[0;32mI (3620519) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.67, TDS: 100.00[0m
+[0;32mI (3623589) TB: Sent servo state: 0[0m
+[0;32mI (3628689) TB: Sent servo state: 0[0m
+[0;32mI (3630569) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.21, TDS: 100.00[0m
+[0;32mI (3630569) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.21, TDS: 100.00[0m
+[0;32mI (3633789) TB: Sent servo state: 0[0m
+[0;32mI (3638889) TB: Sent servo state: 0[0m
+[0;32mI (3640629) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3640629) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3643989) TB: Sent servo state: 0[0m
+[0;32mI (3649089) TB: Sent servo state: 0[0m
+[0;32mI (3650679) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.90, TDS: 100.00[0m
+[0;32mI (3650679) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.90, TDS: 100.00[0m
+[0;32mI (3654189) TB: Sent servo state: 0[0m
+[0;32mI (3659289) TB: Sent servo state: 0[0m
+[0;32mI (3660729) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.09, TDS: 100.00[0m
+[0;32mI (3660729) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.09, TDS: 100.00[0m
+[0;32mI (3664389) TB: Sent servo state: 0[0m
+[0;32mI (3669489) TB: Sent servo state: 0[0m
+[0;32mI (3670789) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 11.09, TDS: 100.00[0m
+[0;32mI (3670789) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 11.09, TDS: 100.00[0m
+[0;32mI (3674589) TB: Sent servo state: 0[0m
+[0;32mI (3679689) TB: Sent servo state: 0[0m
+[0;32mI (3680849) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3680849) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3684789) TB: Sent servo state: 0[0m
+[0;32mI (3689889) TB: Sent servo state: 0[0m
+[0;32mI (3690899) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 19.26, TDS: 100.00[0m
+[0;32mI (3690899) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 19.26, TDS: 100.00[0m
+[0;32mI (3694989) TB: Sent servo state: 0[0m
+[0;32mI (3700089) TB: Sent servo state: 0[0m
+[0;32mI (3700949) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3700949) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3705189) TB: Sent servo state: 0[0m
+[0;32mI (3710289) TB: Sent servo state: 0[0m
+[0;32mI (3710999) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.44, TDS: 100.00[0m
+[0;32mI (3710999) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.44, TDS: 100.00[0m
+[0;32mI (3715389) TB: Sent servo state: 0[0m
+[0;32mI (3720489) TB: Sent servo state: 0[0m
+[0;32mI (3721059) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.44, TDS: 100.00[0m
+[0;32mI (3721059) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.44, TDS: 100.00[0m
+[0;32mI (3725589) TB: Sent servo state: 0[0m
+[0;32mI (3730689) TB: Sent servo state: 0[0m
+[0;32mI (3731119) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.34, TDS: 100.00[0m
+[0;32mI (3731119) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.34, TDS: 100.00[0m
+[0;32mI (3735789) TB: Sent servo state: 0[0m
+[0;32mI (3740889) TB: Sent servo state: 0[0m
+[0;32mI (3741179) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.07, TDS: 100.00[0m
+[0;32mI (3741179) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.07, TDS: 100.00[0m
+[0;32mI (3745989) TB: Sent servo state: 0[0m
+[0;32mI (3751089) TB: Sent servo state: 0[0m
+[0;32mI (3751229) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.46, TDS: 100.00[0m
+[0;32mI (3751229) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.46, TDS: 100.00[0m
+[0;32mI (3756189) TB: Sent servo state: 0[0m
+[0;32mI (3761279) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.26, TDS: 100.00[0m
+[0;32mI (3761279) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.26, TDS: 100.00[0m
+[0;32mI (3761289) TB: Sent servo state: 0[0m
+[0;32mI (3766389) TB: Sent servo state: 0[0m
+[0;32mI (3771339) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3771339) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3771489) TB: Sent servo state: 0[0m
+[0;32mI (3776589) TB: Sent servo state: 0[0m
+[0;32mI (3781399) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3781399) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3781689) TB: Sent servo state: 0[0m
+[0;32mI (3786789) TB: Sent servo state: 0[0m
+[0;32mI (3791459) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3791459) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3791889) TB: Sent servo state: 0[0m
+[0;32mI (3796989) TB: Sent servo state: 0[0m
+[0;32mI (3801509) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3801509) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3802089) TB: Sent servo state: 0[0m
+[0;32mI (3807189) TB: Sent servo state: 0[0m
+[0;32mI (3811569) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3811569) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3812289) TB: Sent servo state: 0[0m
+[0;32mI (3817389) TB: Sent servo state: 0[0m
+[0;32mI (3821629) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 11.41, TDS: 100.00[0m
+[0;32mI (3821629) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 11.41, TDS: 100.00[0m
+[0;32mI (3822489) TB: Sent servo state: 0[0m
+[0;32mI (3827589) TB: Sent servo state: 0[0m
+[0;32mI (3831689) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 3.70, TDS: 100.00[0m
+[0;32mI (3831689) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 3.70, TDS: 100.00[0m
+[0;32mI (3832689) TB: Sent servo state: 0[0m
+[0;32mI (3837789) TB: Sent servo state: 0[0m
+[0;32mI (3841749) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.35, TDS: 100.00[0m
+[0;32mI (3841749) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.35, TDS: 100.00[0m
+[0;32mI (3842889) TB: Sent servo state: 0[0m
+[0;32mI (3847989) TB: Sent servo state: 0[0m
+[0;32mI (3851799) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3851799) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3853089) TB: Sent servo state: 0[0m
+[0;32mI (3858189) TB: Sent servo state: 0[0m
+[0;32mI (3861849) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3861849) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3863289) TB: Sent servo state: 0[0m
+[0;32mI (3868389) TB: Sent servo state: 0[0m
+[0;32mI (3871909) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 3.16, TDS: 100.00[0m
+[0;32mI (3871909) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 3.16, TDS: 100.00[0m
+[0;32mI (3873489) TB: Sent servo state: 0[0m
+[0;32mI (3878589) TB: Sent servo state: 0[0m
+[0;32mI (3881969) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.43, TDS: 100.00[0m
+[0;32mI (3881969) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.43, TDS: 100.00[0m
+[0;32mI (3883689) TB: Sent servo state: 0[0m
+[0;32mI (3888789) TB: Sent servo state: 0[0m
+[0;32mI (3892029) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3892029) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3893889) TB: Sent servo state: 0[0m
+[0;32mI (3898989) TB: Sent servo state: 0[0m
+[0;32mI (3902079) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3902079) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3904089) TB: Sent servo state: 0[0m
+[0;32mI (3909189) TB: Sent servo state: 0[0m
+[0;32mI (3912129) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3912129) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3914289) TB: Sent servo state: 0[0m
+[0;32mI (3919389) TB: Sent servo state: 0[0m
+[0;32mI (3922179) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3922179) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3924489) TB: Sent servo state: 0[0m
+[0;32mI (3929589) TB: Sent servo state: 0[0m
+[0;32mI (3932239) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.63, TDS: 100.00[0m
+[0;32mI (3932239) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.63, TDS: 100.00[0m
+[0;32mI (3934689) TB: Sent servo state: 0[0m
+[0;32mI (3939789) TB: Sent servo state: 0[0m
+[0;32mI (3942299) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.00, TDS: 100.00[0m
+[0;32mI (3942299) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.00, TDS: 100.00[0m
+[0;32mI (3944889) TB: Sent servo state: 0[0m
+[0;32mI (3949989) TB: Sent servo state: 0[0m
+[0;32mI (3952359) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 3.70, TDS: 100.00[0m
+[0;32mI (3952359) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 3.70, TDS: 100.00[0m
+[0;32mI (3955089) TB: Sent servo state: 0[0m
+[0;32mI (3960189) TB: Sent servo state: 0[0m
+[0;32mI (3962419) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3962419) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3965289) TB: Sent servo state: 0[0m
+[0;32mI (3970389) TB: Sent servo state: 0[0m
+[0;32mI (3972479) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3972479) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3975489) TB: Sent servo state: 0[0m
+[0;32mI (3980589) TB: Sent servo state: 0[0m
+[0;32mI (3982539) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3982539) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (3985689) TB: Sent servo state: 0[0m
+[0;32mI (3990789) TB: Sent servo state: 0[0m
+[0;32mI (3992589) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 6.41, TDS: 100.00[0m
+[0;32mI (3992589) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 6.41, TDS: 100.00[0m
+[0;32mI (3995889) TB: Sent servo state: 0[0m
+[0;32mI (4000989) TB: Sent servo state: 0[0m
+[0;32mI (4002639) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.03, TDS: 100.00[0m
+[0;32mI (4002639) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.03, TDS: 100.00[0m
+[0;32mI (4006089) TB: Sent servo state: 0[0m
+[0;32mI (4011189) TB: Sent servo state: 0[0m
+[0;32mI (4012689) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.60, TDS: 100.00[0m
+[0;32mI (4012689) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.60, TDS: 100.00[0m
+[0;32mI (4016289) TB: Sent servo state: 0[0m
+[0;32mI (4021389) TB: Sent servo state: 0[0m
+[0;32mI (4022749) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4022749) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4026489) TB: Sent servo state: 0[0m
+[0;32mI (4031589) TB: Sent servo state: 0[0m
+[0;32mI (4032809) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4032809) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4036689) TB: Sent servo state: 0[0m
+[0;32mI (4041789) TB: Sent servo state: 0[0m
+[0;32mI (4042859) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.55, TDS: 100.00[0m
+[0;32mI (4042859) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.55, TDS: 100.00[0m
+[0;32mI (4046889) TB: Sent servo state: 0[0m
+[0;32mI (4051989) TB: Sent servo state: 0[0m
+[0;32mI (4052909) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.48, TDS: 100.00[0m
+[0;32mI (4052909) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.48, TDS: 100.00[0m
+[0;32mI (4057089) TB: Sent servo state: 0[0m
+[0;32mI (4062189) TB: Sent servo state: 0[0m
+[0;32mI (4062959) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4062959) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4067289) TB: Sent servo state: 0[0m
+[0;32mI (4072389) TB: Sent servo state: 0[0m
+[0;32mI (4073019) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4073019) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4077489) TB: Sent servo state: 0[0m
+[0;32mI (4082589) TB: Sent servo state: 0[0m
+[0;32mI (4083069) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4083069) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4087689) TB: Sent servo state: 0[0m
+[0;32mI (4092789) TB: Sent servo state: 0[0m
+[0;32mI (4093119) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.69, TDS: 100.00[0m
+[0;32mI (4093119) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.69, TDS: 100.00[0m
+[0;32mI (4097889) TB: Sent servo state: 0[0m
+[0;32mI (4102989) TB: Sent servo state: 0[0m
+[0;32mI (4103179) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 17.44, TDS: 100.00[0m
+[0;32mI (4103179) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 17.44, TDS: 100.00[0m
+[0;32mI (4108089) TB: Sent servo state: 0[0m
+[0;32mI (4113189) TB: Sent servo state: 0[0m
+[0;32mI (4113229) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4113229) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4118289) TB: Sent servo state: 0[0m
+[0;32mI (4123289) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4123289) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4123389) TB: Sent servo state: 0[0m
+[0;32mI (4128489) TB: Sent servo state: 0[0m
+[0;32mI (4133349) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4133349) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4133589) TB: Sent servo state: 0[0m
+[0;32mI (4138689) TB: Sent servo state: 0[0m
+[0;32mI (4143409) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 9.86, TDS: 100.00[0m
+[0;32mI (4143409) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 9.86, TDS: 100.00[0m
+[0;32mI (4143789) TB: Sent servo state: 0[0m
+[0;32mI (4148889) TB: Sent servo state: 0[0m
+[0;32mI (4153459) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4153459) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4153989) TB: Sent servo state: 0[0m
+[0;32mI (4159089) TB: Sent servo state: 0[0m
+[0;32mI (4163509) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4163509) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4164189) TB: Sent servo state: 0[0m
+[0;32mI (4169289) TB: Sent servo state: 0[0m
+[0;32mI (4173559) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 12.67, TDS: 100.00[0m
+[0;32mI (4173559) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 12.67, TDS: 100.00[0m
+[0;32mI (4174389) TB: Sent servo state: 0[0m
+[0;32mI (4179489) TB: Sent servo state: 0[0m
+[0;32mI (4183619) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 10.05, TDS: 100.00[0m
+[0;32mI (4183619) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 10.05, TDS: 100.00[0m
+[0;32mI (4184589) TB: Sent servo state: 0[0m
+[0;32mI (4187289) RPC: Received RPC request[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (4189689) TB: Sent servo state: 0[0m
+[0;32mI (4193679) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4193679) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4194789) TB: Sent servo state: 0[0m
+[0;32mI (4195479) RPC: Received RPC request[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (4195619) RPC: Received RPC request[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (4199889) TB: Sent servo state: 0[0m
+[0;32mI (4203729) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 15.04, TDS: 100.00[0m
+[0;32mI (4203729) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 15.04, TDS: 100.00[0m
+[0;32mI (4204989) TB: Sent servo state: 0[0m
+[0;32mI (4210089) TB: Sent servo state: 0[0m
+[0;32mI (4213789) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4213789) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4215189) TB: Sent servo state: 0[0m
+[0;32mI (4218179) RPC: Received RPC request[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (4220289) TB: Sent servo state: 0[0m
+[0;32mI (4223849) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 11.19, TDS: 100.00[0m
+[0;32mI (4223849) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 11.19, TDS: 100.00[0m
+[0;32mI (4225389) TB: Sent servo state: 0[0m
+[0;32mI (4230489) TB: Sent servo state: 0[0m
+[0;32mI (4233909) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4233909) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4235589) TB: Sent servo state: 0[0m
+[0;32mI (4240689) TB: Sent servo state: 0[0m
+[0;32mI (4243969) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4243969) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4245789) TB: Sent servo state: 0[0m
+[0;32mI (4247089) RPC: Received RPC request[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (4250889) TB: Sent servo state: 0[0m
+[0;32mI (4254019) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4254019) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4254769) RPC: Received RPC request[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (4254979) RPC: Received RPC request[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (4255019) RPC: Received RPC request[0m
+[TB] Server-side RPC response overflowed, increase MaxRPC (0)
+[0;32mI (4255989) TB: Sent servo state: 0[0m
+[0;32mI (4261089) TB: Sent servo state: 0[0m
+[0;32mI (4264069) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.75, TDS: 100.00[0m
+[0;32mI (4264069) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.75, TDS: 100.00[0m
+[0;32mI (4266189) TB: Sent servo state: 0[0m
+[0;32mI (4271289) TB: Sent servo state: 0[0m
+[0;32mI (4274119) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 13.63, TDS: 100.00[0m
+[0;32mI (4274119) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 13.63, TDS: 100.00[0m
+[0;32mI (4276389) TB: Sent servo state: 0[0m
+[0;32mI (4281489) TB: Sent servo state: 0[0m
+[0;32mI (4284179) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4284179) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4286589) TB: Sent servo state: 0[0m
+[0;32mI (4291689) TB: Sent servo state: 0[0m
+[0;32mI (4294239) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 10.55, TDS: 100.00[0m
+[0;32mI (4294239) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 10.55, TDS: 100.00[0m
+[0;32mI (4296789) TB: Sent servo state: 0[0m
+[0;32mI (4301889) TB: Sent servo state: 0[0m
+[0;32mI (4304289) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.62, TDS: 100.00[0m
+[0;32mI (4304289) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.62, TDS: 100.00[0m
+[0;32mI (4306989) TB: Sent servo state: 0[0m
+[0;32mI (4312089) TB: Sent servo state: 0[0m
+[0;32mI (4314339) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 18.24, TDS: 100.00[0m
+[0;32mI (4314339) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 18.24, TDS: 100.00[0m
+[0;32mI (4317189) TB: Sent servo state: 0[0m
+[0;32mI (4322289) TB: Sent servo state: 0[0m
+[0;32mI (4324389) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.27, TDS: 100.00[0m
+[0;32mI (4324389) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.27, TDS: 100.00[0m
+[0;32mI (4327389) TB: Sent servo state: 0[0m
+[0;32mI (4332489) TB: Sent servo state: 0[0m
+[0;32mI (4334439) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4334439) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4337589) TB: Sent servo state: 0[0m
+[0;32mI (4342689) TB: Sent servo state: 0[0m
+[0;32mI (4344499) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4344499) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4347789) TB: Sent servo state: 0[0m
+[0;32mI (4352889) TB: Sent servo state: 0[0m
+[0;32mI (4354549) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 16.48, TDS: 100.00[0m
+[0;32mI (4354549) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 16.48, TDS: 100.00[0m
+[0;32mI (4357989) TB: Sent servo state: 0[0m
+[0;32mI (4363089) TB: Sent servo state: 0[0m
+[0;32mI (4364599) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 9.87, TDS: 100.00[0m
+[0;32mI (4364599) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 9.87, TDS: 100.00[0m
+[0;32mI (4368189) TB: Sent servo state: 0[0m
+[0;32mI (4373289) TB: Sent servo state: 0[0m
+[0;32mI (4374649) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 14.64, TDS: 100.00[0m
+[0;32mI (4374649) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 14.64, TDS: 100.00[0m
+[0;32mI (4378389) TB: Sent servo state: 0[0m
+[0;32mI (4383489) TB: Sent servo state: 0[0m
+[0;32mI (4384699) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4384699) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4388589) TB: Sent servo state: 0[0m
+[0;32mI (4393689) TB: Sent servo state: 0[0m
+[0;32mI (4394749) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4394749) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4398789) TB: Sent servo state: 0[0m
+[0;32mI (4403889) TB: Sent servo state: 0[0m
+[0;32mI (4404809) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4404809) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4408989) TB: Sent servo state: 0[0m
+[0;32mI (4414089) TB: Sent servo state: 0[0m
+[0;32mI (4414859) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4414859) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4419189) TB: Sent servo state: 0[0m
+[0;32mI (4424289) TB: Sent servo state: 0[0m
+[0;32mI (4424919) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4424919) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4429389) TB: Sent servo state: 0[0m
+[0;32mI (4434489) TB: Sent servo state: 0[0m
+[0;32mI (4434969) SENSOR: Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m
+[0;32mI (4434969) SENSOR: Sending sensor data - Temperature: 26.00, Turbidity: 0.00, PH: 2.63, TDS: 100.00[0m

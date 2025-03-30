@@ -1,0 +1,438 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15716
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Mar 29 2025 16:37:54[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ef50h (126800) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=0002ef78 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (133) esp_image: segment 2: paddr=0002ef9c vaddr=3ffb0000 size=0107ch (  4220) load[0m
+[0;32mI (139) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=a204ch (663628) map[0m
+[0;32mI (371) esp_image: segment 4: paddr=000d2074 vaddr=3ffb107c size=02f54h ( 12116) load[0m
+[0;32mI (376) esp_image: segment 5: paddr=000d4fd0 vaddr=40080000 size=17a98h ( 96920) load[0m
+[0;32mI (425) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (425) boot: Disabling RNG early entropy source...[0m
+[0;32mI (436) cpu_start: Multicore app[0m
+[0;32mI (444) cpu_start: Pro cpu start user code[0m
+[0;32mI (444) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (444) app_init: Application information:[0m
+[0;32mI (444) app_init: Project name:     thingsboard[0m
+[0;32mI (448) app_init: App version:      1[0m
+[0;32mI (452) app_init: Compile time:     Mar 29 2025 16:37:45[0m
+[0;32mI (457) app_init: ELF file SHA256:  550bd8ccb...[0m
+[0;32mI (461) app_init: ESP-IDF:          v5.4[0m
+[0;32mI (465) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (468) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (472) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (477) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (483) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (488) heap_init: At 3FFB8BA0 len 00027460 (157 KiB): DRAM[0m
+[0;32mI (493) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (498) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (504) heap_init: At 40097A98 len 00008568 (33 KiB): IRAM[0m
+[0;32mI (511) spi_flash: detected chip: generic[0m
+[0;32mI (513) spi_flash: flash io: dio[0m
+[0;33mW (516) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (530) main_task: Started on CPU0[0m
+[0;32mI (540) main_task: Calling app_main()[0m
+[0;32mI (540) MAIN: [APP] Startup..[0m
+[0;32mI (540) MAIN: [APP] Free memory: 276184 bytes[0m
+[0;32mI (540) MAIN: [APP] IDF version: v5.4[0m
+[0;32mI (560) MAIN: Servo initialized[0m
+[0;32mI (560) MAIN: Initializing WiFi...[0m
+[0;32mI (580) wifi:wifi driver task: 3ffc08b8, prio:23, stack:6656, core=0[0m
+[0;32mI (590) wifi:wifi firmware version: 48ea317a7[0m
+[0;32mI (590) wifi:wifi certification version: v7.0[0m
+[0;32mI (590) wifi:config NVS flash: enabled[0m
+[0;32mI (590) wifi:config nano formatting: disabled[0m
+[0;32mI (590) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (600) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (600) wifi:Init management short buffer num: 32[0m
+[0;32mI (610) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (610) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (620) wifi:Init static rx buffer num: 10[0m
+[0;32mI (620) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (620) wifi_init: rx ba win: 6[0m
+[0;32mI (630) wifi_init: accept mbox: 6[0m
+[0;32mI (630) wifi_init: tcpip mbox: 32[0m
+[0;32mI (630) wifi_init: udp mbox: 6[0m
+[0;32mI (640) wifi_init: tcp mbox: 6[0m
+[0;32mI (640) wifi_init: tcp tx win: 5760[0m
+[0;32mI (640) wifi_init: tcp rx win: 5760[0m
+[0;32mI (640) wifi_init: tcp mss: 1440[0m
+[0;32mI (650) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (650) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (660) MAIN: Connecting to WiFi SSID: NHATRO BM T1S[0m
+[0;33mW (660) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (670) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (750) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (780) wifi:mode : sta (08:d1:f9:26:7e:34)[0m
+[0;32mI (780) wifi:enable tsf[0m
+[0;32mI (790) MAIN: WiFi initialization completed[0m
+[0;32mI (790) MAIN: Waiting for WiFi connection...[0m
+[0;32mI (1040) wifi:new:<5,0>, old:<1,0>, ap:<255,255>, sta:<5,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1040) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1050) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1060) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1160) wifi:connected with NHATRO BM T1S, aid = 1, channel 5, BW20, bssid = c4:70:ab:86:49:3b[0m
+[0;32mI (1160) wifi:security: WPA2-PSK, phy: bgn, rssi: -55[0m
+[0;32mI (1170) wifi:pm start, type: 1[0m
+
+[0;32mI (1170) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1190) wifi:<ba-add>idx:0 (ifx:0, c4:70:ab:86:49:3b), tid:0, ssn:1, winSize:64[0m
+[0;32mI (1220) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1790) MAIN: Waiting for WiFi connection...[0m
+[0;32mI (2200) esp_netif_handlers: sta ip: 192.168.110.169, mask: 255.255.255.0, gw: 192.168.110.1[0m
+[0;32mI (2790) MAIN: Connecting to ThingsBoard server: 192.168.110.126[0m
+[0;32mI (2790) MAIN: Connected to ThingsBoard server successfully[0m
+[0;32mI (2790) MAIN: Subscribing to shared attributes...[0m
+[0;32mI (2790) MAIN: Successfully subscribed to shared attributes[0m
+[0;32mI (2960) wifi:<ba-add>idx:1 (ifx:0, c4:70:ab:86:49:3b), tid:7, ssn:2, winSize:64[0m
+[0;32mI (3030) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (3150) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (3260) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (3370) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (3480) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (3590) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (3690) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (3790) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (3890) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (3990) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (4090) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (4200) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (4310) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (4430) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (4550) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (4660) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (4770) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (4870) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (4980) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (5090) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (5200) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (5310) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (5420) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (5530) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (5640) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (5760) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (5870) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (5980) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (6090) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (6200) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (6310) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (6410) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (6520) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (6620) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (6730) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (6830) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (6940) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (7050) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (7160) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (7270) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (7380) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (7490) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (7610) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (7720) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (7840) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (7950) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (8060) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (8160) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (8270) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (8380) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (8490) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (8600) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (8710) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (8820) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (8930) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (9050) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (9160) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (9270) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (9380) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (9490) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (9590) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (9690) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (9790) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (9910) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (10020) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (10130) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (10240) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (10350) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (10460) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (10570) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (10680) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (10800) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (10910) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (11030) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (11140) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (11250) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (11360) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (11470) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (11580) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (11690) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (11800) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (11910) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (12020) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (12140) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (12250) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (12360) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (12460) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (12560) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (12660) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (12760) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (12860) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (12960) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (13060) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (13170) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (13270) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (13380) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (13480) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (13590) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (13690) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (13800) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (13900) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (14000) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (14100) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (14200) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (14300) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (14400) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (14500) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (14600) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (14700) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (14810) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (14910) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (15010) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (15110) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (15210) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (15310) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (15420) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (15540) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (15650) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (15760) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (15870) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (15980) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (16090) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (16200) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (16310) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (16420) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (16530) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (16640) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (16750) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (16870) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (16980) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (17100) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (17210) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (17330) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (17440) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (17550) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (17660) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (17770) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (17880) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (18000) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (18110) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (18230) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (18340) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (18460) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (18570) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (18670) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (18770) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (18870) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (18970) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (19070) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (19170) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (19270) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (19370) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (19470) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (19580) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (19690) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (19800) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (19910) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (20020) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (20130) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (20240) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (20360) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (20480) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (20600) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (20710) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (20820) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (20930) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (21040) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (21150) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (21260) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (21370) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (21490) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (21600) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (21710) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (21830) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (21940) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (22040) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (22140) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (22240) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (22340) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (22440) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (22540) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (22640) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (22740) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (22850) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (22960) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (23080) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (23190) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (23300) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (23410) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (23520) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (23620) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (23720) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (23820) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (23920) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (24020) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (24120) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (24230) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (24340) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (24450) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (24560) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (24670) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (24790) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (24910) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (25020) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (25130) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (25240) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (25350) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (25460) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (25570) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (25680) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (25800) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (25910) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (26020) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (26130) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (26250) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (26360) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (26470) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (26580) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (26690) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (26800) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (26910) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (27020) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (27130) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (27240) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (27350) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (27460) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (27570) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (27680) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (27790) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (27900) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (28000) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (28110) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (28220) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (28330) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (28440) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (28550) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (28660) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (28780) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (28890) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (28990) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (29090) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (29190) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (29290) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (29390) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (29510) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (29620) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (29720) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (29820) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (29920) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (30020) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (30120) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (30220) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (30320) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (30420) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (30520) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (30620) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (30720) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (30820) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (30940) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (31050) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (31150) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (31250) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (31350) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (31450) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (31550) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (31660) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (31770) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (31890) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (32000) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (32110) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (32210) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (32310) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (32410) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (32510) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (32610) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (32720) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (32820) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (32920) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (33020) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (33130) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (33230) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (33330) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (33430) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (33540) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (33640) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (33740) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (33840) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (33940) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (34040) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (34150) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (34260) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (34370) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (34470) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (34570) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (34670) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (34780) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (34900) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (35010) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (35120) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (35230) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (35340) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (35460) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (35580) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (35690) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (35800) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (35900) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (36010) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (36110) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (36220) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (36320) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (36430) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (36530) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (36640) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (36750) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (36860) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (36970) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (37080) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (37190) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (37300) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (37420) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (37540) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (37650) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (37760) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (37860) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (37970) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (38080) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (38190) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
+[0;32mI (38300) MAIN: Sending sensor data - Temperature: 25.50, Turbidity: 100.00, PH: 7.00, TDS: 500.00[0m
