@@ -4,6 +4,7 @@
 #include "Shared_Attribute_Update.h"
 #include "Espressif_MQTT_Client.h"
 #include "driver/adc.h"
+#include "ssd1306.h"
 
 // Initialize global variables
 SensorData sensorData = {0.0f, 0.0f, 0.0f, 0.0f};
@@ -31,6 +32,18 @@ ThingsBoardSized<1024> tb(mqttClient, 1024, 1024, TB_STACK_SIZE, apis);
 
 // Add timer handle definition
 TimerHandle_t xServoTimer;
+
+// Add OLED handle definition
+SSD1306_t oled_dev;
+TaskHandle_t oled_task_handle = NULL;
+
+// Initialize previous values
+PreviousValues prev_values = {
+    .temperature = 0.0f,
+    .turbidity = 0.0f,
+    .ph = 0.0f,
+    .tds = 0.0f,
+    .servo_active = false};
 
 // WiFi Functions Implementation
 void on_got_ip(void *event_handler_arg, esp_event_base_t event_base, int32_t event_id, void *event_data)
@@ -335,7 +348,7 @@ void thingsboard_task(void *pvParameters)
 
         static uint32_t last_update = 0;
         uint32_t current_time = xTaskGetTickCount() * portTICK_PERIOD_MS;
-        if (current_time - last_update > 5000)
+        if (current_time - last_update > 10000)
         {
             if (tb.sendTelemetryData(SERVO_STATE_KEY, systemState.servo_active))
             {
@@ -361,8 +374,8 @@ void sensor_task(void *pvParameters)
         static uint32_t last_read = 0;
         uint32_t current_time = xTaskGetTickCount() * portTICK_PERIOD_MS;
 
-        // Read sensors every 5 seconds
-        if (current_time - last_read > 5000)
+        // Read sensors every 10 seconds
+        if (current_time - last_read > 10000)
         {
             readSensors();
             last_read = current_time;
@@ -371,7 +384,7 @@ void sensor_task(void *pvParameters)
         if (tb.connected())
         {
             static uint32_t last_update = 0;
-            if (current_time - last_update > 5000)
+            if (current_time - last_update > 10000)
             {
                 ESP_LOGI("SENSOR", "Sending sensor data - Temperature: %.2f, Turbidity: %.2f, PH: %.2f, TDS: %.2f",
                          sensorData.temperature, sensorData.turbidity, sensorData.ph, sensorData.tds);
@@ -397,7 +410,7 @@ void sensor_task(void *pvParameters)
             }
         }
 
-        vTaskDelay(1000 / portTICK_PERIOD_MS); // Increased delay to 1s since we only need updates every 5s
+        vTaskDelay(1000 / portTICK_PERIOD_MS); // Check every second
     }
 }
 
@@ -433,4 +446,72 @@ void vServoTimerCallback(TimerHandle_t xTimer)
     // Return to original position using the common setServoAngle function
     setServoAngle(0);
     ESP_LOGI(TAG, "Servo returned to original position");
+}
+
+void init_oled(void)
+{
+    i2c_master_init(&oled_dev, OLED_SDA_GPIO, OLED_SCL_GPIO, -1);
+    i2c_device_add(&oled_dev, I2C_NUM_0, -1, OLED_I2C_ADDRESS);
+    i2c_init(&oled_dev, 128, 64);
+    ssd1306_clear_screen(&oled_dev, false);
+}
+
+void update_oled_display(void)
+{
+    // Check if any values have changed
+    bool values_changed =
+        (sensorData.temperature != prev_values.temperature) ||
+        (sensorData.turbidity != prev_values.turbidity) ||
+        (sensorData.ph != prev_values.ph) ||
+        (sensorData.tds != prev_values.tds) ||
+        (systemState.servo_active != prev_values.servo_active);
+
+    // Only update display if values have changed
+    if (values_changed)
+    {
+        ssd1306_clear_screen(&oled_dev, false);
+
+        // Display title
+        const char *title = "Aqua Monitor";
+        ssd1306_display_text(&oled_dev, 0, (char *)title, 12, false);
+
+        // Display sensor values
+        char temp_str[32];
+        char ph_str[32];
+        char turb_str[32];
+        char tds_str[32];
+
+        snprintf(temp_str, sizeof(temp_str), "Temp: %.1f C", sensorData.temperature);
+        snprintf(ph_str, sizeof(ph_str), "pH: %.1f", sensorData.ph);
+        snprintf(turb_str, sizeof(turb_str), "Turb: %.0f NTU", sensorData.turbidity);
+        snprintf(tds_str, sizeof(tds_str), "TDS: %.0f ppm", sensorData.tds);
+
+        ssd1306_display_text(&oled_dev, 2, temp_str, strlen(temp_str), false);
+        ssd1306_display_text(&oled_dev, 3, ph_str, strlen(ph_str), false);
+        ssd1306_display_text(&oled_dev, 4, turb_str, strlen(turb_str), false);
+        ssd1306_display_text(&oled_dev, 5, tds_str, strlen(tds_str), false);
+
+        // Display servo status
+        char servo_str[32];
+        snprintf(servo_str, sizeof(servo_str), "Servo: %s", systemState.servo_active ? "ON" : "OFF");
+        ssd1306_display_text(&oled_dev, 7, servo_str, strlen(servo_str), false);
+
+        // Update previous values
+        prev_values.temperature = sensorData.temperature;
+        prev_values.turbidity = sensorData.turbidity;
+        prev_values.ph = sensorData.ph;
+        prev_values.tds = sensorData.tds;
+        prev_values.servo_active = systemState.servo_active;
+    }
+}
+
+void oled_task(void *pvParameters)
+{
+    ESP_LOGI(TAG, "Starting OLED task");
+
+    while (1)
+    {
+        update_oled_display();
+        vTaskDelay(pdMS_TO_TICKS(1000)); // Check every second
+    }
 }

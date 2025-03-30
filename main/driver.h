@@ -15,6 +15,8 @@
 #include "nvs_flash.h"
 #include "esp_netif.h"
 #include "ArduinoJson.h"
+#include "ssd1306.h"
+// #include "font8x8_basic.h"
 
 #define TAG "DRIVER"
 
@@ -55,5 +57,32 @@ extern TimerHandle_t xServoTimer;
 
 // Add timer callback declaration
 void vServoTimerCallback(TimerHandle_t xTimer);
+
+// OLED Display Configuration
+#define OLED_SDA_GPIO GPIO_NUM_21
+#define OLED_SCL_GPIO GPIO_NUM_22
+#define OLED_RESET_GPIO GPIO_NUM_16
+#define OLED_I2C_ADDRESS 0x3C
+
+// OLED handle
+extern SSD1306_t oled_dev;
+extern TaskHandle_t oled_task_handle;
+
+// OLED display functions
+void init_oled(void);
+void oled_task(void *pvParameters);
+void update_oled_display(void);
+
+// Previous values for OLED update
+struct PreviousValues
+{
+    float temperature;
+    float turbidity;
+    float ph;
+    float tds;
+    bool servo_active;
+};
+
+extern PreviousValues prev_values;
 
 #endif // DRIVER_H

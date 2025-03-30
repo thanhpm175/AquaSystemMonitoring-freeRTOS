@@ -17,11 +17,16 @@ extern "C" void app_main(void)
     initServo();
     ESP_LOGI("MAIN", "Servo initialized");
 
+    // Initialize OLED display
+    init_oled();
+    ESP_LOGI("MAIN", "OLED display initialized");
+
     // Create tasks with increased stack sizes
     xTaskCreate(wifi_task, "wifi_task", 4096, NULL, 5, &wifi_task_handle);
     xTaskCreate(thingsboard_task, "thingsboard_task", 8192, NULL, 4, &thingsboard_task_handle);
     xTaskCreate(sensor_task, "sensor_task", 4096, NULL, 3, &sensor_task_handle);
     xTaskCreate(servo_task, "servo_task", 4096, NULL, 2, &servo_task_handle);
+    xTaskCreate(oled_task, "oled_task", 4096, NULL, 1, &oled_task_handle);
 
     // Main loop - just keep the system running
     while (1)
