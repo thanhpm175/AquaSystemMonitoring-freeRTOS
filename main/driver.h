@@ -33,7 +33,6 @@ void initSensor();
 void initServo();
 void setServoAngle(int angle);
 void handleServo();
-void readSensors();
 void processRPCRequest(const ArduinoJson::JsonVariantConst &params, ArduinoJson::JsonDocument &response);
 
 // Task declarations

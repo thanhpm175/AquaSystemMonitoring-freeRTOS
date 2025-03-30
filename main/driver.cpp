@@ -223,14 +223,6 @@ float read_tds_sensor()
     return 100.0f;
 }
 
-void readSensors()
-{
-    sensorData.temperature = read_temp_sensor();
-    sensorData.turbidity = read_turbidity_sensor();
-    sensorData.ph = read_ph_sensor();
-    sensorData.tds = read_tds_sensor();
-}
-
 void processRPCRequest(const JsonVariantConst &params, JsonDocument &response)
 {
     ESP_LOGI(TAG, "Received RPC request");
@@ -369,6 +361,16 @@ void sensor_task(void *pvParameters)
 {
     ESP_LOGI("SENSOR", "Starting sensor task");
 
+    // Wait for WiFi to be connected before initializing sensor
+    while (!systemState.wifi_connected)
+    {
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
+
+    // Initialize sensor after WiFi is connected
+    initSensor();
+    ESP_LOGI("SENSOR", "Sensor initialized");
+
     while (1)
     {
         static uint32_t last_read = 0;
@@ -377,7 +379,10 @@ void sensor_task(void *pvParameters)
         // Read sensors every 10 seconds
         if (current_time - last_read > 10000)
         {
-            readSensors();
+            sensorData.temperature = read_temp_sensor();
+            sensorData.turbidity = read_turbidity_sensor();
+            sensorData.ph = read_ph_sensor();
+            sensorData.tds = read_tds_sensor();
             last_read = current_time;
         }
 
@@ -436,7 +441,7 @@ void servo_task(void *pvParameters)
             }
         }
 
-        vTaskDelay(500 / portTICK_PERIOD_MS); // Increased delay to 500ms since we don't need frequent updates
+        vTaskDelay(1000 / portTICK_PERIOD_MS); // Increased delay to 500ms since we don't need frequent updates
     }
 }
 
