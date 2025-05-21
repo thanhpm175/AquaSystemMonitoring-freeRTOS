@@ -232,9 +232,21 @@ void processRPCRequest(const JsonVariantConst &params, JsonDocument &response)
     serializeJson(params, params_str);
     ESP_LOGI(TAG, "Received params: %s", params_str);
 
-    // Check for method field
-    if (!params.containsKey("method"))
-    {
+    // Handle direct boolean value (for backward compatibility)
+    if (params.is<bool>()) {
+        bool state = params.as<bool>();
+        systemState.servo_active = state;
+        systemState.servo_moving = false;
+        systemState.servo_start_time = xTaskGetTickCount() * portTICK_PERIOD_MS;
+        ESP_LOGI(TAG, "Set servo state to: %d", state);
+        response["success"] = true;
+        response["servo_active"] = state;
+        response["message"] = state ? "Servo turned ON" : "Servo turned OFF";
+        return;
+    }
+
+    // Handle method-based request
+    if (!params.containsKey("method")) {
         ESP_LOGE(TAG, "Missing method parameter");
         response["error"] = "Missing method parameter";
         return;
@@ -243,40 +255,50 @@ void processRPCRequest(const JsonVariantConst &params, JsonDocument &response)
     const char *method = params["method"];
     ESP_LOGI(TAG, "Method: %s", method);
 
-    if (strcmp(method, "setServoState") == 0)
-    {
-        // Check for params object and angle parameter
-        if (!params.containsKey("params") || !params["params"].containsKey("angle"))
-        {
-            ESP_LOGE(TAG, "Missing angle parameter");
-            response["error"] = "Missing angle parameter";
+    if (strcmp(method, "setServoState") == 0) {
+        if (!params.containsKey("params")) {
+            ESP_LOGE(TAG, "Missing params parameter");
+            response["error"] = "Missing params parameter";
             return;
         }
 
-        int new_angle = params["params"]["angle"];
-        if (new_angle < SERVO_ANGLE_MIN || new_angle > SERVO_ANGLE_MAX)
-        {
-            ESP_LOGE(TAG, "Invalid angle: %d", new_angle);
-            response["error"] = "Invalid angle (0-180)";
+        // Handle boolean params
+        if (params["params"].is<bool>()) {
+            bool state = params["params"].as<bool>();
+            systemState.servo_active = state;
+            systemState.servo_moving = false;
+            systemState.servo_start_time = xTaskGetTickCount() * portTICK_PERIOD_MS;
+            ESP_LOGI(TAG, "Set servo state to: %d", state);
+            response["success"] = true;
+            response["servo_active"] = state;
+            response["message"] = state ? "Servo turned ON" : "Servo turned OFF";
             return;
         }
 
-        ESP_LOGI(TAG, "Setting servo angle to: %d", new_angle);
-        servo_angle = new_angle;
+        // Handle angle params
+        if (params["params"].is<JsonObjectConst>() && params["params"].containsKey("angle")) {
+            int new_angle = params["params"]["angle"];
+            if (new_angle < SERVO_ANGLE_MIN || new_angle > SERVO_ANGLE_MAX) {
+                ESP_LOGE(TAG, "Invalid angle: %d", new_angle);
+                response["error"] = "Invalid angle (0-180)";
+                return;
+            }
+            ESP_LOGI(TAG, "Setting servo angle to: %d", new_angle);
+            servo_angle = new_angle;
+            systemState.servo_active = true;
+            systemState.servo_moving = false;
+            systemState.servo_start_time = xTaskGetTickCount() * portTICK_PERIOD_MS;
+            setServoAngle(new_angle);
+            response["success"] = true;
+            response["angle"] = new_angle;
+            response["message"] = "Servo angle set successfully";
+            return;
+        }
 
-        // Set servo state and start timer in a safe way
-        systemState.servo_active = true;
-        systemState.servo_moving = false;
-        systemState.servo_start_time = xTaskGetTickCount() * portTICK_PERIOD_MS;
-
-        setServoAngle(new_angle);
-
-        response["success"] = true;
-        response["angle"] = new_angle;
-        response["message"] = "Servo angle set successfully";
-    }
-    else
-    {
+        ESP_LOGE(TAG, "Invalid params type or missing angle");
+        response["error"] = "Invalid params type or missing angle";
+        return;
+    } else {
         ESP_LOGE(TAG, "Unknown method: %s", method);
         response["error"] = "Unknown method";
     }

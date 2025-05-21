@@ -4,14 +4,17 @@ build/
 # IDE files
 .vscode/
 .idea/
+.devcontainer/
 
 # System files
 .DS_Store
 Thumbs.db
 
 # ESP-IDF specific
+sdkconfig
 sdkconfig.old
 dependencies.lock
+managed_components
 
 # Log files
 *.log 

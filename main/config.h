@@ -18,8 +18,8 @@
 #define WIFI_PASSWORD "nhatro123456t1"
 
 // ThingsBoard Configuration
-#define THINGSBOARD_SERVER "192.168.110.126"
-#define TOKEN "koPUeob0V2iGJO646g2B"
+#define THINGSBOARD_SERVER "192.168.110.62"
+#define TOKEN "iQjOhOQgHqnZ3v7gOWtj"
 #define THINGSBOARD_PORT 1883
 
 // GPIO Configuration
