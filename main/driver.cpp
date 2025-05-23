@@ -87,6 +87,7 @@ void initSensor()
 }
 
 // Servo Functions Implementation
+// Servo Functions Implementation
 void initServo()
 {
     // Configure LEDC timer
@@ -135,8 +136,6 @@ void setServoAngle(int angle)
 
     int duty = (int)(100.0 * (angle / 20.0) * 81.91);
 
-    ESP_LOGI(TAG, "Setting servo angle to: %d, duty cycle: %d", angle, duty);
-
     // Use mutex to protect servo control
     static SemaphoreHandle_t servo_mutex = NULL;
     if (servo_mutex == NULL)
@@ -164,14 +163,12 @@ void handleServo()
             systemState.servo_start_time = current_time;
             systemState.servo_moving = true;
             setServoAngle(1); // Set to 90 degrees when active
-            ESP_LOGI(TAG, "Servo activated, moving to 90 degrees");
         }
         else if (current_time - systemState.servo_start_time >= 5000)
         {
             setServoAngle(0);
             systemState.servo_moving = false;
             systemState.servo_active = false;
-            ESP_LOGI(TAG, "Servo deactivated, returned to 0 degrees");
         }
     }
 }
@@ -232,21 +229,9 @@ void processRPCRequest(const JsonVariantConst &params, JsonDocument &response)
     serializeJson(params, params_str);
     ESP_LOGI(TAG, "Received params: %s", params_str);
 
-    // Handle direct boolean value (for backward compatibility)
-    if (params.is<bool>()) {
-        bool state = params.as<bool>();
-        systemState.servo_active = state;
-        systemState.servo_moving = false;
-        systemState.servo_start_time = xTaskGetTickCount() * portTICK_PERIOD_MS;
-        ESP_LOGI(TAG, "Set servo state to: %d", state);
-        response["success"] = true;
-        response["servo_active"] = state;
-        response["message"] = state ? "Servo turned ON" : "Servo turned OFF";
-        return;
-    }
-
-    // Handle method-based request
-    if (!params.containsKey("method")) {
+    // Check for method field
+    if (!params.containsKey("method"))
+    {
         ESP_LOGE(TAG, "Missing method parameter");
         response["error"] = "Missing method parameter";
         return;
@@ -255,50 +240,39 @@ void processRPCRequest(const JsonVariantConst &params, JsonDocument &response)
     const char *method = params["method"];
     ESP_LOGI(TAG, "Method: %s", method);
 
-    if (strcmp(method, "setServoState") == 0) {
-        if (!params.containsKey("params")) {
-            ESP_LOGE(TAG, "Missing params parameter");
-            response["error"] = "Missing params parameter";
+    if (strcmp(method, "setServoState") == 0)
+    {
+        // Check for params object and angle parameter
+        if (!params.containsKey("params") || !params["params"].containsKey("angle"))
+        {
+            ESP_LOGE(TAG, "Missing angle parameter");
+            response["error"] = "Missing angle parameter";
             return;
         }
 
-        // Handle boolean params
-        if (params["params"].is<bool>()) {
-            bool state = params["params"].as<bool>();
-            systemState.servo_active = state;
-            systemState.servo_moving = false;
-            systemState.servo_start_time = xTaskGetTickCount() * portTICK_PERIOD_MS;
-            ESP_LOGI(TAG, "Set servo state to: %d", state);
-            response["success"] = true;
-            response["servo_active"] = state;
-            response["message"] = state ? "Servo turned ON" : "Servo turned OFF";
+        int new_angle = params["params"]["angle"];
+        if (new_angle < SERVO_ANGLE_MIN || new_angle > SERVO_ANGLE_MAX)
+        {
+            ESP_LOGE(TAG, "Invalid angle: %d", new_angle);
+            response["error"] = "Invalid angle (0-180)";
             return;
         }
 
-        // Handle angle params
-        if (params["params"].is<JsonObjectConst>() && params["params"].containsKey("angle")) {
-            int new_angle = params["params"]["angle"];
-            if (new_angle < SERVO_ANGLE_MIN || new_angle > SERVO_ANGLE_MAX) {
-                ESP_LOGE(TAG, "Invalid angle: %d", new_angle);
-                response["error"] = "Invalid angle (0-180)";
-                return;
-            }
-            ESP_LOGI(TAG, "Setting servo angle to: %d", new_angle);
-            servo_angle = new_angle;
-            systemState.servo_active = true;
-            systemState.servo_moving = false;
-            systemState.servo_start_time = xTaskGetTickCount() * portTICK_PERIOD_MS;
-            setServoAngle(new_angle);
-            response["success"] = true;
-            response["angle"] = new_angle;
-            response["message"] = "Servo angle set successfully";
-            return;
-        }
+        servo_angle = new_angle;
 
-        ESP_LOGE(TAG, "Invalid params type or missing angle");
-        response["error"] = "Invalid params type or missing angle";
-        return;
-    } else {
+        // Set servo state and start timer in a safe way
+        systemState.servo_active = true;
+        systemState.servo_moving = false;
+        systemState.servo_start_time = xTaskGetTickCount() * portTICK_PERIOD_MS;
+
+        setServoAngle(new_angle);
+
+        response["success"] = true;
+        response["angle"] = new_angle;
+        response["message"] = "Servo angle set successfully";
+    }
+    else
+    {
         ESP_LOGE(TAG, "Unknown method: %s", method);
         response["error"] = "Unknown method";
     }
@@ -360,20 +334,6 @@ void thingsboard_task(void *pvParameters)
 
         tb.loop();
 
-        static uint32_t last_update = 0;
-        uint32_t current_time = xTaskGetTickCount() * portTICK_PERIOD_MS;
-        if (current_time - last_update > 10000)
-        {
-            if (tb.sendTelemetryData(SERVO_STATE_KEY, systemState.servo_active))
-            {
-                ESP_LOGI("TB", "Sent servo state: %d", systemState.servo_active);
-            }
-            else
-            {
-                ESP_LOGE("TB", "Failed to send servo state");
-            }
-            last_update = current_time;
-        }
 
         vTaskDelay(100 / portTICK_PERIOD_MS);
     }
@@ -399,7 +359,7 @@ void sensor_task(void *pvParameters)
         uint32_t current_time = xTaskGetTickCount() * portTICK_PERIOD_MS;
 
         // Read sensors every 10 seconds
-        if (current_time - last_read > 10000)
+        if (current_time - last_read > 30000)
         {
             sensorData.temperature = read_temp_sensor();
             sensorData.turbidity = read_turbidity_sensor();
@@ -411,7 +371,7 @@ void sensor_task(void *pvParameters)
         if (tb.connected())
         {
             static uint32_t last_update = 0;
-            if (current_time - last_update > 10000)
+            if (current_time - last_update > 30000)
             {
                 ESP_LOGI("SENSOR", "Sending sensor data - Temperature: %.2f, Turbidity: %.2f, PH: %.2f, TDS: %.2f",
                          sensorData.temperature, sensorData.turbidity, sensorData.ph, sensorData.tds);
@@ -444,26 +404,24 @@ void sensor_task(void *pvParameters)
 void servo_task(void *pvParameters)
 {
     ESP_LOGI("SERVO", "Starting servo task");
+    bool last_servo_state = systemState.servo_active;  // Track last state
 
     while (1)
     {
         handleServo();
 
-        if (tb.connected())
+        if (tb.connected() && last_servo_state != systemState.servo_active)
         {
-            static uint32_t last_update = 0;
-            uint32_t current_time = xTaskGetTickCount() * portTICK_PERIOD_MS;
-            if (current_time - last_update > 5000)
+            // Only send and log when state changes
+            if (tb.sendTelemetryData(SERVO_STATE_KEY, systemState.servo_active))
             {
-                if (tb.sendTelemetryData(SERVO_STATE_KEY, systemState.servo_active))
-                {
-                    ESP_LOGI("SERVO", "Sent servo state: %d", systemState.servo_active);
-                }
-                last_update = current_time;
+                ESP_LOGI("SERVO", "Servo state changed to: %s", 
+                         systemState.servo_active ? "ON" : "OFF");
+                last_servo_state = systemState.servo_active;
             }
         }
 
-        vTaskDelay(1000 / portTICK_PERIOD_MS); // Increased delay to 500ms since we don't need frequent updates
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }
 

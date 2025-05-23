@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-/home/thanhvo/User_Space/SysAquaMonitoring_freeRTOS_ThingsboardPlatformSDK/build/CMakeFiles/bootloader
-/home/thanhvo/User_Space/SysAquaMonitoring_freeRTOS_ThingsboardPlatformSDK/build/CMakeFiles/bootloader.rule
-/home/thanhvo/User_Space/SysAquaMonitoring_freeRTOS_ThingsboardPlatformSDK/build/CMakeFiles/bootloader-complete.rule
-/home/thanhvo/User_Space/SysAquaMonitoring_freeRTOS_ThingsboardPlatformSDK/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-/home/thanhvo/User_Space/SysAquaMonitoring_freeRTOS_ThingsboardPlatformSDK/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-/home/thanhvo/User_Space/SysAquaMonitoring_freeRTOS_ThingsboardPlatformSDK/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-/home/thanhvo/User_Space/SysAquaMonitoring_freeRTOS_ThingsboardPlatformSDK/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-/home/thanhvo/User_Space/SysAquaMonitoring_freeRTOS_ThingsboardPlatformSDK/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-/home/thanhvo/User_Space/SysAquaMonitoring_freeRTOS_ThingsboardPlatformSDK/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-/home/thanhvo/User_Space/SysAquaMonitoring_freeRTOS_ThingsboardPlatformSDK/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/home/thanhvo/Class_Space/Embedded_System/AquaSystemMonitoring-freeRTOS/build/CMakeFiles/bootloader
+/home/thanhvo/Class_Space/Embedded_System/AquaSystemMonitoring-freeRTOS/build/CMakeFiles/bootloader.rule
+/home/thanhvo/Class_Space/Embedded_System/AquaSystemMonitoring-freeRTOS/build/CMakeFiles/bootloader-complete.rule
+/home/thanhvo/Class_Space/Embedded_System/AquaSystemMonitoring-freeRTOS/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/thanhvo/Class_Space/Embedded_System/AquaSystemMonitoring-freeRTOS/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/thanhvo/Class_Space/Embedded_System/AquaSystemMonitoring-freeRTOS/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/thanhvo/Class_Space/Embedded_System/AquaSystemMonitoring-freeRTOS/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/thanhvo/Class_Space/Embedded_System/AquaSystemMonitoring-freeRTOS/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/thanhvo/Class_Space/Embedded_System/AquaSystemMonitoring-freeRTOS/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/thanhvo/Class_Space/Embedded_System/AquaSystemMonitoring-freeRTOS/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

@@ -39,12 +39,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/thanhvo/User_Space/SysAquaMonitoring_freeRTOS_ThingsboardPlatformSDK/build/esp-idf/newlib/port/cmake_install.cmake")
+  include("/home/thanhvo/Class_Space/Embedded_System/AquaSystemMonitoring-freeRTOS/build/esp-idf/newlib/port/cmake_install.cmake")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/thanhvo/User_Space/SysAquaMonitoring_freeRTOS_ThingsboardPlatformSDK/build/esp-idf/newlib/install_local_manifest.txt"
+  file(WRITE "/home/thanhvo/Class_Space/Embedded_System/AquaSystemMonitoring-freeRTOS/build/esp-idf/newlib/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
