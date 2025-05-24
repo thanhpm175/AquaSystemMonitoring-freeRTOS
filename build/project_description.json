@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "thingsboard",
-    "project_version":    "75af6fb-dirty",
+    "project_version":    "64c6afc-dirty",
     "project_path":       "/home/thanhvo/Class_Space/Embedded_System/AquaSystemMonitoring-freeRTOS",
     "idf_path":           "/home/thanhvo/Documents/esp/v5.4.1/esp-idf",
     "build_dir":          "/home/thanhvo/Class_Space/Embedded_System/AquaSystemMonitoring-freeRTOS/build",
